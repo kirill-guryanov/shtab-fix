@@ -1,0 +1,104 @@
+.team
+    padding: 80px 0
+
+    background-color: #1B1B1B
+
+    position: relative
+
+.team__decorativeCircle,
+.team__decorativeGlowingCircle
+    position: absolute
+
+.team__decorativeCircle
+    right: -598px
+    top: 50%
+    transform: translateY(-50%)
+
+.team__decorativeGlowingCircle
+    transform: translate(-50%, -50%)
+
+    top: 50%
+    left: 50%
+
+.team__content
+    position: relative
+    z-index: 1
+
+.team__contentTop
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    margin-bottom: 80px
+
+    @media (max-width: 440px)
+        flex-direction: column
+
+        margin-bottom: 50px
+
+    & .fillingButton__svg,
+    & .fillingButton__circle
+        width: 138px
+        height: 138px
+
+    & .fillingButton
+        @media (max-width: 440px)
+            margin-top: 30px
+
+// bottom
+// .team__contentBottom
+.team__contentBottomItems
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    row-gap: 20px
+    column-gap: 40px
+
+    @media (max-width: 1120px)
+        grid-template-columns: repeat(3, 1fr)
+        row-gap: 40px
+
+    @media (max-width: 720px)
+        grid-template-columns: repeat(2, 1fr)
+        column-gap: 20px
+
+    @media (max-width: 440px)
+        grid-template-columns: repeat(1, 1fr)
+        row-gap: 40px
+        justify-items: center
+
+// item
+.team__contentBottomItem
+    max-width: 320px
+
+    width: 100%
+    height: auto
+
+    &:nth-child(2n)
+        margin-top: 40px
+
+        @media (max-width: 1120px)
+            margin-top: 0
+
+.team__contentBottomItemImage
+    width: 100%
+    height: auto
+
+    object-fit: cover
+    aspect-ratio: 1/1
+
+.team__contentBottomItemTexts
+    margin-top: 25px
+
+.team__contentBottomItemTitle
+    margin-bottom: 10px
+
+    font-weight: 800
+    @include adaptiveFont(18, 16)
+    line-height: 1.2
+    color: #FFFFFF
+
+.team__contentBottomItemText
+    font-weight: 400
+    @include adaptiveFont(18, 16)
+    line-height: 1.2
+    color: #8A8A8A

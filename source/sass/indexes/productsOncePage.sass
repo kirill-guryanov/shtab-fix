@@ -1,0 +1,57 @@
+// variables
+@import "../components/utils/variables"
+// utils
+@import "../components/utils/container"
+@import "../components/utils/locomotive.scss"
+@import "../components/utils/preloader"
+@import "../components/utils/variables"
+@import "../components/utils/mixins"
+@import "../components/utils/fonts"
+@import "../components/utils/reset"
+@import "../components/utils/fillingButton"
+@import "../components/utils/sectionTitles"
+// sections
+@import "../components/circle/circle"
+@import "../components/header/header"
+@import "../components/utils/burgerMenu"
+
+@import "../components/productsOncePage/intro"
+@import "../components/productsOncePage/info"
+@import "../components/productsOncePage/other"
+@import "../components/productsOncePage/mayToLike"
+@import "../components/services/offer"
+
+@import "../components/footer/footer"
+
+@import "../components/modals/modals"
+
+html
+    scroll-behavior: smooth
+
+body
+    display: flex
+    flex-direction: column
+
+    font-family: 'Circe', serif
+
+    position: relative
+
+main
+    flex-grow: 1
+
+input:focus
+    border: 1px solid $saladColor
+    outline: none
+
+#butter
+    position: fixed
+
+.offer
+    @media (max-width: 600px)
+        padding-top: 35px
+
+.otherAndMayToLikeWrapper
+    overflow: hidden
+
+.progress-circle
+    z-index: 5

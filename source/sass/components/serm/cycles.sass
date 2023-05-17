@@ -1,0 +1,218 @@
+.cycles
+    padding: 70px 0 90px
+
+    background-color: #262626
+
+    position: relative
+
+// .cycles__content
+
+// top
+.cycles__contentTop
+    margin-bottom: 90px
+
+    text-align: center
+
+.cycles__contentTopTitle
+    font-weight: 700
+    font-size: 45px
+    @include adaptiveFont(45, 20)
+    line-height: 1.2
+    color: #FFFFFF
+
+// bottom
+// .cycles__contentBottom
+
+.cycles__contentBottomItems
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    column-gap: 95px
+    row-gap: 95px
+
+    @media ( max-width: 1415px )
+        grid-template-columns: repeat(2, 1fr)
+        justify-items: center
+
+    @media ( max-width: 860px )
+        grid-template-columns: repeat(1, 1fr)
+
+// item
+.cycles__contentBottomItem
+    display: flex
+
+    max-width: 375px
+    min-height: 175px
+
+    width: 100%
+
+    background-color: #232323
+    border-radius: 15px
+
+    position: relative
+
+    @media ( max-width: 860px )
+        max-width: 90%
+
+        margin-right: -20px
+
+    @media ( max-width: 535px )
+        max-width: 80%
+
+    &:hover .cycles__contentBottomItemCircleInnerCircleText
+        color: #1e1e1e
+
+    &:hover .cycles__contentBottomItemCircleInnerCircle
+        background-color: #fff
+
+.cycles__contentBottomItemContent
+    width: 100%
+
+    position: relative
+    z-index: 1
+
+// arrow
+.cycles__contentBottomItemArrowFirstCircle
+    display: flex
+    align-items: center
+    justify-content: center
+
+    width: 41px
+    height: 41px
+
+    background-color: #3E3E3E
+    border-radius: 50%
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25)
+
+    transform: translate(50%,-50%)
+
+    position: absolute
+    right: 0
+    top: 50%
+    z-index: 2
+
+.cycles__contentBottomItemArrowSecondCircle
+    display: flex
+    align-items: center
+    justify-content: center
+
+    width: 27px
+    height: 27px
+
+    background-color: #D0FF48
+    border-radius: 50%
+
+// .cycles__contentBottomItemArrow
+// circle
+.cycles__contentBottomItemCircle
+    display: flex
+    align-items: center
+    justify-content: center
+
+    width: 88px
+    height: 88px
+
+    background-color: $saladColor
+    border-radius: 50%
+
+    position: absolute
+    top: -44px
+    left: -50px
+    z-index: 2
+
+    @media ( max-width: 420px )
+        left: -44px
+
+.cycles__contentBottomItemCircleInnerCircle
+    display: flex
+    align-items: center
+    justify-content: center
+
+    width: 47px
+    height: 47px
+
+    transition: background-color .3s ease
+    background-color: #1E1E1E
+    border-radius: 50%
+    box-shadow: 1px 4px 9px 3px rgba(0, 0, 0, 0.25)
+
+.cycles__contentBottomItemCircleInnerCircleText
+    font-weight: 700
+    @include adaptiveFont(18, 16)
+    line-height: 1
+    color: #fff
+
+    transition: background-color .3s ease
+
+// item bottom
+.cycles__contentBottomItemLeft
+    display: flex
+    align-items: center
+
+    padding: 10px 20px
+
+    width: 175px
+    max-height: 37px
+
+    background-color: $saladColor
+    border-radius: 10px
+
+    transform: translate(-50%, 50%) rotate(-90deg)
+
+    position: absolute
+    left: 0
+    bottom: 50%
+
+.cycles__contentBottomItemLeftTitle
+    font-weight: 400
+    @include adaptiveFont(18, 16)
+    line-height: 1.2
+    color: #353535
+
+.cycles__contentBottomItemRight
+    display: flex
+    align-items: center
+    justify-content: center
+
+    padding: 30px 40px 30px 60px
+
+    background: #232323
+    border-radius: 15px
+
+    width: 100%
+    height: 100%
+
+    @media ( max-width: 420px )
+        padding: 40px 30px 15px 48px
+
+.cycles__contentBottomItemRightBg
+    background-color: #333333
+    box-shadow: 5px 6px 9px rgba(0, 0, 0, 0.25)
+    border-radius: 15px
+
+    width: 100%
+    height: 100%
+    position: absolute
+    left: 10px
+    top: 0
+
+// .cycles__contentBottomItemRightList
+.cycles__contentBottomItemRightListItem
+    display: flex
+    // align-items: baseline
+
+    margin-bottom: 15px
+
+.cycles__contentBottomItemRightListItemDash
+    margin-right: 12px
+    margin-top: 8px
+
+    width: 16px
+    height: 1px
+
+    background-color: #BABABA
+
+.cycles__contentBottomItemRightListItemText
+    font-weight: 350
+    font-size: 15px
+    line-height: 1.2
+    color: #FFFFFF

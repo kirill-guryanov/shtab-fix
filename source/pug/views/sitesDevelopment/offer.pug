@@ -1,0 +1,83 @@
+section.offer.sectionForProgresCircleColor.whiteSection
+    h1.visibleHidden Статистика
+
+    img.offer__decorativeCircle(
+        src="assets/images/utils/circleWithLines.svg" alt="Декоративный круг"
+        width=421 height=421
+    )
+
+    .container.animationItem.animationNoRepeat(data-scroll data-scroll-call="7").fadeIn
+        .titleBlockWithBg
+            h2.titleWithBg Давайте поработаем!
+
+        .offer__content
+            h2.offer__contentTitle Мы уверены, что мы сможем сделать многое для вас, чтобы дать вам хороший результат
+
+            form(action="" method="").offer__form
+                .offer__formBody
+                    .offer__formInputs
+                        input(type="text" placeholder="Ваше имя" name="name").offer__formInput
+                        input(type="tel" placeholder="Ваш телефон" name="tel").offer__formInput
+                    
+                    .offer__formCheckboxes
+                        header.offer__formCheckboxesHeader
+                            h3.offer__formCheckboxesTitle Удобное для вас время звонка (По Московскому времени)
+
+                        .offer__formCheckboxesCols
+                            .offer__formCheckboxesCol
+                                .offer__formCheckboxesWithCustom
+                                    input(type="checkbox" id="ten" name="ten").offer__formCheckbox
+                                    .offer__formCheckboxCustom
+                                        .offer__formCheckboxCustomFillWrapper
+                                            .offer__formCheckboxCustomFill
+                                    label(for="ten").offer__formCheckboxLabel
+                                        time(datetitme="10:00") 10:00 
+                                        | - 
+                                        time(datetitme="13:00") 13:00
+
+                                .offer__formCheckboxesWithCustom
+                                    input(type="checkbox" id="sixteen" name="sixteen").offer__formCheckbox
+                                    .offer__formCheckboxCustom
+                                        .offer__formCheckboxCustomFillWrapper
+                                            .offer__formCheckboxCustomFill
+                                    label(for="sixteen").offer__formCheckboxLabel
+                                        time(datetitme="16:00") 16:00 
+                                        | - 
+                                        time(datetitme="19:00") 19:00
+
+                            .offer__formCheckboxesCol
+                                .offer__formCheckboxesWithCustom
+                                    input(type="checkbox" id="thirteen" name="thirteen").offer__formCheckbox
+                                    .offer__formCheckboxCustom
+                                        .offer__formCheckboxCustomFillWrapper
+                                            .offer__formCheckboxCustomFill
+                                    label(for="thirteen").offer__formCheckboxLabel
+                                        time(datetitme="13:00") 13:00 
+                                        | - 
+                                        time(datetitme="16:00") 16:00
+
+                                .offer__formCheckboxesWithCustom
+                                    input(type="checkbox" id="notMatter" name="notMatter").offer__formCheckbox
+                                    .offer__formCheckboxCustom
+                                        .offer__formCheckboxCustomFillWrapper
+                                            .offer__formCheckboxCustomFill
+                                    label(for="notMatter").offer__formCheckboxLabel
+                                        p Не имеет значения
+
+                    .offer__formButtonBlock
+                        button(type="submit").fillingButton.fillingButton--infoOffer
+                            .fillingButton__imageSrcInDataTag(data-src="assets/images/utils/arrowForFillingButton--black.svg")
+                            svg.fillingButton__svg( viewBox="0 0 204 204" )
+                                circle.fillingButton__svg-circle.fillingButton__svg-circle--infoOffer( cx="102" cy="102" r="102" fill="transparent" )
+
+                            .fillingButton__circle.fillingButton__circle--black-border.fillingButton__circle--infoOffer
+
+                            .fillingButton__content
+                                p
+                                    span.fillingButton__span--smallMargin Отправить
+
+                footer.offer__formFooter
+                    p.offer__formFooterText Нажимая кнопку, вы разрешаете обработку персональных данных и соглашаетесь с политикой конфиденциальности.
+
+                
+        

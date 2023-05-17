@@ -1,0 +1,67 @@
+.intro-contacts
+    img.contacts__decoration-circle-contacts(
+        src="assets/images/contacts/decoration-circle.svg" alt="Телефонная трубка"
+        width=465 height=465
+    )
+
+    .container.container--contacts
+        .contacts__left
+            h1.contacts__left-title Контакты
+            ul.contacts__left-contacts-list
+                li.contacts__left-contacts-list-item
+                    h2.contacts__left-contacts-list-item-title Телефон для связи
+                    .contacts__left-contacts-list-item-contacts
+                        img.contacts__left-contacts-list-item-contacts-image(
+                            src="assets/images/contacts/phone.svg" alt="Телефонная трубка"
+                            width=24 height=24
+                        )
+                        address.contacts__left-contacts-list-item-contacts-texts
+                            a( href="tel:+7 (905) 022-62-28" ).contacts__left-contacts-list-item-contacts-text.contacts__left-contacts-list-item-contacts-text--phone +7 (905) 022-62-28
+                            a( href="" ).contacts__left-contacts-list-item-contacts-text--bottom Написать в whatsapp
+
+                li.contacts__left-contacts-list-item
+                    h2.contacts__left-contacts-list-item-title Для гостей
+                    .contacts__left-contacts-list-item-contacts
+                        img.contacts__left-contacts-list-item-contacts-image(
+                            src="assets/images/contacts/marker.svg" alt="Маркер на карте"
+                            width=27 height=27
+                        )
+                        address.contacts__left-contacts-list-item-contacts-texts
+                            a( href="#" ).contacts__left-contacts-list-item-contacts-text г. Казань ул. Четаева д. 5А
+
+                li.contacts__left-contacts-list-item
+                    h2.contacts__left-contacts-list-item-title Режим работы
+                    .contacts__left-contacts-list-item-contacts
+                        img.contacts__left-contacts-list-item-contacts-image(
+                            src="assets/images/contacts/clock.svg" alt="Часы"
+                            width=23 height=23
+                        )
+                        address.contacts__left-contacts-list-item-contacts-texts
+                            .contacts__left-contacts-list-item-contacts-text--time Пн — Пт: с 9.00 до 19.00
+                            .contacts__left-contacts-list-item-contacts-text--time Сб — Вс: с 10.00 до17:00
+
+                li.contacts__left-contacts-list-item
+                    h2.contacts__left-contacts-list-item-title Для писем
+                    .contacts__left-contacts-list-item-contacts.contacts__left-contacts-list-item-contacts--center
+                        img.contacts__left-contacts-list-item-contacts-image(
+                            src="assets/images/contacts/mail.svg" alt="Почта"
+                            width=21 height=22
+                        )
+                        address.contacts__left-contacts-list-item-contacts-texts
+                            a( href="mailto:info@itshtab.ru" ).contacts__left-contacts-list-item-contacts-text info@itshtab.ru
+
+            .contacts__left-button
+                a.fillingButton.fillingButton--contacts( href="brief.html" )
+                    .fillingButton__imageSrcInDataTag(data-src="assets/images/utils/arrowForFillingButton--black.svg")
+                    svg.fillingButton__svg( viewBox="0 0 204 204" )
+                        circle.fillingButton__svg-circle.fillingButton__svg-circle--contacts( cx="102" cy="102" r="102" fill="transparent" )
+
+                    .fillingButton__circle.fillingButton__circle--black-border.fillingButton__circle--contacts
+
+                    .fillingButton__content
+                        p.fillingButton__p.fillingButton__p--black
+                            span Заполнить
+                            | бриф
+
+        .contacts__right
+            #map

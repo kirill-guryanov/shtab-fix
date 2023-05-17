@@ -1,0 +1,99 @@
+.stages__contentBottom__decorationRightLines-attraction
+    position: absolute
+    top: -123px
+    right: -71px
+
+    @media ( max-width: 900px )
+        display: none
+
+//
+.stages-attraction
+    padding-top: 60px
+
+    max-height: 523px
+
+    background-color: #262626
+
+    overflow: initial
+
+.stages__content-attraction
+    display: flex
+    flex-direction: column
+
+.stages__contentTop-attraction
+    margin-bottom: 50px
+
+// bottom
+.stages__contentBottomWrapper-attraction
+    position: relative
+
+.stages__contentBottom-attraction
+    padding: 65px 85px
+
+    max-width: 1395px
+
+    background-color: $saladColor
+    border-radius: 20px
+
+    position: relative
+    z-index: 1
+
+    @media ( max-width: 500px )
+        padding: 65px 35px
+
+// items
+.stages__contentBottomItems-attraction
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    column-gap: 25px
+
+    @media ( max-width: 1150px )
+        grid-template-columns: repeat(2, 1fr)
+        row-gap: 35px
+
+    @media ( max-width: 710px )
+        grid-template-columns: repeat(1, 1fr)
+        row-gap: 35px
+
+// .stages__contentBottomItem
+
+.stages__contentBottomItemTop-attraction
+    display: flex
+    align-items: center
+
+    margin-bottom: 35px
+
+    & .servisec-list__item
+        margin-right: 15px
+        margin-top: -8px
+
+        transform: rotate(270deg)
+
+        @media ( max-width: 600px )
+            margin-right: 0px
+            margin-left: 20px
+
+        & .servisec-list__item-title-span-wrapper
+            transform: rotate(15deg)
+
+.stages__contentBottomItemTopTitle-attraction
+    font-weight: 700
+    @include adaptiveFont(25, 18)
+    line-height: 1.2
+    letter-spacing: 0.015em
+    color: #262626
+
+.stages__contentBottomItemBottomList-attraction
+    display: flex
+    flex-direction: column
+
+.stages__contentBottomItemBottomListItem-attraction
+    display: flex
+
+    margin-bottom: 20px
+
+.stages__contentBottomItemBottomListItemText-attraction
+    font-weight: 400
+    @include adaptiveFont(20, 16)
+    line-height: 1.2
+    color: #000000

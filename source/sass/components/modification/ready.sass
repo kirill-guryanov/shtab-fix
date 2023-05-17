@@ -1,0 +1,178 @@
+.ready
+    padding: 60px 0
+
+    background-color: #262626
+
+.ready__content
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    @media (max-width: 1040px)
+        flex-direction: column
+        align-items: center
+
+// left
+.ready__contentLeft
+    margin-right: 60px
+
+    @media (max-width: 1040px)
+        margin-right: 0
+        margin-bottom: 70px
+
+        text-align: center
+
+.ready__contentLeftTop
+    margin-bottom: 45px
+
+.ready__contentLeftTopTexts
+    max-width: 610px
+    // margin: bottom 40px
+
+.ready__contentLeftTopTextsText
+    margin-top: 15px
+
+    font-weight: 350
+    font-size: 20px
+    @include adaptiveFont(20, 16)
+    line-height: 1.2
+    color: #949494
+
+// form 
+// .ready__contentLeftBottomFormWrapper
+.ready__contentLeftBottomForm
+    padding: 25px 35px
+
+    max-width: 639px
+    width: 100%
+
+    background-color: transparent
+    border: 1px solid #666666
+    border-radius: 20px
+
+.ready__contentLeftBottomFormTitleWrapper
+    margin-bottom: 30px
+
+.ready__contentLeftBottomFormTitle
+    font-weight: 700
+    font-size: 25px
+    @include adaptiveFont(25, 18)
+    line-height: 1.2
+    color: #FFFFFF
+
+    @media (max-width: 560px)
+        flex-direction: column
+
+.ready__contentLeftBottomFormInput
+    padding: 0 16px
+    max-width: 266px
+
+    width: 100%
+    height: 44px
+
+    border: 1px solid #D0D0D0
+    border-radius: 10px
+    background-color: transparent
+
+    font-weight: 400
+    font-size: 16px
+    line-height: 1.2
+    color: #fff
+
+    @media (max-width: 1040px)
+        margin-bottom: 20px
+
+    &:not(:last-child)
+        margin-right: 20px
+
+        @media (max-width: 1040px)
+            margin-right: 0
+
+    &::placeholder
+        color: #9A9A9A
+
+.ready__contentLeftBottomFormTextWrapper
+    margin-bottom: 20px
+
+.ready__contentLeftBottomFormText
+    font-weight: 350
+    font-size: 14px
+    line-height: 1.2
+    color: #797979
+
+// buttom
+.ready__contentLeftBottomFormButtonWrapper
+    @media (max-width: 690px)
+        display: flex
+        justify-content: center
+
+.ready__contentLeftBottomFormButton
+    display: flex
+    align-items: center
+    justify-content: center
+
+    padding: 12px 15px
+
+    max-width: 256px
+    min-height: 44px
+
+    width: 100%
+
+    background-color: #C6FF00
+    border-radius: 10px
+
+    transition: background-color .3s ease
+
+    text-align: center
+
+    &:hover
+        background: #fff
+
+.ready__contentLeftBottomFormButtonText
+    margin-right: 20px
+
+    font-weight: 400
+    @include adaptiveFont(18, 16)
+    line-height: 1.2
+    color: #2D2D2D
+
+// .ready__contentLeftBottomFormButtonImage
+// right
+.ready__contentRight
+    flex-shrink: 0
+
+    @media (max-width: 1220px)
+        flex-shrink: unset
+
+.ready__contentRightItems
+    display: grid
+    grid-template-columns: repeat(1, 1fr)
+    row-gap: 40px
+
+// right item
+.ready__contentRightItem
+    max-width: 500px
+
+    display: flex
+
+.ready__contentRightItemLeft
+    margin-right: 35px
+
+    height: 100%
+
+// .ready__contentRightItemLeftImage
+// .ready__contentRightItemRight
+
+.ready__contentRightItemRightTitle
+    margin-bottom: 10px
+
+    font-weight: 400
+    @include adaptiveFont(25, 18)
+    line-height: 1.2
+    color: #FFFFFF
+
+.ready__contentRightItemRightText
+    font-weight: 350
+    @include adaptiveFont(20, 16)
+    line-height: 1.2
+    color: #FFFFFF

@@ -1,0 +1,54 @@
+@use "sass:math"
+
+$maxLayoutWidth: 1920
+$minLayoutWidth: 320
+
+@function strip-unit($number)
+  @if type-of($number) == 'number' and not unitless($number)
+    @return math.div($number ,($number * 0 + 1))
+
+  @return $number
+
+@mixin adaptiveFont($f-max, $f-min, $units: px)
+  $f-min: strip-unit($f-min)
+  $f-max: strip-unit($f-max)
+  $w-min: strip-unit($minLayoutWidth)
+  $w-max: strip-unit($maxLayoutWidth)
+
+  $k: math.div(($f-max - $f-min),($w-max - $w-min))
+  $b: $f-min - $k * $w-min
+
+  $b: $b + $units
+
+  @media (min-width: #{$maxLayoutWidth + px})
+    font-size: #{$f-max + px}
+
+  @media (max-width: #{$maxLayoutWidth - 1 + px})
+    font-size: calc( #{$k} * 100vw + #{$b} )
+
+@mixin adaptiveFontHeight($f-max, $f-min, $units: px)
+  $f-min: strip-unit($f-min)
+  $f-max: strip-unit($f-max)
+  $w-min: strip-unit($minLayoutWidth)
+  $w-max: strip-unit($maxLayoutWidth)
+
+  $k: calc(($f-max - $f-min)/($w-max - $w-min))
+  $b: $f-min - $k * $w-min
+
+  $b: $b + $units
+
+  @media (min-width: #{$maxLayoutWidth + px})
+    height: #{$f-max + px}
+
+  @media (max-width: #{$maxLayoutWidth - 1 + px})
+    height: calc( #{$k} * 100vw + #{$b} )
+
+//@mixin adaptiveFont($desktopSize, $mobileSize)
+//  $addSize: $desktopSize - $mobileSize
+//  $addMobSize: $addSize - ( $addSize * 0.7 )
+//  @media (max-width: #{$maxLayoutWidth + px})
+//    font-size: #{$desktopSize + px}
+//  @media (max-width: 767px)
+//    font-size: calc(#{$mobileSize + px} + #{$addMobSize} * ((100vw - 320px) / #{$maxLayoutWidth}))
+//  @media (min-width: 767px)
+//    font-size: calc(#{$mobileSize + px} + #{$addSize} * (100vw / #{$maxLayoutWidth}))

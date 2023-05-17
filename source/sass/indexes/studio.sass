@@ -1,0 +1,108 @@
+// variables
+@import "../components/utils/variables"
+// utils
+@import "../components/utils/container"
+@import "../components/utils/locomotive.scss"
+@import "../components/utils/preloader"
+@import "../components/utils/variables"
+@import "../components/utils/mixins"
+@import "../components/utils/fonts"
+@import "../components/utils/reset"
+@import "../components/utils/fillingButton"
+@import "../components/utils/sectionTitles"
+// functional
+@import "../components/services/statistics"
+// // sections
+@import "../components/studio/intro"
+@import "../components/studio/about"
+@import "../components/studio/team"
+@import "../components/studio/hoisting"
+// 
+@import "../components/circle/circle"
+@import "../components/header/header"
+@import "../components/utils/burgerMenu"
+@import "../components/footer/footer"
+
+html
+    scroll-behavior: smooth
+
+body
+    display: flex
+    flex-direction: column
+
+    font-family: 'Circe', serif
+
+    position: relative
+
+main
+    flex-grow: 1
+
+input:focus
+    border: 1px solid $saladColor
+    outline: none
+
+#butter
+    position: fixed
+
+// header phone
+.header__contacts-item-number-image
+    display: none
+
+    margin-right: 15px
+
+    &--black
+        @media (max-width: 390px)
+            display: inherit
+
+    &--white
+        @media (max-width: 390px)
+            display: none
+
+// header
+.header--main
+    background-color: transparent
+
+    &--min-padding
+        background-color: #1B1B1B
+        padding: 10px 0 15px
+
+.header--main-black-mode
+    background-color: #1d1d1d
+
+.header__burger-span
+    background-color: #fff
+
+.header__nav-item,
+.header__contacts-item-number,
+.header__contacts-item-back-call
+    color: #fff
+
+.header__logo-block-image--black
+    display: none
+
+.header__logo-block-image--white
+    display: block
+
+.header__contacts-item-image--black
+    display: none
+
+.header__contacts-item-image--white
+    display: block
+
+// header letters
+.header__nav-item-text
+    & .block:last-child
+        color: #ffffff
+
+// statistics
+.statistics
+    background-color: #fff
+
+.statistics__itemNumber,
+.statistics__itemTitle
+    color: #000
+
+.statistics__items
+    @media (max-width: 640px)
+        grid-template-columns: repeat(2,1fr)
+        grid-row-gap: 50px

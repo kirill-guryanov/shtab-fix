@@ -1,0 +1,95 @@
+.costs-serm
+    padding: 70px 0 35px
+
+    background-color: #262626
+
+    & .servicesTitle
+        @media ( max-width: 420px )
+            text-align: center
+
+// .costs__content
+// top
+.costs__contentTop-serm
+    margin-bottom: 45px
+// bottom
+// .costs__contentBottom
+
+.costs__contentBottomItems-serm
+    display: grid
+    grid-template-columns: repeat(3,1fr)
+    column-gap: 50px
+    row-gap: 50px
+
+    @media ( max-width: 1130px )
+        grid-template-columns: repeat(2,1fr)
+        justify-items: center
+
+    @media ( max-width: 685px )
+        grid-template-columns: repeat(1,1fr)
+
+// Item
+.costs__contentBottomItem-serm
+    padding: 30px
+
+    max-width: 430px
+    width: 100%
+
+    min-height: 268px
+
+    background-color: #fff
+    border-radius: 20px
+
+    @media ( max-width: 685px )
+        max-width: 100%
+
+// top
+.costs__contentBottomItemTop-serm
+    display: flex
+    align-items: center
+
+    margin-bottom: 20px
+
+.costs__contentBottomItemTopLeft-serm
+    margin-right: 20px
+
+// .costs__contentBottomItemTopLeftIcon
+
+// .costs__contentBottomItemTopRight
+
+.costs__contentBottomItemTopRightTitle-serm
+    margin-bottom: 7px
+
+    font-weight: 700
+    @include adaptiveFont(24, 18)
+    font-size: 24px
+    line-height: 1.1
+    color: #343434
+
+.costs__contentBottomItemTopRightText-serm
+    font-weight: 350
+    font-size: 16px
+    line-height: 1.2
+    color: #343434
+
+// middle
+.costs__contentBottomItemMiddle-serm
+    margin-bottom: 20px
+
+.costs__contentBottomItemMiddleText-serm
+    font-weight: 350
+    font-size: 16px
+    line-height: 1.2
+    color: #343434
+
+// bottom
+// .costs__contentBottomItemBottom
+
+// button
+.fillingButton__svg--costsItem,
+.fillingButton__circle--costsItem,
+.fillingButton__svg-circle--costsItem
+    width: 62px
+    height: 62px
+
+.fillingButton__p--costsItem
+    font-weight: normal

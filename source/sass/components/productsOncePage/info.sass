@@ -1,0 +1,228 @@
+.info
+    padding: 70px 0 80px
+
+    position: relative
+
+    @media ( max-width: 640px )
+        padding-bottom: 30px
+
+    @media ( max-width: 580px )
+        padding-top: 30px
+
+// decor
+.info__decorativeCircleWithLines--transparent
+    position: absolute
+    right: -120px
+    bottom: -300px
+    z-index: -1
+
+    @media (max-width: 1350px)
+        display: none
+
+// text
+.infoTitle
+    font-weight: 700
+    @include adaptiveFont(30, 18)
+    line-height: 1.2
+    color: #1B1B1B
+
+    @media ( max-width: 580px )
+        text-align: center
+
+    &--big
+        @include adaptiveFont(35, 20)
+
+    &--small
+        @include adaptiveFont(25, 18)
+
+    &--white
+        color: #fff
+
+    &--notCenter
+        text-align: left
+
+        @media ( max-width: 490px )
+            text-align: center
+
+.infoText
+    font-weight: 400
+    @include adaptiveFont(20, 16)
+    line-height: 1.2
+    color: #000
+
+    &--350
+        font-weight: 350
+
+    &--500
+        font-weight: 500
+        @include adaptiveFont(18, 16)
+
+    &--white
+        color: #fff
+
+// content
+.info__content
+    display: flex
+    flex-direction: column
+
+// top
+.info__contentTop
+    display: flex
+    justify-content: space-between
+
+    margin-bottom: 120px
+
+    @media ( max-width: 1115px )
+        margin-bottom: 60px
+
+    @media ( max-width: 580px )
+        flex-direction: column
+
+// left
+.info__contentTopLeft
+    flex-shrink: 0
+
+    margin-right: 50px
+
+    @media ( max-width: 580px )
+        margin-bottom: 30px
+
+.info__contentTopLeftTitle
+    margin-bottom: 25px
+
+.info__contentTopLeftList
+    display: block
+
+.info__contentTopLeftListItem
+    display: flex
+    align-items: center
+
+    &:not(:last-child)
+        margin-bottom: 20px
+
+// right
+.info__contentTopRight
+    max-width: 835px
+
+.info__contentTopRightItem
+    &:not(:last-child)
+        margin-bottom: 25px
+
+.info__contentTopRightItemTitle
+    margin-bottom: 15px
+
+.info__contentTopRightItemText
+    &:not(:last-child)
+        margin-bottom: 15px
+
+// bottom
+// left
+.info__contentBottom
+    display: flex
+    justify-content: space-between
+    align-content: stretch
+
+    @media ( max-width: 1115px )
+        flex-direction: column-reverse
+        align-items: center
+
+.info__contentBottomLeftWrapper
+    flex-shrink: 1
+
+    min-height: 100%
+
+    position: relative
+    margin-right: 20px
+
+    @media ( max-width: 1115px )
+        margin-top: 50px
+
+        text-align: center
+
+.info__contentBottomLeft
+    flex-shrink: 0
+    align-self: auto
+
+    margin-right: 50px
+
+    @media ( max-width: 1115px )
+        margin-right: 0
+
+.info__contentBottomLeftLists
+    display: flex
+    flex-direction: column
+
+    margin-bottom: 70px
+
+    @media ( max-width: 600px )
+        margin-bottom: 35px
+
+.info__contentBottomLeftListsItem
+    &:not(:last-child)
+        margin-bottom: 30px
+
+.info__contentBottomLeftListsItemTitle
+    margin-bottom: 20px
+
+.info__contentBottomLeftListsItemListItem
+    display: flex
+    align-items: baseline
+
+    margin-bottom: 10px
+
+    text-align: left
+    line-height: 1.4
+    @include adaptiveFont(20, 16)
+
+// stack
+.info__contentBottomLeftStackTitle
+    margin-bottom: 35px
+
+.info__contentBottomLeftStackItems
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-column-gap: 15px
+    grid-row-gap: 55px
+
+    @media ( max-width: 1230px )
+        grid-template-columns: repeat(2, 1fr)
+
+    @media ( max-width: 1115px )
+        grid-template-columns: repeat(3, 1fr)
+        justify-content: center
+
+    @media ( max-width: 615px )
+        grid-template-columns: repeat(2, 1fr)
+
+    @media ( max-width: 400px )
+        grid-template-columns: repeat(1, 1fr)
+        grid-row-gap: 20px
+
+.info__contentBottomLeftStackItem
+    display: flex
+    align-items: center
+
+    @media ( max-width: 1115px )
+        justify-content: center
+
+.info__contentBottomLeftStackItemImage
+    margin-right: 10px
+
+// right
+.info__contentBottomRight
+    @media ( max-width: 1115px )
+        width: 100%
+
+.info__contentBottomRightImage
+    width: auto
+
+    aspect-ratio: 1/2
+    object-fit: cover
+
+    @media ( max-width: 1115px )
+        width: 100%
+        height: 100%
+        object-position: unset
+
+    // @media ( max-width: 450px )
+    //     object-position: 0 -40px

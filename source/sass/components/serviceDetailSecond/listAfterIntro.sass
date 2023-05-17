@@ -1,0 +1,118 @@
+.listAfterIntro
+    padding: 50px 0 76px
+
+    background-color: #1E1E1E
+
+    position: relative
+
+.blogLines
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+
+    margin: 0 auto
+
+    max-width: 495px
+    width: 100%
+
+    position: absolute
+    top: 0
+    bottom: 0
+
+.blogLine
+    width: 1px
+    height: 100%
+
+    background-color: #fff
+    opacity: .1
+
+    transition: transform 5s ease
+
+.listAfterIntro__content
+    position: relative
+    z-index: 1
+
+// top
+.listAfterIntro__contentTop
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    margin-bottom: 60px
+
+// left
+.listAfterIntro__contentTopLeft
+    margin-right: 30px
+
+    @media ( max-width: 620px )
+        width: 100%
+
+        text-align: center
+
+.listAfterIntro__contentTopLeftTitle
+    font-weight: 700
+    font-size: 40px
+    @include adaptiveFont(40, 18)
+    line-height: 1.2
+    letter-spacing: 0.015em
+    color: #FFFFFF
+
+// right
+.listAfterIntro__contentTopRight
+    @media ( max-width: 620px )
+        display: none
+
+.listAfterIntro__contentTopRightText
+    font-weight: 800
+    @include adaptiveFont(80, 20)
+    line-height: 1.2
+    color: #fff
+    opacity: .1
+
+// bottom
+// .listAfterIntro__contentBottom
+
+// solve
+// right list
+.solve__contentRightList
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    row-gap: 50px
+    column-gap: 90px
+
+    @media ( max-width: 1120px )
+        row-gap: 60px
+        column-gap: 60px
+        grid-template-columns: repeat(2, 1fr)
+
+    @media ( max-width: 660px )
+        grid-template-columns: repeat(1, 1fr)
+        row-gap: 50px
+
+.solve__contentRightListItem
+    display: flex
+    align-items: center
+
+    & .servisec-list__item
+        margin-top: -20px
+        margin-right: 15px
+
+        width: 75px
+
+        transform: rotate(270deg)
+
+        @media ( max-width: 600px )
+            margin-right: 10px
+            margin-left: 20px
+
+        & .servisec-list__item-title-span-wrapper
+            transform: rotate(15deg)
+
+.solve__contentRightListItemText
+    font-weight: 400
+    @include adaptiveFont(20, 18)
+    line-height: 1.2
+    color: #fff
+
+    &--bold
+        font-weight: 700

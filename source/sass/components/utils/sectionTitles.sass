@@ -1,0 +1,63 @@
+.section__titles
+  display: flex
+  justify-content: space-between
+
+.section__titles-left
+  @media (max-width: 680px)
+    margin-right: 35px
+
+.section__titles__decoration-right
+  width: 125px
+  height: 120px
+
+.services__decoration-right-image--parallax
+  display: inline-block
+
+  @media (max-width: 680px)
+    width: 99px
+    height: 117px
+
+.section__overtitle
+  display: flex
+  align-items: center
+
+  margin-bottom: 10px
+
+.section__overtitle-text
+  font-weight: 400
+  @include adaptiveFont(20, 14)
+  line-height: 1
+  color: #000000
+
+  &--white
+    color: #fff
+
+  &--black
+    color: #000
+
+  &--productsOncePage
+    @include adaptiveFont(21, 18)
+    text-transform: uppercase
+    color: #fff
+
+.section__overtitle-text-index
+  font-weight: 400
+  @include adaptiveFont(20, 14)
+  line-height: 1
+  color: #000000
+
+.section__overtitle-line
+  margin-left: 25px
+
+  width: 66px
+  height: 1px
+  border: 1px solid rgb(197 197 197)
+
+.section__title-title
+  font-weight: 800
+  @include adaptiveFont(40, 25)
+  line-height: 1
+  color: #000000
+
+  &--white
+    color: #fff

@@ -1,0 +1,360 @@
+@import "source/sass/components/utils/variables"
+
+.blog-index
+  padding-top: 95px
+  padding-bottom: 80px
+
+  position: relative
+
+  @media (max-width: 680px)
+    padding-top: 50px
+    padding-bottom: 50px
+
+  & .fillingButton__circle,
+  & .fillingButton__svg,
+  & .fillingButton__svg-circle
+    @media (max-width: 1300px)
+      width: 71px
+      height: 71px
+
+.fillingButton--blog-top
+  @media (max-width: 1300px)
+    margin-right: 18px
+
+  & .fillingButton__p
+    @media (max-width: 1300px)
+      margin-left: 18px
+
+.blogLines-index
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+
+  margin: 0 auto
+
+  max-width: 495px
+  width: 100%
+
+  // transform: rotate(180deg)
+
+  position: absolute
+  top: 0
+  bottom: 0
+
+.blogLine-index
+  width: 1px
+  height: 100%
+
+  background-color: #EDEDED
+
+.section__titles__blog
+  @media (max-width: 970px)
+    display: grid!important
+
+.about-us__right-side-read-more--black
+  flex-shrink: 0
+
+  color: #000
+
+.blog__telegram-index
+  display: flex
+  justify-content: center
+
+  margin-top: 90px
+
+  width: 100%
+
+  @media (max-width: 630px)
+    margin-top: 40px
+
+// titles
+.section__titles__decoration-right--blog
+  display: flex
+  justify-content: space-between
+
+  margin-top: 0
+
+  width: auto !important
+
+  @media (max-width: 970px)
+    grid-row-start: 1
+    grid-column-start: 2
+
+    margin-top: 0
+
+  @media (max-width: 630px)
+    grid-row-start: 3
+    grid-column-start: 1
+
+    margin-top: 20px
+
+  //@media (max-width: 670px)
+    grid-column-start: 1
+
+.section__titles__decoration-right-text-block
+  margin-top: 40px
+
+  @media (max-width: 970px)
+    grid-column-start: 1
+
+    margin-top: 30px
+
+  @media (max-width: 854px)
+    margin-top: -45px
+
+  @media (max-width: 630px)
+    margin-top: 20px
+
+.section__titles__decoration-right-text
+  max-width: 340px
+
+  font-weight: 400
+  @include adaptiveFont(20, 16)
+  color: #000000
+
+// items
+.blog__items-list-index
+  display: flex
+  gap: 150px
+  justify-content: space-between
+
+  @media (max-width: 1425px)
+    display: grid
+    grid-template-columns: 1fr 1fr
+    justify-items: center
+    gap: unset
+    row-gap: 50px
+
+  @media (max-width: 900px)
+    justify-content: space-between
+
+  @media (max-width: 615px)
+    grid-template-columns: 1fr
+    row-gap: 30px
+
+  @media (max-width: 460px)
+    justify-items: center
+
+//item
+.blog__items-block-index
+  margin-top: 80px
+
+  @media (max-width: 630px)
+    margin-top: 40px
+
+.blog__items-item-index
+  width: 334px
+  height: 386px
+
+  position: relative
+
+  @media (max-width: 1536px)
+    width: 300px
+    height: 333px
+
+  @media (max-width: 1024px)
+    width: 278px
+    height: 300px
+
+  @media (max-width: 854px)
+    width: 245px
+    height: 270px
+
+  &:hover .blog__items-item-image-index
+    transform: scale(1.2)
+
+  &::after
+    content: ""
+    display: block
+
+    width: 100%
+    height: 100%
+
+    background-color: #000
+    opacity: 0
+
+    transition: opacity .3s ease-in-out
+
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+
+  &:hover > .blog__items-item-block-index >.blog__items-item-hidden-block
+    transform: translateY(0)
+
+  &:hover:after
+    opacity: .6
+
+  &:hover .blog__items-item-visible-block-index
+    transform: translateY(0)
+    background-color: #2D2D2D
+
+  &:hover .blog__items-item-visible-block-body-text-index,
+  &:hover .blog__items-item-visible-block-top-date-index
+    color: #fff
+
+.blog__items-item-imageWrapper-index
+  width: 100%
+  height: 100%
+
+  overflow: hidden
+
+.blog__items-item-image-index
+  width: 100%
+  height: 100%
+
+  transition: transform .3s ease
+
+.blog__items-item-block-index
+  width: 278px
+  height: 176px
+
+  overflow: hidden
+
+  position: absolute
+  bottom: 0
+  right: -100px
+  z-index: 1
+
+  @media (max-width: 1536px)
+    right: -30px
+
+  @media (max-width: 854px)
+    width: 245px
+    height: 160px
+
+    right: 0
+
+  @media (max-width: 460px)
+    right: 0
+
+.blog__items-item-visible-block-index
+  display: flex
+  flex-direction: column
+  gap: 15px
+
+  padding: 25px 20px 0 25px
+
+  height: 100%
+
+  background-color: #fff
+  transform: translateY(50px)
+
+  transition: all .3s ease-in-out
+
+  @media (max-width: 854px)
+    padding: 25px 10px 0 15px
+
+.blog__items-item-visible-block-top-index,
+.blog__items-item-visible-block-body-index
+  display: flex
+
+.blog__items-item-visible-block-body-index
+  flex-direction: column
+
+.blog__items-item-visible-block-top-index
+  gap: 10px
+  align-items: center
+
+.blog__items-item-visible-block-top-title-index
+  font-weight: 350
+  @include adaptiveFont(16, 15)
+  color: #ABABAB
+
+.blog__items-item-visible-block-top-circle-index
+  width: 5px
+  height: 5px
+
+  background-color: $saladColor
+  border-radius: 50%
+
+.blog__items-item-visible-block-top-date-index
+  font-weight: 350
+  @include adaptiveFont(16, 15)
+  color: #ABABAB
+
+.blog__items-item-visible-block-body-text-index
+  padding-bottom: 22px
+
+  font-weight: 400
+  @include adaptiveFont(17, 15)
+  color: #404040
+
+  border-bottom: 1px solid rgb(117 117 117)
+
+  @media (max-width: 854px)
+    padding-bottom: 15px
+
+// hidden
+// .blog__items-item-hidden-block-index
+//   display: flex
+//   flex-direction: column
+//   gap: 15px
+
+//   padding: 25px 20px 0 25px
+
+//   width: 278px
+//   height: 176px
+
+//   background-color: #2D2D2D
+
+//   transition: transform .3s ease-in-out
+//   transform: translateY(100%)
+
+//   bottom: 0
+//   position: absolute
+
+.blog__items-item-hidden-block-top-title-index
+  font-weight: 350
+  @include adaptiveFont(16, 15)
+  color: #ABABAB
+
+.blog__items-item-hidden-block-top-date-index
+  font-weight: 350
+  @include adaptiveFont(16, 15)
+  color: #FFFFFF
+
+  opacity: .7
+
+.blog__items-item-hidden-block-body-index
+  display: flex
+  flex-direction: column
+
+.blog__items-item-hidden-block-body-text-index
+  padding-bottom: 22px
+
+  border-bottom: 1px solid #757575
+
+  font-weight: 400
+  @include adaptiveFont(17, 16)
+  color: #FFFFFF
+
+.blog__items-item-hidden-block-body-read-block-index
+  display: inline-flex
+
+  width: min-content
+
+  margin-top: 15px
+
+  & img
+    opacity: .7
+
+    transition: opacity .3s ease-in-out
+
+  &:hover .blog__items-item-hidden-block-body-read-text-index,
+  &:hover img
+    opacity: 1
+
+.blog__items-item-hidden-block-body-read-text-index
+  flex-shrink: 0
+  padding-right: 10px
+
+  font-weight: 350
+  @include adaptiveFont(16, 15)
+  color: #FFFFFF
+
+  opacity: .7
+
+  transition: opacity .3s ease-in-out

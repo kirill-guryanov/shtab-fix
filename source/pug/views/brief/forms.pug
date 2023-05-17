@@ -1,0 +1,280 @@
+section.forms-brief.sectionForProgresCircleColor
+    .container
+        .forms__header-brief
+            h2.forms__header-title-brief Заполните следующие поля
+            .forms__header-texts-brief
+                p.forms__header-text-top-brief
+                    | Данный опросный лист поможет нам более глубоко понять цели и задачи вашего будущего интернет-проекта, а так же узнать подробнее о вас
+                p.forms__header-text-bottom-brief
+                    | Не обязательно заполнять все пункты данного брифа. Заполняйте только ту информацию, которая у вас есть. Если окажутся пропущенными важные для нашей работы пункты – мы обязательно уточним их у Вас. Однако, полное заполнение данного брифа поможет нам лучше понять друг-друга и, соответственно, выполнить работу быстро и качественно
+
+        .forms__about-company-brief
+            .forms__about-company-content-brief
+                form.forms__form-brief.forms__about-company-content-form-brief#info-about-company
+                    .forms__content-brief
+                        .forms__title-block-brief
+                            h3.forms__title-brief Информация о компании
+
+                        .forms__block-brief
+                            .forms__block-left-brief.animationItem.animationNoRepeat(data-scroll data-scroll-call="7").fadeInLeft
+                                .forms__form-input-fieldset-brief
+                                    label.forms__form-input-label-brief( for="company-name" ) Название вашей компании
+                                    input.forms__form-input-brief(
+                                        type="text" name="company-name" placeholder="Название компании или юридического лица"
+                                        spellcheck="true" minlength=5 required id="company-name"
+                                    )
+
+                                    label.forms__form-input-label-brief( for="site-of-company" ) Сайт компании (если есть)
+                                    input.forms__form-input-brief(
+                                        type="text" name="company-name" placeholder="Не заполняйте, если сайта на данный момент нет"
+                                        spellcheck="true" minlength=5 id="site-of-company"
+                                    )
+
+                                    label.forms__form-input-label-brief( for="contacts-face-and-number" ) Контактное лицо и телефон
+                                    input.forms__form-input-brief(
+                                        type="text" name="company-name" placeholder="Укажите имя и телефон"
+                                        spellcheck="true" minlength=5 required id="contacts-face-and-number"
+                                    )
+
+                            .forms__block-right-brief.animationItem.animationNoRepeat(data-scroll data-scroll-call="7").fadeInRight
+                                .forms__form-input-fieldset-brief.forms__form-input-fieldset--wide-brief
+                                    label.forms__form-input-label-brief( for="company-slogan" ) Слоган компании
+                                    input.forms__form-input-brief(
+                                        type="text" name="company-name" placeholder="Если имеется"
+                                        spellcheck="true" minlength=5 id="company-slogan"
+                                    )
+
+                                    label.forms__form-input-label-brief( for="company-activity" ) Описание деятельности компании
+                                    textarea.forms__form-input-brief.forms__form-input-brief--tail.forms__form-textarea-brief(
+                                        name="company-activity" placeholder="Включая информацию о продуктах и услугах компании"
+                                        spellcheck="true" minlength=5 required id="company-activity"
+                                    )
+
+                    .forms__content-brief
+                        .forms__title-block-brief
+                            h3.forms__title-brief Цели и задачи сайта
+
+                        .forms__block-brief
+                            .forms__block-left-brief.animationItem.animationNoRepeat(data-scroll data-scroll-call="7").fadeInLeft
+                                .forms__block-left-title-brief Какую цель должен выполнить сайт
+
+                                .forms__block-left-radio-main-block-brief
+                                    .forms__block-left-radio-block-brief
+                                        input.input__radio-brief.input__radio--js(
+                                            type="radio" checked  name="site-aim" id="tell-about-company"
+                                        )
+                                        .input__radio-custom-brief
+                                            .input__radio-custom-checked-brief
+                                    label.input__radio-label-brief( for="tell-about-company" ) Рассказать о компании и ее деятельности
+
+                                .forms__block-left-radio-main-block-brief
+                                    .forms__block-left-radio-block-brief
+                                        input.input__radio-brief.input__radio--js(
+                                            type="radio" name="site-aim" id="sell-product"
+                                        )
+                                        .input__radio-custom-brief
+                                            .input__radio-custom-checked-brief
+                                    label.input__radio-label-brief( for="sell-product" ) Продажа товаров
+
+                                .forms__block-left-radio-main-block-brief
+                                    .forms__block-left-radio-block-brief
+                                        input.input__radio-brief.input__radio--js(
+                                            type="radio" name="site-aim" id="sell-services"
+                                        )
+                                        .input__radio-custom-brief
+                                            .input__radio-custom-checked-brief
+                                    label.input__radio-label-brief( for="sell-services" ) Продажа услуг
+
+                                .forms__block-left-radio-main-block-brief
+                                    .forms__block-left-radio-block-brief
+                                        input.input__radio-brief.input__radio--js(
+                                            type="radio" name="site-aim" id="online-service"
+                                        )
+                                        .input__radio-custom-brief
+                                            .input__radio-custom-checked-brief
+                                    label.input__radio-label-brief( for="online-service" ) Онлайн сервис
+
+                                .forms__block-left-radio-main-block-brief
+                                    .forms__block-left-radio-block-brief
+                                        input.input__radio-brief.input__radio--js(
+                                            type="radio" name="site-aim" id="have-other"
+                                        )
+                                        .input__radio-custom-brief
+                                            .input__radio-custom-checked-brief
+                                    label.input__radio-label-brief( for="have-other" ) Сайт нужен, потому что есть у других
+
+
+                            .forms__block-right-brief.animationItem.animationNoRepeat(data-scroll data-scroll-call="7").fadeInRight
+                                .forms__form-input-fieldset-brief.forms__form-input-fieldset--wide-brief
+                                    label.forms__form-input-label-brief( for="company-why-decide" ) Что привело Вас к решению создать новый сайт (изменить существующий)?
+                                    textarea.forms__form-input-brief.forms__form-input-brief--tail.forms__form-textarea-brief(
+                                        name="company-why-decide" placeholder="Расскажите в свободной форме"
+                                        spellcheck="true" minlength=5 required id="company-why-decide"
+                                    )
+
+                    .forms__content-brief
+                        .forms__title-block-brief
+                            h3.forms__title-brief Целевая аудитория и конкуренты
+
+                        .forms__block-brief
+                            .forms__block-left-brief.animationItem.animationNoRepeat(data-scroll data-scroll-call="7").fadeInLeft
+                                .forms__form-input-fieldset-brief
+                                    label.forms__form-input-label-brief( for="your target audience" ) Опишите вашу целевую аудиторию
+                                    textarea.forms__form-input-brief.forms__form-input-brief--tail.forms__form-textarea-brief(
+                                        name="your target audience" placeholder="Кто принимает решение о покупке продукта или услуги? Его социально-демографические характеристики (пол, возраст, доход, образование, стиль жизни)"
+                                        spellcheck="true" minlength=5 required id="your target audience"
+                                    )
+
+                            .forms__block-right-brief.animationItem.animationNoRepeat(data-scroll data-scroll-call="7").fadeInRight
+                                .forms__form-input-fieldset-brief.forms__form-input-fieldset--wide-brief
+                                    label.forms__form-input-label-brief( for="your-competition" ) Расскажите о ваших конкурентах
+                                    textarea.forms__form-input-brief.forms__form-input-brief--tail.forms__form-textarea-brief(
+                                        name="your-competition" placeholder="Необходимо указать прямых конкурентов в Вашем ценном сегменте. По возможности охарактеризуйте их сильные и слабые стороны. Укажите адреса сайтов."
+                                        spellcheck="true" minlength=5 required id="your-competition"
+                                    )
+
+                    .forms__content-brief
+                        .forms__title-block-brief
+                            h3.forms__title-brief Наполнение сайта
+
+                        .forms__block-brief
+                            .forms__block-left-brief.animationItem.animationNoRepeat(data-scroll data-scroll-call="7").fadeInLeft
+                                .forms__form-input-fieldset-brief
+                                    label.forms__form-input-label-brief( for="what-materials-do-you-have" ) Какие материалы у вас уже есть
+                                    textarea.forms__form-input-brief.forms__form-input--big-mb-brief.forms__form-input-brief--tail.forms__form-textarea-brief(
+                                        name="what-materials-do-you-have" placeholder="Логотип, знак, фирменный цвет, фирменный шрифт, фотографии, материалы, используемые при разработке другой рекламной продукции и т. д.?"
+                                        spellcheck="true" minlength=5 required id="what-materials-do-you-have"
+                                    )
+
+                                    label.forms__form-input-label-brief( for="what-design-do-you-want" ) Пожелания к дизайну
+                                    textarea.forms__form-input-brief.forms__form-input--big-mb-brief.forms__form-input-brief--tail.forms__form-textarea-brief(
+                                        name="what-design-do-you-want" placeholder="Напишите свои пожелания к дизайну, которые вы хотите чтобы мы учли."
+                                        spellcheck="true" minlength=5 required id="what-design-do-you-want"
+                                    )
+
+                            .forms__block-right-brief.animationItem.animationNoRepeat(data-scroll data-scroll-call="7").fadeInRight
+                                .forms__form-input-fieldset-brief.forms__form-input-fieldset--wide-brief
+                                    label.forms__form-input-label-brief( for="what-pages-do-you-want-to-see" ) Какие страницы вы бы хотели видеть на сайте
+                                    textarea.forms__form-input-brief.forms__form-input--big-mb-brief.forms__form-input-brief--tail.forms__form-textarea-brief(
+                                        name="what-pages-do-you-want-to-see" placeholder="Список страниц (Например: главная, о компании, услуги, детальная страница услуг, контакты, и так далее)"
+                                        spellcheck="true" minlength=5 required id="what-pages-do-you-want-to-see"
+                                    )
+
+                                    label.forms__form-input-label-brief( for="what-sites-do-you-like" ) Сайты, которые вам нравятся
+                                    textarea.forms__form-input-brief.forms__form-input--big-mb-brief.forms__form-input-brief--tail.forms__form-textarea-brief(
+                                        name="what-sites-do-you-like" placeholder="Укажите списком. Это поможет нам еще достичь еще лучшего результата в короткий срок"
+                                        spellcheck="true" minlength=5 required id="what-sites-do-you-like"
+                                    )
+
+                    .forms__content-brief
+                        .forms__title-block-brief
+                            .forms__title-brief.forms__title-brief--flex
+                                h3  Финишная прямая
+                                img.forms__title-image-brief(
+                                    src="assets/images/brief/flags.svg" alt="Флаги"
+                                    width=53 height=47
+                                )
+
+                        .forms__block.forms__block--column-brief
+                            .forms__block-left-brief--mb
+                                .forms__block-left-title-brief.forms__block-left-title-brief--biggest-font Вашю-бджет на разработку
+                                .forms__block-left-text-brief
+                                    | Мы работаем с любым бюджетом, и нам очень хочется видеть вас в числе наших клиентов, выбранный вами бюджет поможет нам сделать наилучшее предложения по соотношению цена-качество, от выбранного бюджета зависит уровень проработки, и какие этапы будет включать в себя разработка
+
+                            .forms__block-right-brief.forms__block-right-brief--flex.animationItem.animationNoRepeat(data-scroll data-scroll-call="7").fadeIn
+                                .forms__form-radio-block-brief
+                                    label.forms__form-radio-label-brief( for="100k" ) Менее 100 т.р
+                                    input.forms__form-checkbox-brief(
+                                        type="checkbox" checked name="less-than-100k" id="100k"
+                                    )
+
+                                .forms__form-radio-block-brief
+                                    label.forms__form-radio-label-brief( for="100k-300k" ) 100 - 300 т.р
+                                    input.forms__form-checkbox-brief(
+                                        type="checkbox" name="100k-300k" id="100k-300k"
+                                    )
+
+                                .forms__form-radio-block-brief
+                                    label.forms__form-radio-label-brief( for="300k-500k" ) 300 - 500 т.р
+                                    input.forms__form-checkbox-brief(
+                                        type="checkbox" name="300k-500k" id="300k-500k"
+                                    )
+
+                                .forms__form-radio-block-brief
+                                    label.forms__form-radio-label-brief( for="1kk-and-more" ) Более 1 млн.р
+                                    input.forms__form-checkbox-brief(
+                                        type="checkbox" name="1kk-and-more" id="1kk-and-more"
+                                    )
+
+                                .forms__form-radio-block-brief
+                                    label.forms__form-radio-label-brief( for="price-undefined" ) Бюджет не определен
+                                    input.forms__form-checkbox-brief(
+                                        type="checkbox" name="price-undefined" id="price-undefined"
+                                    )
+
+                    .forms__content-brief
+                        .forms__block-brief
+                            .forms__block-left-brief.animationItem.animationNoRepeat(data-scroll data-scroll-call="7").fadeInLeft.forms__block-left--narrow-brief
+                                .forms__block-left-title-brief.forms__block-left-title-brief--biggest-font Допустимый срок разработки
+
+                                .forms__block-left-radio-main-block-brief
+                                    .forms__block-left-radio-block-brief
+                                        input.input__radio-brief.input__radio--js(
+                                            type="radio" name="dead-line" id="less-than-month"
+                                        )
+                                        .input__radio-custom-brief
+                                            .input__radio-custom-checked-brief
+                                    label.input__radio-label-brief( for="less-than-month" ) Менее 1 месяца
+
+                                .forms__block-left-radio-main-block-brief
+                                    .forms__block-left-radio-block-brief
+                                        input.input__radio-brief.input__radio--js(
+                                            type="radio" name="dead-line" id="more-than-month"
+                                        )
+                                        .input__radio-custom-brief
+                                            .input__radio-custom-checked-brief
+                                    label.input__radio-label-brief( for="more-than-month" ) Более 1 месяца
+
+                                .forms__block-left-radio-main-block-brief
+                                    .forms__block-left-radio-block-brief
+                                        input.input__radio-brief.input__radio--js(
+                                            type="radio" name="dead-line" id="deadline-undefined"
+                                        )
+                                        .input__radio-custom-brief
+                                            .input__radio-custom-checked-brief
+                                    label.input__radio-label-brief( for="deadline-undefined" ) Срок не определен
+
+                                .forms__block-left-radio-main-block-brief
+                                    .forms__block-left-radio-block-brief
+                                        input.input__radio-brief.input__radio--js(
+                                            type="radio" name="dead-line" id="need-urgently"
+                                        )
+                                        .input__radio-custom-brief
+                                            .input__radio-custom-checked-brief
+                                    label.input__radio-label-brief( for="need-urgently" ) Нужно срочно
+
+
+                            .forms__block-right-brief.animationItem.animationNoRepeat(data-scroll data-scroll-call="7").fadeInRight
+                                .forms__form-input-fieldset-brief.forms__form-input-fieldset-brief--wide
+                                    label.forms__form-input-label-brief( for="helpful-info" ) Любая полезная в работе над проектом информация
+                                    textarea.forms__form-input-brief.forms__form-input-brief--tail.forms__form-textarea-brief.forms__form-textarea-brief--narrow(
+                                        name="helpful-info" placeholder="Расскажите в свободной форме"
+                                        spellcheck="true" minlength=5 required id="helpful-info"
+                                    )
+
+                    .forms__content-brief.forms__content-button--center-brief
+
+                        button(type="submit").fillingButton.fillingButton--big.fillingButton--brief-bottom
+                            .fillingButton__imageSrcInDataTagBlack(data-src="assets/images/utils/arrowForFillingButton--black.svg")
+                            .fillingButton__imageSrcInDataTagWhite(data-src="assets/images/utils/arrowForFillingButton--white.svg")
+                            svg.fillingButton__svg.fillingButton__svg--big( viewBox="0 0 204 204" )
+                                circle.fillingButton__svg-circle.fillingButton__svg-circle--big.fillingButton__svg-circle--brief-bottom( cx="102" cy="102" r="102" fill="transparent" )
+
+                            .fillingButton__circle.fillingButton__circle--big.fillingButton__circle--brief-bottom
+
+                            .fillingButton__content.fillingButton__content--big
+                                p.fillingButton__p
+                                    span Завершить и отправить
+
+                                .fillingButton__images
+                                    .fillingButton__imagesWrapper

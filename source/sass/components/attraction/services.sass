@@ -1,0 +1,145 @@
+.services-attraction
+    padding: 60px 0
+
+    background-color: #262626
+
+    & .intro__bottomTitle
+        max-width: 370px
+
+// top
+.services__contentTop-attraction
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    margin-bottom: 50px
+
+    @media ( max-width: 800px )
+        flex-direction: column
+        align-items: center
+        justify-content: center
+
+.services__contentTopLeft-attraction
+    @media ( max-width: 800px )
+        text-align: center
+        margin-bottom: 20px
+
+// bottom
+.services__contentBottomItems-attraction
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    column-gap: 60px
+    row-gap: 60px
+
+    @media ( max-width: 1335px )
+        grid-template-columns: repeat(2, 1fr)
+        justify-items: center
+
+    @media ( max-width: 800px )
+        grid-template-columns: repeat(1, 1fr)
+
+// item
+.services__contentBottomItem-attraction
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+    padding: 40px 45px 40px 25px
+
+    max-width: 425px
+    min-height: 392px
+
+    background-color: #343434
+    border-radius: 20px
+
+    @media ( max-width: 500px )
+        padding: 40px 15px 40px 15px
+
+.services__contentBottomItemTop-attraction
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    margin-bottom: 23px
+
+.services__contentBottomItemTopImage-attraction
+    margin-right: 15px
+
+.services__contentBottomItemTopTitle-attraction
+    font-weight: 700
+    @include adaptiveFont(25, 20)
+    line-height: 1.1
+    color: #FFFFFF
+
+.services__contentBottomItemText-attraction
+    margin-bottom: 20px
+
+    font-weight: 400
+    font-size: 16px
+    line-height: 1.2
+    color: #FFFFFF
+
+.services__contentBottomItemList-attraction
+    margin-bottom: 35px
+
+    max-width: 310px
+
+.services__contentBottomItemListItem-attraction
+    display: flex
+    align-items: center
+
+    &:not(:last-child)
+        margin-bottom: 12px
+
+.services__contentBottomItemListItemBulletWrapper-attraction
+    display: flex
+    align-items: center
+    justify-content: center
+
+    margin-right: 15px
+
+    width: 20px
+    height: 20px
+
+    border: 1px solid #4E4E4E
+    border-radius: 50%
+
+.services__contentBottomItemListItemText-attraction
+    font-weight: 350
+    font-size: 15px
+    line-height: 1.2
+    color: #989898
+
+.services__contentBottomItemListItemBottom-attraction
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+.services__contentBottomItemListItemBottomPrice-attraction
+    margin-right: 15px
+
+    font-weight: 400
+    @include adaptiveFont(19, 18)
+    line-height: 1.2
+    color: #FFFFFF
+
+.services__contentBottomItemListItemBottomButton-attraction
+    padding: 7px 30px
+
+    max-width: 190px
+    min-height: 35px
+
+    background-color: #D0FF48
+    border-radius: 40px
+    transition: background-color .3s ease
+
+    cursor: pointer
+
+    font-weight: 350
+    @include adaptiveFont(17, 16)
+    line-height: 1.2
+    color: #1E1E1E
+    text-align: center
+
+    &:hover
+        background-color: #fff

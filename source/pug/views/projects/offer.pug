@@ -1,0 +1,28 @@
+section.offer.sectionForProgresCircleColor.whiteSection
+    h1.visibleHidden Давайте поработаем!
+
+    img.offer__decorativeCircle-middle(
+        src="assets/images/utils/circleWithLines.svg" alt="Декоративный круг"
+        width=350 height=350
+    )
+
+    .container.animationItem.animationNoRepeat(data-scroll data-scroll-call="7").fadeIn
+        .titleBlockWithBg 
+            h2.titleWithBg Давайте поработаем!
+            
+        .offer__bottom
+            p.offer__bottomText.offer__bottomText--smallMb
+                | Мы уверены, что мы сможем сделать многое для вас, 
+                | чтобы дать вам хороший результат
+
+            .modalTrigger.fillingButton.fillingButton--projectsOffer.fillingButton--notShrink( href="blog.html" data-modal="1")
+                .fillingButton__imageSrcInDataTag(data-src="assets/images/utils/arrowForFillingButton--black.svg")
+                svg.fillingButton__svg( viewBox="0 0 204 204" )
+                    circle.fillingButton__svg-circle.fillingButton__svg-circle--projectsOffer( cx="102" cy="102" r="102" fill="transparent" )
+
+                .fillingButton__circle.fillingButton__circle--black-border.fillingButton__circle--projectsOffer
+
+                .fillingButton__content
+                    p.fillingButton__p.fillingButton__p--black
+                        span Оставить 
+                        | заявку

@@ -1,0 +1,84 @@
+section.intro-modification.sectionForProgresCircleColor
+    h1.visibleHidden Доработка веб-сайта и работа с контентом
+
+    img.intro__decorativeCircle-modification(
+        src="assets/images/utils/semicircle-to-right--gray.svg" alt="Декоративный круг" 
+        width=122 height=258
+    )
+
+    picture
+        source(srcset="assets/images/utils/glowingCircle.webp" type="image/webp")
+        source(srcset="assets/images/utils/glowingCircle.png" type="image/png")
+        img.intro__decorativeGlowingCircle-modification(
+            src="assets/images/utils/glowingCircle.png" alt="Декоративный круг" 
+        )
+
+    .container.container--introServiceDetail
+        .intro__top
+            .intro__contentLeftSide
+                h2.intro__contentLeftSideTitle 
+                    | Доработка веб-сайта
+                    br
+                    | и работа с контентом
+                p.intro__contentLeftSideText
+                    | От решений с типовым функционалом до высоконагруженных систем. Выстраиваем техническую 
+                    | архитектуру, сценарии покупок, интегрируем сторонние сервисы.
+                .intro__contentLeftSideButton
+                    .fillingButton.fillingButton--introTop.modalTrigger(data-modal="1")
+                        .fillingButton__imageSrcInDataTag(data-src="assets/images/utils/arrowForFillingButton--white.svg")
+                        svg.fillingButton__svg( viewBox="0 0 204 204" )
+                            circle.fillingButton__svg-circle.fillingButton__svg-circle--introTop( cx="102" cy="102" r="102" fill="transparent" )
+
+                        .fillingButton__circle.fillingButton__circle--introTop
+
+                        .fillingButton__content
+                            p.fillingButton__p
+                                span.fillingButton__span--smallMargin-and-partial Остави
+                                | ть заявку
+
+            .intro__contentRightSide
+                picture
+                    source(srcset="assets/images/modification/introRightSide.webp" type="image/webp")
+                    source(srcset="assets/images/modification/introRightSide.png" type="image/png")
+                    img.intro__contentRightSideImage-modification(
+                        src="assets/images/modification/introRightSide.png" alt="Декоративная картинка"
+                        width=500 height=405
+                    )
+
+.intro__bottom.intro__bottom-brown
+   .container
+        .intro__bottomItemsWrapper-serviceDetail
+            .servisec-list__item.servisec-list__item--notMargin.servisec-list__item--notPadding
+                .servisec-list__item-title-span-wrapper.servisec-list__item-title-span-wrapper--wide
+                    .servisec-list__item-title-span-bg
+
+                .servisec-list__item-content
+                    h1.servisec-list__item-title.intro__bottomTitle-serviceDetail.intro__bottomTitle
+                        span.servisec-list__item-title-span Решим вашу задачу 
+                        | любой сложности!
+                
+
+            form().intro__bottomForm-serviceDetail
+                div.intro__bottomForm-serviceDetail-width
+                    div.intro__bottomForm-serviceDetail-inputs
+                        input(type="text" placeholder="Ваше имя" name="name").offer__formInputIntro
+                        input(type="tel" placeholder="Ваш телефон" name="tel").offer__formInputIntro
+
+                    footer.intro__bottomFormDescriptionBlock-serviceDetail
+                        p.intro__bottomFormDescription-serviceDetail
+                            | Нажимая кнопку, вы разрешаете обработку персональных данных и соглашаетесь с 
+                            | политикой конфиденциальности.
+
+                .intro__bottomButton-serviceDetail
+                    .intro__contentLeftSideButton-serviceDetail
+                        button(type="submit").fillingButton.fillingButton--introBottom
+                            .fillingButton__imageSrcInDataTag(data-src="assets/images/utils/arrowForFillingButton--white.svg")
+                            svg.fillingButton__svg.fillingButton__svg--introBottom( viewBox="0 0 160 160" )
+                                circle.fillingButton__svg-circle.fillingButton__svg-circle--introBottom( cx="80" cy="80" r="80" fill="transparent" )
+
+                            .fillingButton__circle.fillingButton__circle--introBottom
+
+                            .fillingButton__content
+                                p.fillingButton__p
+                                    span.fillingButton__span--smallMargin-and-partial Отпра
+                                    | вить

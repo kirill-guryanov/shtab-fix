@@ -1,0 +1,166 @@
+@import "../components/utils/variables"
+@import "../components/utils/mixins"
+@import "../components/utils/fonts"
+@import "../components/utils/reset"
+@import "../components/utils/container"
+@import "../components/utils/fillingButton"
+@import "../components/utils/preloader"
+
+@import "../components/header/header"
+@import "../components/utils/burgerMenu"
+@import "../components/footer/footer"
+@import "../components/utils/locomotive.scss"
+
+body
+  display: flex
+  flex-direction: column
+
+  font-family: 'Circe', serif
+
+  position: relative
+
+main
+  flex-grow: 1
+
+.body--hidden
+  overflow: hidden
+
+input:focus
+  border: 1px solid $saladColor
+  outline: none
+
+//  intro
+.intro404
+  display: flex
+  justify-content: center
+  flex-direction: column
+  align-items: center
+
+  width: 100%
+  height: 860px
+
+  text-align: center
+
+  overflow: unset
+
+  position: relative
+
+  @media(max-width: 768px)
+    height: 580px
+
+  @media(max-width: 540px)
+    margin-top: 50px
+
+    height: 370px
+
+.intro404__decoration-circle-with-lines,
+.intro404__decoration-circle,
+.intro404__decoration-stars,
+.intro404__decoration-line,
+.intro404__decoration-figures
+  position: absolute
+
+.intro404__decoration-circle-with-lines
+  display: block
+
+  z-index: -1
+
+  @media(max-width: 768px)
+    display: none
+
+.intro404__decoration-figures
+  left: 20%
+  bottom: 10%
+
+  @media(max-width: 1024px)
+    left: 5%
+
+  @media(max-width: 735px)
+    bottom: 2%
+
+  @media(max-width: 768px)
+    display: none
+
+.intro404__decoration-line
+  margin: 0 auto
+
+  z-index: -1
+
+.intro404__decoration-circle
+  left: -100px
+  top: 170px
+
+  @media(max-width: 1024px)
+    left: -150px
+
+  @media(max-width: 768px)
+    display: none
+
+.intro404__decoration-stars
+  right: 30%
+  top: 20%
+
+  @media(max-width: 1024px)
+    right: 10%
+    top: 20%
+
+  @media(max-width: 768px)
+    display: none
+
+//@media( max-width: 735px )
+//  top: 13%
+
+// texts
+.intro404__title
+  font-weight: 800
+  @include adaptiveFont(180, 80)
+  line-height: 1
+  color: #000000
+
+.intro404__suptitle
+  margin-bottom: 15px
+
+  font-weight: 800
+  @include adaptiveFont(24, 18)
+  line-height: 1
+  text-align: center
+  color: #000000
+
+  @media(max-width: 500px)
+    margin: 0 auto 15px
+
+    max-width: 200px
+
+.intro404__text
+  margin: 0 auto 33px
+
+  max-width: 400px
+  width: 100%
+
+  font-weight: 400
+  @include adaptiveFont(24, 15)
+  line-height: 112.9%
+  text-align: center
+  color: #000000
+
+  @media(max-width: 500px)
+    max-width: 290px
+
+.intro404__button
+  display: flex
+  align-items: center
+  justify-content: center
+
+// lines
+.decoration-lines
+  display: flex
+  justify-content: space-between
+  height: fit-content
+  position: absolute
+  z-index: -1
+
+  @media(max-width: 730px)
+    display: none
+
+.decoration-line
+  border: 1px solid #EDEDED

@@ -1,0 +1,368 @@
+.footer
+  display: flex
+
+  background-color: #1E1E1E
+  border-radius: 0 50px 0 0
+
+  position: relative
+
+  width: 100%
+
+  min-height: 336px
+
+  @media (max-width: 1460px)
+    width: 100%
+
+  @media (max-width: 930px)
+    flex-direction: column-reverse
+
+// left side
+.footer__left-side
+  display: flex
+  flex-direction: column
+  justify-content: space-evenly
+
+  width: 100%
+  height: auto
+
+  @media (max-width: 1090px)
+    padding: 0 40px
+
+.footer__left-sideItems
+  display: flex
+  justify-content: space-between
+
+  width: 100%
+
+// rights
+.footer__left-side-rights
+  //padding: 19px 0 30px
+
+  border-top: 1px solid #313131
+
+.footer__left-side-rights-text
+  padding: 10px 0 0 0
+
+  font-weight: 350
+  @include adaptiveFont(18, 15)
+  line-height: 1
+  color: #FFFFFF
+  opacity: .5
+
+  @media (max-width: 930px)
+    padding: 15px 0
+    text-align: center
+
+// block
+.footer__blocks
+  display: flex
+  justify-content: space-between
+
+  padding-top: 35px
+  padding-right: 50px
+  padding-bottom: 0
+
+  width: 100%
+
+  &--between
+    justify-content: space-between
+
+  @media (max-width: 1225px)
+    justify-content: space-between
+
+  @media (max-width: 1090px)
+    padding-right: 0
+
+  @media (max-width: 740px)
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    justify-items: center
+
+  @media (max-width: 600px)
+    grid-template-columns: repeat(1, 1fr)
+
+.footer__blocks-item-list
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+
+.footer__blocks-item
+  margin-bottom: 50px
+
+.footer__blocks-item-list--one
+  flex-shrink: 0
+
+  margin-bottom: 18px
+
+  max-width: 205px
+
+  & li:not(:last-child)
+    margin-bottom: 21px
+
+.footer__blocks-item-list--two li:not(:last-child)
+  margin-bottom: 18px
+
+.footer__blocks-item-list--three li:not(:last-child)
+  margin-bottom: 23px
+
+.footer__blocks-item-title
+  margin-bottom: 35px
+
+  font-weight: 700
+  @include adaptiveFont(24, 18)
+  line-height: 1
+  color: #FFFFFF
+
+.footer__blocks-list-item
+  font-weight: 200
+  @include adaptiveFont(16, 14)
+  line-height: 1
+  color: #FFFFFF
+
+// services
+.footer__blocks-list-item--dash
+  margin-left: 30px
+
+  position: relative
+
+  &:before
+    content: ""
+    display: block
+
+    width: 16px
+    height: 1px
+
+    background-color: #fff
+
+    position: absolute
+    top: calc(50% - 1px)
+    left: -28px
+
+.footer__blocks-item-text
+  // max-width: 202px
+
+  font-weight: 350
+  @include adaptiveFont(16, 14)
+  line-height: 1
+  color: #767676
+
+.footer__blocks-item-socials
+  display: flex
+  align-items: center
+
+  & a
+    transition: transform .3s ease-in-out
+
+    &:not(:last-child)
+      margin-right: 15px
+
+    &:hover
+      transform: scale(1.1)
+
+// contacts
+.footer__blocks-list-item--contacts
+  display: flex
+  align-items: center
+  flex-direction: row
+
+  & address
+    margin-left: 10px
+
+.footer__blocks-list-item--contacts-text-block
+  display: flex
+  flex-direction: column
+
+.footer__blocks-list-item--contacts-text
+  font-weight: 200
+  @include adaptiveFont(15, 14)
+  line-height: 1
+  color: #FFFFFF
+
+//form
+.footer__right-side-form-content
+  display: flex
+  flex-direction: column
+  align-items: center
+
+  text-align: center
+
+  @media (max-width: 1090px)
+    padding: 35px
+
+  @media (max-width: 600px)
+    padding: 0
+
+.footer__right-side-form-title
+  margin-bottom: 29px
+
+  font-weight: 500
+  @include adaptiveFont(21, 17)
+  line-height: 1
+  color: #FFFFFF
+
+.footer__right-side-form
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  flex-shrink: 0
+
+  padding: 32px 75px
+
+  height: 100%
+
+  background-color: #212121
+  border-radius: 0 50px 0 0
+
+  // @media (max-width: 1540px)
+  //   width: 35%
+
+  @media (max-width: 1330px)
+    padding: 30px 35px
+
+  @media (max-width: 1090px)
+    padding: 0
+
+    height: auto
+
+  @media (max-width: 930px)
+    // max-width: unset
+
+    width: 100%
+
+.footer__right-side-form-form
+  display: flex
+  flex-direction: column
+
+  max-width: 271px
+
+  width: 100%
+
+.footer__right-side-form-form-input,
+.footer__right-side-form-form-button
+  max-width: 271px
+  width: 100%
+  height: 51px
+
+.footer__right-side-form-form-input
+  padding: 0 33px
+
+  height: 40px
+
+  max-width: 270px
+  width: 100%
+
+  background-color: transparent
+  border: 1px solid #737373
+  border-radius: 40px
+
+  font-weight: 350
+  @include adaptiveFont(18, 15)
+  line-height: 1
+  color: #CECECE
+
+  transition: all .3s ease-in-out
+
+  &:not(:last-child)
+    margin-bottom: 10px
+
+.footer__right-side-form-form-checkbox
+  flex-shrink: 0
+
+  margin-left: 10px
+
+  width: 23px
+  height: 23px
+
+  border-radius: 50%
+  cursor: pointer
+  opacity: 0
+
+  position: relative
+  z-index: 1
+
+.footer__right-side-form-form-checkbox-block
+  display: flex
+  //flex-direction: row-reverse
+  align-items: center
+  // gap: 15px
+
+  margin-top: 8px
+  margin-bottom: 18px
+
+  position: relative
+
+.footer__right-side-form-form-checkbox-custom-block
+  flex-shrink: 0
+
+  margin-left: 10px
+
+  border-radius: 50%
+
+  position: absolute
+  left: 0
+
+.footer__right-side-form-form-checkbox-custom
+  width: 23px
+  height: 23px
+
+  background-color: #494949
+  border-radius: 50%
+
+  position: relative
+
+.footer__right-side-form-form-checkbox-custom--active
+  width: 15px
+  height: 15px
+
+  background-color: #C9F31D
+  border-radius: 50%
+  opacity: 0
+
+  // box-shadow: rgb(201 243 29) 0 0 10px
+
+  transition: opacity .3s ease-in-out
+
+  position: absolute
+  top: 4px
+  left: 4px
+
+.footer__right-side-form-form-button
+  padding: 10px 15px
+
+  height: auto
+
+  background-color: transparent
+  border: 1px solid #C9F31D
+  border-radius: 40px
+
+  transition: all .3s ease-in-out
+
+  font-weight: 350
+  @include adaptiveFont(18, 15)
+  line-height: 112.9%
+  color: #FFFFFF
+
+  &:hover
+    color: #1D1D1D
+    background-color: #C9F31D
+
+.footer__right-side-form-form-checkbox-block-label
+  margin-left: 15px
+
+  cursor: pointer
+
+  font-weight: 350
+  font-size: 13px
+  line-height: 1
+  color: #CECECE
+  text-align: left
+
+.footer__blocks-item-logo-image
+  max-width: 155px
+
+  width: 100%
+  height: 100%
+
+  &:hover
+    opacity: 1

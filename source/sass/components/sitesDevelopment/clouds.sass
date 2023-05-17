@@ -1,0 +1,143 @@
+.clouds
+    padding: 65px 0 90px
+
+    background: #1B1B1B
+
+    position: relative
+
+    @media (max-width: 650px)
+        padding: 65px 0 40px
+
+.obliqueLines
+    transform: translate(0, -50%)
+
+    position: absolute
+    top: 50%
+    right: -50px
+
+    @media (max-width: 860px)
+        display: none
+
+// .clouds__content
+// top
+.clouds__contentTop
+    display: flex
+    align-items: center
+
+    margin-bottom: 55px
+
+    @media (max-width: 660px)
+        flex-direction: column
+        align-items: center
+        text-align: center
+
+// top left
+.clouds__contentTopLeft
+    display: flex
+    align-items: center
+    justify-content: center
+
+    margin-right: 50px
+
+    @media (max-width: 660px)
+        margin-right: 0
+        margin-bottom: 30px
+
+.clouds__contentTopLeftImagesWrapper
+    width: 110px
+    height: 110px
+
+    position: relative
+
+.clouds__contentTopLeftImageCloud
+    transform: translate(-50%, -50%)
+
+    position: absolute
+    top: 50%
+    left: 50%
+
+.clouds__contentTopLeftImageArrow
+    position: absolute
+    top: 0
+    left: 0
+
+// top right
+// .clouds__contentTopRight
+
+.clouds__contentTopRightTitle
+    margin-bottom: 15px
+
+    font-weight: 700
+    @include adaptiveFont(40, 20)
+    line-height: 1.2
+    letter-spacing: 0.015em
+    color: #FFFFFF
+
+.clouds__contentTopRightText
+    max-width: 840px
+
+    font-weight: 400
+    @include adaptiveFont(20, 16)
+    line-height: 1.2
+    letter-spacing: 0.015em
+    color: #979797
+
+// bottom
+// .clouds__contentBottom
+
+.clouds__contentBottomItems
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    column-gap: 35px
+    row-gap: 25px
+
+    @media (max-width: 870px)
+        grid-template-columns: repeat(1, 1fr)
+        justify-items: center
+
+// item
+.clouds__contentBottomItem
+    padding: 20px 30px 30px
+
+    background: #343434
+    border-radius: 20px
+
+    @media (max-width: 870px)
+        max-width: 100%
+
+// item top
+.clouds__contentBottomItemTop
+    display: flex
+    align-items: center
+
+    margin-bottom: 20px
+
+.clouds__contentBottomItemTopIconWrapper
+    display: flex
+    align-items: center
+    justify-content: center
+
+    margin-right: 15px
+
+    width: 56px
+    height: 56px
+
+    background: #1E1E1E
+    border-radius: 20px
+
+// .clouds__contentBottomItemTopIcon
+
+.clouds__contentBottomItemTopTitle
+    font-weight: 700
+    @include adaptiveFont(25, 18)
+    line-height: 1.2
+    color: #FFFFFF
+
+// item bottom
+// .clouds__contentBottomItemBottom
+
+.clouds__contentBottomItemBottomText
+    font-weight: 350
+    @include adaptiveFont(17, 15)
+    line-height: 1.2
+    color: #FFFFFF

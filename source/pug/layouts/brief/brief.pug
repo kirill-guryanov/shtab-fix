@@ -1,0 +1,17 @@
+include head
+
+body.hidden.body-brief
+    include ../../views/utils/preloader
+    include ../../views/circle/circle
+    include ../../views/utils/burgerMenu
+    include ../../views/header/headerBlack
+    #butter(data-scroll-container)
+        main(data-scroll-section)
+            include ../../views/brief/intro
+            include ../../views/brief/forms
+
+        include ../../views/footer/footer-blackPage
+
+script( src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1/dist/locomotive-scroll.min.js" )
+// my js
+script( src="./assets/js/main.js" )

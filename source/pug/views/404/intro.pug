@@ -1,0 +1,35 @@
+.intro404
+    img.intro404__decoration-figures(
+        src="assets/images/404/decoration-figures.svg" alt="Фигурки декоративные"
+        width="125" height="120"
+    )
+
+    img.intro404__decoration-circle-with-lines(
+        src="assets/images/404/decoration-circle-with-lines.svg" alt="Круг декоративный"
+        width="289" height="289"
+    )
+
+    img.intro404__decoration-stars(
+        src="assets/images/404/decoration-stars.svg" alt="Звезды декоративные"
+        width="58" height="59"
+    )
+
+    .intro404__container.container
+        .intro404__content
+            h1.intro404__title 404
+            h2.intro404__suptitle Сожалеем, данной страницы нет
+            p.intro404__text
+                | Страница, на которую вы попали, не существует или была перемещена
+
+            .intro404__button
+                a.fillingButton.fillingButton--404( href="index.html" )
+                    .fillingButton__imageSrcInDataTag(data-src="assets/images/utils/arrowForFillingButton--black.svg")
+                    svg.fillingButton__svg( viewBox="0 0 204 204" )
+                        circle.fillingButton__svg-circle.fillingButton__svg-circle--404( cx="102" cy="102" r="102" fill="transparent" )
+
+                    .fillingButton__circle.fillingButton__circle--black-border.fillingButton__circle--404
+
+                    .fillingButton__content
+                        p.fillingButton__p.fillingButton__p--black
+                            span Вернуться
+                            | на главную

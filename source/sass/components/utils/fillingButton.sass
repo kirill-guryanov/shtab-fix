@@ -1,0 +1,194 @@
+@import "mixins"
+@import "variables"
+
+.fillingButton
+  display: flex
+  align-items: center
+
+  cursor: default
+  width: fit-content
+
+  font-weight: 700
+  @include adaptiveFont(18, 14)
+  line-height: 1
+
+  &--big
+    position: relative
+
+  &__imagesWrapper
+    position: relative
+
+.fillingButton--notShrink
+  flex-shrink: 0
+
+.fillingButton__p
+  flex-shrink: 0
+
+  transition: color .3s ease
+
+  color: #FFF
+  cursor: pointer
+
+  &--black
+    color: #000
+
+  &--big
+    margin-top: 15px
+
+    text-align: center
+
+.fillingButton__circle
+  flex-shrink: 0
+
+  width: 102px
+  height: 102px
+
+  border: 1px solid $saladColor
+  border-radius: 50%
+  appearance: none
+  pointer-events: none
+
+  overflow: hidden
+
+  position: relative
+
+  @media( max-width: 490px )
+    width: 84px
+    height: 84px
+
+  &--big
+    display: flex
+    justify-content: center
+    align-items: center
+
+    width: 170px
+    height: 170px
+
+  &--small
+    width: 71px
+    height: 71px
+
+  &--intro
+    width: 102px
+    height: 102px
+
+    @media (max-width: 1024px)
+      width: 72px
+      height: 72px
+
+  &::before
+    content: ""
+    display: block
+
+    --size: 0
+
+    width: var(--size)
+    height: var(--size)
+
+    background: radial-gradient(circle, rgba(202,247,70,1) 100%, rgba(202,247,70,1) 100%, rgba(208,255,72,1) 100%)
+    border-radius: 50%
+    transition: all .3s ease-in-out
+
+    transform: translate(-50%, -50%)
+
+    position: absolute
+    left: var(--x)
+    top: var(--y)
+
+  &--active::before
+    --size: 400px
+
+  &--black-border
+    transition: border .5s ease-in-out
+
+    border: 1px solid #000
+
+    &:hover
+      border: $saladColor
+
+.fillingButton__svg
+  width: 102px
+  height: 102px
+
+  pointer-events: none
+
+  position: absolute
+  z-index: 1
+
+  @media( max-width: 490px )
+    display: block
+
+    width: 84px
+    height: 84px
+
+  &--big
+    width: 170px
+    height: 170px
+
+  &--small
+    width: 71px
+    height: 71px
+
+  &--brief-bottom-size
+    width: 170px
+    height: 170px
+
+.fillingButton__svg-circle
+  pointer-events: painted
+  cursor: pointer
+
+  @media( max-width: 490px )
+    display: block
+
+    width: 84px
+    height: 84px
+
+  &--big
+    width: 170px
+    height: 170px
+
+  &--small
+    width: 71px
+    height: 71px
+
+.fillingButton__content
+  display: flex
+  align-items: center
+
+  cursor: pointer
+
+  position: relative
+
+  &--big
+    flex-direction: column-reverse
+
+    max-width: 130px
+    width: 100%
+
+    transform: translateX(-50%)
+
+    position: absolute
+    left: 50%
+
+.fillingButton__image
+  margin-left: 15px
+
+  &--big
+    margin-left: 0
+
+    transition: filter .3s ease-in-out
+
+    position: absolute
+    left: 0
+
+  &--black-visible
+    filter: opacity(1)
+
+  &--black-hidden
+    filter: opacity(0)
+
+  &--white-visible
+    filter: opacity(1)
+
+  &--white-hidden
+    filter: opacity(0)

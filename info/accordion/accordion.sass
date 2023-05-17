@@ -1,0 +1,90 @@
+.answers__contentBottomLeftAccordion
+    display: flex
+    flex-direction: column
+    justify-items: center
+
+    margin-bottom: 17px
+
+    max-width: 918px
+    width: 100%
+
+    &.open .answers__contentBottomLeftAccordionTopCloseCircleSaladCross
+        transform: rotate(90deg)
+
+    &.open .answers__contentBottomLeftAccordionBottom
+        filter: opacity(1)
+        overflow: initial
+        padding: 18px 30px
+
+.answers__contentBottomLeftAccordionTop
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    padding: 11px 34px
+
+    min-height: 63px
+
+    background-color: #343434
+    border-radius: 10px
+
+.answers__contentBottomLeftAccordionTopTitle
+    margin-right: 15px
+
+    font-weight: 400
+    @include adaptiveFont(20, 16)
+    line-height: 112.9%
+    color: #FFFFFF
+
+.answers__contentBottomLeftAccordionTopClose
+    display: flex
+    align-items: center
+    justify-content: center
+
+    width: 41px
+    height: 41px
+
+    border-radius: 50%
+    background-color: #3E3E3E
+
+.answers__contentBottomLeftAccordionTopCloseCircleSalad
+    display: flex
+    align-items: center
+    justify-content: center
+
+    width: 27px
+    height: 27px
+
+    background-color: $saladColor
+    border-radius: 50%
+
+.answers__contentBottomLeftAccordionTopCloseCircleSaladCross
+    transition: transform .3s ease
+    transform: rotate(45deg)
+
+// bottom
+.answers__contentBottomLeftAccordionBottom
+    margin: 0 10px
+    padding: 0 30px
+
+    // for animation
+    max-height: 0
+
+    overflow: hidden
+
+    will-change: max-height
+    filter: opacity(0)
+    transition: all .3s ease
+
+    box-sizing: content-box
+    // ========
+
+    background: #FFFFFF
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1)
+    border-radius: 0px 0px 10px 10px
+
+.answers__contentBottomLeftAccordionBottomText
+    font-weight: 350
+    font-size: 16px
+    line-height: 1.2
+    color: #262626

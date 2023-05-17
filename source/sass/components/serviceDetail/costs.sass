@@ -1,0 +1,131 @@
+.costs
+    padding: 70px 0 50px
+
+    background-color: #262626
+
+// content
+.costs__content-sd
+    display: flex
+    justify-content: space-between
+
+    @media (max-width: 1240px)
+        flex-direction: column
+
+// left
+.costs__contentLeft
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+    margin-right: 60px
+
+    @media (max-width: 1240px)
+        align-items: center
+
+        margin-right: 0
+        margin-bottom: 35px
+
+        text-align: center
+
+// .costs__contentLeftTextWrapper
+
+.costs__contentLeftText
+    margin-bottom: 30px
+
+    max-width: 885px
+
+    font-weight: 400
+    @include adaptiveFont(20, 16)
+    line-height: 1.2
+    color: #FFFFFF
+
+// .costs__contentLeftButtonWrapper
+// right
+.costs__contentRight
+    display: flex
+    flex-direction: column
+    flex-shrink: 0
+
+.costs__contentRightTitle
+    margin-bottom: 35px
+
+    font-weight: 700
+    @include adaptiveFont(26, 18)
+    line-height: 1.2
+    letter-spacing: 0.015em
+    color: #FFFFFF
+
+    @media (max-width: 1240px)
+        text-align: center
+
+// items
+.costs__contentRightItems
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+    @media (max-width: 1240px)
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        column-gap: 25px
+
+    @media (max-width: 1110px)
+        grid-template-columns: repeat(2, 1fr)
+        row-gap: 25px
+
+    @media (max-width: 750px)
+        align-items: center
+        grid-template-columns: repeat(1, 1fr)
+        row-gap: 25px
+
+// item
+.costs__contentRightItem
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    padding: 15px 30px
+    margin-bottom: 10px
+
+    max-width: 456px
+
+    background-color: #343434
+    border-radius: 20px
+
+    transition: transform .3s ease
+
+    @media (max-width: 750px)
+        max-width: 100%
+
+    @media (max-width: 390px)
+        flex-direction: column
+
+    &:hover
+        transform: scale(1.1)
+
+.costs__contentRightItemLeft
+    margin-right: 30px
+
+    @media (max-width: 390px)
+        margin-right: 0
+        margin-bottom: 15px
+
+// .costs__contentRightItemLeftIcon
+
+// .costs__contentRightItemRight
+
+.costs__contentRightItemRightTitle
+    margin-bottom: 7px
+
+    font-weight: 700
+    @include adaptiveFont(20, 18)
+    line-height: 1.1
+    letter-spacing: 0.015em
+    color: #FFFFFF
+
+.costs__contentRightItemRightText
+    font-weight: 350
+    font-size: 16px
+    line-height: 1.2
+    color: #FFFFFF
+    opacity: .7

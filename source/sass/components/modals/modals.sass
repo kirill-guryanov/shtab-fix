@@ -1,0 +1,239 @@
+.wrapper
+    display: flex
+    justify-content: center
+    align-items: center
+
+    padding: 0 15px
+
+    width: 100%
+    height: 100%
+
+    background-color: rgba(0, 0, 0, 0.9)
+    filter: opacity(0)
+
+    position: fixed
+    z-index: -1
+
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+
+    transition: all .3s ease
+
+    &--visible
+        filter: opacity(1)
+        z-index: 1000
+
+    &--gallery
+        overflow-y: auto
+
+.modal
+    display: flex
+    justify-content: flex-end
+
+    padding: 50px 70px 30px 20px
+
+    max-width: 565px
+    min-height: 382px
+
+    width: 95%
+
+    background-color: #1D1D1D
+    border-radius: 20px
+
+    // transform: translate(-50%, -50%)
+    position: relative
+    // top: 50%
+    // left: 50%
+    // z-index: -1
+
+    // transition: all .3s ease
+    // filter: opacity(0)
+    overflow: hidden
+
+    @media ( max-width: 485px )
+        justify-content: center
+        padding: 50px 30px 30px 20px
+
+    // &--visible
+    //     filter: opacity(1)
+    //     z-index: 1001
+
+    &--withLine
+        padding: 50px 90px 30px 20px
+
+        @media ( max-width: 560px )
+            padding: 50px 60px 30px 20px
+
+.modal__content
+    display: flex
+    flex-direction: column
+
+    max-width: 300px
+    width: 100%
+
+    position: relative
+    z-index: 1
+
+// circles
+.modal__contentCross
+    position: absolute
+    top: 20px
+    right: 20px
+
+    cursor: pointer
+
+    transition: transform .3s ease
+
+    &:hover
+        transform: rotate(180deg)
+
+.modal__contentCircle
+    transform: translateY(-50%)
+
+    position: absolute
+    top: 50%
+    left: 0
+
+    @media ( max-width: 680px )
+        left: -55px
+
+    @media ( max-width: 515px )
+        left: -80px
+
+    @media ( max-width: 485px )
+        display: none
+
+.modal__contentLines
+    transform: translateY(-50%)
+
+    position: absolute
+    top: 50%
+    left: 0
+
+    @media ( max-width: 560px )
+        left: -25px
+
+    @media ( max-width: 500px )
+        left: -40px
+
+    @media ( max-width: 485px )
+        display: none
+
+.modal__contentGlowingCircle
+    position: absolute
+    top: 0
+    right: 0
+    left: 0
+    bottom: 0
+    width: 100%
+    height: 100%
+
+// top
+.modal__contentTop
+    display: flex
+    justify-content: flex-end
+
+    margin-bottom: 20px
+
+    width: 100%
+
+// texts
+.modal__contentTexts
+    margin-bottom: 30px
+
+.modal__contentTitle
+    margin-bottom: 10px
+
+    font-weight: 700
+    @include adaptiveFont(25, 18)
+    line-height: 1.2
+    color: #FFFFFF
+
+.modal__contentText
+    font-weight: 400
+    font-size: 16px
+    line-height: 1.2
+    color: #FFFFFF
+
+// inputs
+.modal__contentInputsBlock
+    margin-bottom: 15px
+
+.modal__contentInputs
+    margin-bottom: 20px
+
+.modal__contentInput
+    padding: 0 30px
+
+    width: 100%
+    height: 45px
+
+    border: 1px solid #737373
+    border-radius: 40px
+    background-color: transparent
+
+    font-weight: 350
+    font-size: 15px
+    color: #FFFFFF
+
+    &::placeholder
+        color: #FFFFFF
+
+    &:not(:last-child)
+        margin-bottom: 10px
+
+.modal__contentInput--textarea
+    padding: 15px 30px
+    min-height: 120px
+    border-radius: 20px
+    resize: none
+
+    &:focus
+        border: 1px solid #D0FF48
+        outline: none
+
+.modal__contentInputsText
+    font-weight: 350
+    font-size: 10px
+    line-height: 1.2
+    color: #797979
+
+// .modal__contentButton
+    // display: none
+
+// gallery
+.galleryContainer
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+    // margin-top: 300px
+
+.galleryItem
+    // @media (max-width: 1920px)
+    // width: 500px
+    // width: 85%
+    // width: inherit
+
+.wrapper--gallery
+    padding-bottom: 50px
+
+.galleryCrossWrapper
+    display: flex
+    justify-content: flex-end
+
+    // margin-left: 25px
+
+    width: 100%
+
+.galleryCross
+    margin-bottom: 20px
+    margin-left: 25px
+
+    cursor: pointer
+
+.galleryItam
+    cursor: pointer

@@ -1,0 +1,185 @@
+section.quiz.sectionForProgresCircleColor
+    .quiz__decorativeLeftText quiz
+    .quiz__decorativeLine
+
+    .container
+        .quiz__content.animationItem.animationNoRepeat(data-scroll data-scroll-call="7").fadeIn
+            .quiz__contentLeft
+                h2.quiz__contentLeftTitle Пройдите короткий тест и получите бесплатную консультацию маркетолога
+                p.quiz__contentLeftText Узнайте, насколько велики шансы привлечь новых клиентов в ваш бизнес и увеличить прибыль
+
+            .quiz__contentRight
+                form(name="quiz" action="").quizComponent
+                    .quizComponentQuestions
+                        .quizComponentQuestion
+                            img.quizComponentDecorativeImageLines(
+                                src="assets/images/serviceDetailSecond/lines.svg" alt="Декоративные линии" 
+                                width=201 height=136
+                            )
+
+                            h3.quizComponentQuestionTitle Укажите сферу деятельности вашей компании:
+
+                            .quizComponentQuestionForms
+                                .quizComponentQuestionForm
+                                    .forms__block-left-radio-main-block
+                                        .forms__block-left-radio-block
+                                            input.input__radio.input__radio--js(
+                                                type="radio" name="area" id="less-than-month"
+                                            )
+                                            .input__radio-custom
+                                                .input__radio-custom-checked
+                                        label.input__radio-label( for="less-than-month" ) Торговля
+
+                                    .forms__block-left-radio-main-block
+                                        .forms__block-left-radio-block
+                                            input.input__radio.input__radio--js(
+                                                type="radio" name="area" id="more-than-month"
+                                            )
+                                            .input__radio-custom
+                                                .input__radio-custom-checked
+                                        label.input__radio-label( for="more-than-month" ) Промышленность
+
+                                    .forms__block-left-radio-main-block
+                                        .forms__block-left-radio-block
+                                            input.input__radio.input__radio--js(
+                                                type="radio" name="area" id="deadline-undefined"
+                                            )
+                                            .input__radio-custom
+                                                .input__radio-custom-checked
+                                        label.input__radio-label( for="deadline-undefined" ) Юриспруденция
+
+                                    .forms__block-left-radio-main-block
+                                        .forms__block-left-radio-block
+                                            input.input__radio.input__radio--js(
+                                                type="radio" name="area" id="need-urgently"
+                                            )
+                                            .input__radio-custom
+                                                .input__radio-custom-checked
+                                        label.input__radio-label( for="need-urgently" ) Другое
+
+                                .quizComponentQuestionForm
+                                    .forms__block-left-radio-main-block
+                                        .forms__block-left-radio-block
+                                            input.input__radio.input__radio--js(
+                                                type="radio" name="area" id="logistic"
+                                            )
+                                            .input__radio-custom
+                                                .input__radio-custom-checked
+                                        label.input__radio-label( for="logistic" ) Логистика
+
+                                    .forms__block-left-radio-main-block
+                                        .forms__block-left-radio-block
+                                            input.input__radio.input__radio--js(
+                                                type="radio" name="area" id="beuty-and-health"
+                                            )
+                                            .input__radio-custom
+                                                .input__radio-custom-checked
+                                        label.input__radio-label( for="beuty-and-health" ) Красота и здоровье
+
+                                    .forms__block-left-radio-main-block
+                                        .forms__block-left-radio-block
+                                            input.input__radio.input__radio--js(
+                                                type="radio" name="area" id="medicine"
+                                            )
+                                            .input__radio-custom
+                                                .input__radio-custom-checked
+                                        label.input__radio-label( for="medicine" ) Медицина
+
+
+                        .quizComponentQuestion
+                            img.quizComponentDecorativeImageLines(
+                                src="assets/images/serviceDetailSecond/lines.svg" alt="Декоративные линии" 
+                                width=201 height=136
+                            )
+
+                            h3.quizComponentQuestionTitle В каком городе вы работаете? Или планируете вести деятельность
+
+                            input.quizComponentQuestionInput(type="text" placeholder="Укажите название города" name="city")
+                        
+                        .quizComponentQuestion
+                            h3.quizComponentQuestionTitle Ваш текущий или планируемый месячный бюджет на рекламу
+
+                            .quizComponentQuestionForms
+                                .quizComponentQuestionForm
+                                    .forms__block-left-radio-main-block
+                                        .forms__block-left-radio-block
+                                            input.input__radio.input__radio--js(
+                                                type="radio" name="adds" id="30"
+                                            )
+                                            .input__radio-custom
+                                                .input__radio-custom-checked
+                                        label.input__radio-label( for="30" ) До 30 000 рублей
+
+                                    .forms__block-left-radio-main-block
+                                        .forms__block-left-radio-block
+                                            input.input__radio.input__radio--js(
+                                                type="radio" name="adds" id="30-50"
+                                            )
+                                            .input__radio-custom
+                                                .input__radio-custom-checked
+                                        label.input__radio-label( for="30-50" ) 30 000 - 50 000 рублей
+
+                                    .forms__block-left-radio-main-block
+                                        .forms__block-left-radio-block
+                                            input.input__radio.input__radio--js(
+                                                type="radio" name="adds" id="50-100"
+                                            )
+                                            .input__radio-custom
+                                                .input__radio-custom-checked
+                                        label.input__radio-label( for="50-100" ) 50 000 - 100 000 рублей
+
+                                    .forms__block-left-radio-main-block
+                                        .forms__block-left-radio-block
+                                            input.input__radio.input__radio--js(
+                                                type="radio" name="adds" id="100-250"
+                                            )
+                                            .input__radio-custom
+                                                .input__radio-custom-checked
+                                        label.input__radio-label( for="100-250" ) 100 000 - 250 000 рублей
+
+                                .quizComponentQuestionForm
+                                    .forms__block-left-radio-main-block
+                                        .forms__block-left-radio-block
+                                            input.input__radio.input__radio--js(
+                                                type="radio" name="adds" id="250"
+                                            )
+                                            .input__radio-custom
+                                                .input__radio-custom-checked
+                                        label.input__radio-label( for="250" ) Более 250 000 рублей
+
+                        .quizComponentQuestion
+                            img.quizComponentDecorativeImageCircle.quizComponentDecorativeImageCircle--toLeft(
+                                src="assets/images/serviceDetailSecond/circle.svg" alt="Декоративный круг" 
+                                width=342 height=342
+                            )
+
+                            h3.quizComponentQuestionTitle Укажите ссылку на ваш текущий сайт, если сайт только планируется разрабатывать, напишите слово “нет”
+
+                            input.quizComponentQuestionInput(type="text" placeholder="Укажите название города" name="city")
+
+                        .quizComponentQuestion
+                            h3.quizComponentQuestionTitle Укажите данные для связи с вами
+
+                            input.quizComponentQuestionInput(type="text" placeholder="Имя" name="name")
+                        
+                            input.quizComponentQuestionInput(type="text" placeholder="Телефон" name="tell")
+
+                            p.quizComponentQuestionInputSuptitle 
+                                | Завершая опрос, вы соглашаетесь с политикой обработки персональных данных в соответствии с ФЗ «О персональных данных» № 152-ФЗ
+
+                    .quizComponentControls
+                        .quizComponentControlsLeftButton.quizComponentControlsButton
+                            p.quizComponentControlsLeftButtonText Далее
+
+                            svg.quizComponentControlsLeftButtonImage( width="42" height="16" viewBox="0 0 42 16" xmlns="http://www.w3.org/2000/svg")
+                                path( d="M1 7C0.447715 7 4.82823e-08 7.44772 0 8C-4.82823e-08 8.55228 0.447715 9 1 9L1 7ZM41.7071 8.70711C42.0976 8.31659 42.0976 7.68342 41.7071 7.2929L35.3431 0.928935C34.9526 0.538411 34.3195 0.538411 33.9289 0.928935C33.5384 1.31946 33.5384 1.95262 33.9289 2.34315L39.5858 8L33.9289 13.6569C33.5384 14.0474 33.5384 14.6805 33.9289 15.0711C34.3195 15.4616 34.9526 15.4616 35.3431 15.0711L41.7071 8.70711ZM1 9L41 9L41 7L1 7L1 9Z" )
+
+                        .quizComponentControlsStages
+                            p.quizComponentControlsStagesCurrentStage 1
+                            p.quizComponentControlsStagesFrom из
+                            p.quizComponentControlsStagesAtAll 5
+
+                        .quizComponentControlsRightButton.quizComponentControlsRightButton--notActive
+                            | Далее
+
+                        button(type="submit" disabled).quizComponentControlsRightButtonSubmit Завершить

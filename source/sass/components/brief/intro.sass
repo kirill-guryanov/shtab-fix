@@ -1,0 +1,116 @@
+// intro
+.intro-brief
+  overflow: unset
+
+  position: relative
+
+.intro__container-brief
+  display: flex
+  flex-direction: column
+
+.intro__top-brief
+  display: flex
+
+  margin-top: 245px
+
+  @media (max-width: 1536px)
+    justify-content: center
+
+  @media (max-width: 1280px)
+    margin-top: 180px
+
+  @media (max-width: 775px)
+    flex-direction: column
+
+    margin-top: 100px
+
+  @media (max-width: 680px)
+    margin-top: 115px
+
+.intro__top-left-tickets-brief
+  width: 603px
+  height: 495px
+
+  @media (max-width: 1536px)
+    width: 468px
+    height: 394px
+
+  @media (max-width: 1366px)
+    // width: 391px
+    // height: 302px
+    width: 401px
+    height: 352px
+
+  @media (max-width: 460px)
+    width: 302px
+    height: 227px
+
+// left
+.intro__top-left-brief
+  position: relative
+
+  @media (max-width: 775px)
+    display: flex
+    justify-content: center
+
+.intro__top-left-circle-brief
+  position: absolute
+
+  @media (max-width: 1280px)
+    top: -150px
+
+// right
+.intro__top-right-brief
+  display: flex
+  flex-direction: column
+  justify-content: center
+
+  margin-left: 165px
+
+  @media (max-width: 1240px)
+    margin-left: 50px
+
+  @media (max-width: 775px)
+    // margin-top: 60px
+    margin-top: 0
+    margin-left: 0
+
+    text-align: center
+
+.intro__top-right-title-brief
+  margin-bottom: 20px
+
+  font-weight: 800
+  @include adaptiveFont(55, 40)
+  line-height: 109%
+  color: #FFFFFF
+
+  @media (max-width: 1366px)
+    @include adaptiveFont(50, 20)
+
+  @media (max-width: 1280px)
+    @include adaptiveFont(35, 20)
+
+.intro__top-right-text-block-brief
+  margin-bottom: 45px
+
+  @media (max-width: 775px)
+    display: flex
+    justify-content: center
+
+.intro__top-right-text-brief
+  max-width: 540px
+
+  font-weight: 400
+  @include adaptiveFont(22, 16)
+  line-height: 127.5%
+  letter-spacing: 0.025em
+  color: #FFFFFF
+
+  @media (max-width: 1280px)
+    @include adaptiveFont(16, 16)
+
+.intro__top-right-button-brief
+  @media (max-width: 775px)
+    display: flex
+    justify-content: center

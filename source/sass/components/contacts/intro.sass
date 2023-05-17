@@ -1,0 +1,160 @@
+.intro-contacts
+  margin-top: 210px
+  margin-bottom: 250px
+
+  position: relative
+
+  @media (max-width: 1600px)
+    margin-top: 140px
+
+  @media (max-width: 1400px)
+    margin-top: 80px
+
+  @media (max-width: 1250px)
+    margin-top: 115px
+    margin-bottom: 80px
+
+  @media (max-width: 680px)
+    margin-top: 110px
+
+.contacts__decoration-circle-contacts
+  position: absolute
+  left: -170px
+  top: 5%
+  z-index: -1
+
+  @media (max-width: 1750px)
+    display: none
+
+//  left
+.contacts__left
+  display: flex
+  justify-content: space-between
+  flex-direction: column
+  flex-shrink: 0
+
+  @media (max-width: 1250px)
+    margin-top: 50px
+
+.contacts__left-title
+  margin-bottom: 40px
+  margin-left: -7px
+
+  font-weight: 800
+  @include adaptiveFont(70, 20)
+  line-height: 1
+  color: #1B1B1B
+
+  @media (max-width: 1250px)
+    margin-bottom: 60px
+    margin-left: 0
+
+    text-align: center
+
+.contacts__left-contacts-list
+  @media (max-width: 1250px)
+    display: grid
+    grid-template-columns: 1fr 1fr
+    justify-items: flex-start
+
+  @media (max-width: 740px)
+    grid-template-columns: 1fr
+
+.contacts__left-contacts-list-item
+  display: flex
+  flex-direction: column
+
+  &:not(:last-child)
+    margin-bottom: 35px
+
+.contacts__left-contacts-list-item-title
+  margin-bottom: 13px
+
+  font-weight: 400
+  @include adaptiveFont(24, 18)
+  line-height: 1
+  color: #8F8F8F
+
+  @media (max-width: 740px)
+    text-align: center
+
+.contacts__left-contacts-list-item-contacts
+  display: flex
+
+  &--center
+    align-items: center
+
+.contacts__left-contacts-list-item-contacts-texts
+  display: flex
+  flex-direction: column
+
+.contacts__left-contacts-list-item-contacts-image
+  margin-right: 16px
+
+.contacts__left-contacts-list-item-contacts-text
+  font-weight: 400
+  @include adaptiveFont(30, 22)
+  line-height: 1
+  color: #111111
+
+  &--time
+    @include adaptiveFont(25, 18)
+
+  &--phone
+    margin-bottom: 10px
+
+  &--bottom
+    margin-left: 10px
+
+    font-weight: 400
+    @include adaptiveFont(20, 16)
+    line-height: 1
+    text-decoration-line: underline!important
+    color: #111111
+
+.contacts__left-button
+  margin-top: 60px
+
+  width: 100%
+
+  @media (max-width: 1250px)
+    display: flex
+    justify-content: center
+
+    margin-top: 45px
+
+.about-us__right-side-read-more-circle
+  width: 86px
+  height: 86px
+
+// right
+.contacts__right
+  margin-left: 100px
+
+.contacts__right-form-block
+  border-left: 5px solid $saladColor
+
+.contacts__right-form-block-title
+  font-weight: 400
+  @include adaptiveFont(20, 18)
+  line-height: 1
+  color: #000000
+
+//.contacts__right-form
+
+// map
+#map
+  width: 1920px
+  height: 706px
+
+  position: relative
+  left: 69px
+
+  @media (max-width: 1250px)
+    height: 400px
+
+    position: absolute
+    left: -15px
+
+.ymaps-layers-pane
+  filter: grayscale(100%)

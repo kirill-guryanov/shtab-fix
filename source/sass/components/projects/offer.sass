@@ -1,0 +1,93 @@
+.offer
+    padding: 100px 0
+
+    overflow: hidden
+
+    position: relative
+
+    @media (max-width: 760px)
+        padding: 50px 0
+
+.offer__decorativeCircle-middle
+    position: absolute
+    left: -165px
+    top: 50%
+    z-index: -1
+    transform: translateY(-50%) rotate(356deg)
+
+    @media (max-width: 1350px)
+        transform: rotate(70deg)
+
+        left: unset
+        right: -20%
+        top: -20%
+
+    @media (max-width: 1005px)
+        right: -23%
+        top: -25%
+
+    @media (max-width: 640px)
+        display: none
+
+.titleBlockWithBg
+    display: flex
+
+    margin-bottom: 45px
+
+    @media (max-width: 640px)
+        justify-content: center
+
+.titleWithBg
+    display: inherit
+
+    width: fit-content
+
+    font-weight: 400
+    @include adaptiveFont(30, 20)
+    line-height: 1.2
+    color: #000
+
+    position: relative
+
+    &::before
+        content: ""
+        display: block
+
+        width: 100%
+        height: 100%
+
+        background-color: $saladColor
+        transform: rotate(357deg)
+
+        position: absolute
+        left: 0
+        top: 15%
+        z-index: -1
+
+.offer__bottom
+    display: flex
+    justify-content: space-between
+
+    @media (max-width: 640px)
+        flex-direction: column
+        align-items: center
+
+.offer__bottomText
+    margin-right: 120px
+
+    font-weight: 700
+    @include adaptiveFont(40, 25)
+    line-height: 1.2
+    color: #000
+
+    @media (max-width: 760px)
+        margin-right: 40px
+
+    @media (max-width: 640px)
+        margin-right: 0
+        margin-bottom: 30px
+
+        text-align: center
+
+.offer__bottomText--smallMb
+    margin-right: 20px

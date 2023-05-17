@@ -1,0 +1,943 @@
+// // variables
+@import "../components/utils/variables"
+// utils
+@import "../components/utils/container"
+@import "../components/utils/locomotive.scss"
+@import "../components/utils/preloader"
+@import "../components/utils/mixins"
+@import "../components/utils/fonts"
+@import "../components/utils/reset"
+@import "../components/utils/fillingButton"
+@import "../components/utils/sectionTitles"
+@import "../components/circle/circle"
+@import "../components/header/header"
+@import "../components/utils/burgerMenu"
+@import "../components/footer/footer"
+@import "../components/modals/modals"
+@import "../components/utils/breadcrumbs"
+@import "../components/utils/servisec-list__item"
+// ======
+html
+    scroll-behavior: smooth
+
+body
+    display: flex
+    flex-direction: column
+
+    font-family: 'Circe', serif
+
+    position: relative
+
+.body-brief
+    background-color: #1B1B1B
+
+main
+    flex-grow: 1
+
+input:focus
+    border: 1px solid $saladColor
+    outline: none
+
+// #butter
+    position: fixed
+
+.reviews__splide
+    padding: 0 15px 0 15px
+
+    @media (max-width: 530px)
+        margin-top: 110px
+
+.reviews__splide .splide__arrow
+    width: 54px
+    height: 54px
+
+    border: 1px solid #A0A0A0
+    border-radius: unset
+    background: unset
+    opacity: .4
+
+    transition: all .3s ease-in-out
+    overflow: hidden
+
+    right: 0
+    left: unset
+
+    &:hover
+        opacity: 1
+        border: 1px solid #000
+
+    &:hover svg
+        fill: #000
+
+    & svg
+        width: 34px
+        height: 25px
+
+        transition: all .3s ease-in-out
+
+.reviews__splide .splide__arrow:disabled
+    opacity: .4
+
+    &:hover
+        opacity: 1
+        border: 1px solid #000
+
+.reviews__splide .splide__arrow--next svg
+    fill: #A0A0A0
+
+.reviews__splide .splide__arrow--prev svg
+    fill: #A0A0A0
+
+.reviews__splide .splide__arrow--prev
+    right: 67px
+
+// functional
+.section__titles
+    margin-bottom: 55px
+
+// main
+.reviews
+    padding: 65px 0 65px
+
+    position: relative
+
+// bullet
+.bullet
+    flex-shrink: 0
+
+    width: 8px
+    height: 8px
+
+    margin-right: 16px
+    margin-left: 16px
+
+    background-color: #C6FF00
+    border-radius: 50%
+
+    @media ( max-width: 580px )
+        margin-left: 0
+
+    &--grey
+        background-color: #A9A9A9
+
+    &--blackStages
+        width: 6px
+        height: 6px
+
+        background-color: #000
+
+    &--small
+        margin-right: 10px
+        margin-left: 10px
+
+        width: 4px
+        height: 4px
+
+        @media ( max-width: 580px )
+            margin-left: 0
+
+    &--checkMark
+        flex-shrink: 0
+
+        margin-right: 12px
+
+        background-color: unset
+        border-radius: unset
+
+    &--image
+        width: auto
+        height: auto
+
+        margin-left: unset
+        margin-right: unset
+
+        background-color: unset
+        border-radius: unset
+
+    &--imageRocket
+        margin-left: -30px
+
+    &--imageCheckMarkServices
+        margin-left: 8px
+        margin-bottom: 5px
+
+.bullet--white
+    background-color: #fff
+
+.servicesTitle
+    width: 100%
+
+    font-weight: 700
+    @include adaptiveFont(40, 25)
+    line-height: 1.2
+    color: #FFFFFF
+
+    &--black
+        color: #404040
+
+// intro
+// .intro
+//     @media( max-width: 1400px )
+//         padding: 125px 0 40px
+
+//     @media ( max-width: 1035px )
+//         padding: 225px 0 40px
+
+//     @media( max-width: 420px )
+//         padding: 190px 0 30px
+
+//     @media( max-width: 750px )
+//         padding: 200px 0 30px
+
+.intro__top
+    @media ( max-width: 1035px )
+        flex-direction: column-reverse
+
+.intro__contentLeftSideBottomText
+    @media ( max-width: 1035px )
+        text-align: center!important
+
+.intro__contentRightSideImage
+    aspect-ratio: 2/1
+    transform: unset
+    transform: scale(1.2)
+
+    @media( max-width: 1380px )
+        max-width: 590px
+        transform: scale(1.4)
+
+    @media( max-width: 1035px )
+        margin-bottom: 40px
+
+        min-width: unset
+
+        transform: unset
+
+    @media( max-width: 900px )
+        max-width: 400px
+
+    @media( max-width: 540px )
+        max-width: 320px
+
+    @media( max-width: 420px )
+        max-width: 240px
+
+.intro__contentLeftSideListWrapper
+    @media( max-width: 1380px )
+        grid-row-start: 2
+
+    @media ( max-width: 1035px )
+        grid-row-start: 1
+        grid-column-start: 2
+
+        margin-left: 40px
+
+    @media ( max-width: 700px )
+        grid-row-start: 2
+        grid-column-start: unset
+
+        margin-left: unset
+
+.intro__contentLeftSideList
+    @media ( max-width: 700px )
+        margin-bottom: 20px
+
+.intro__contentLeftSide
+    @media ( max-width: 1035px )
+        display: grid
+        grid-template-columns: 1fr
+        justify-items: center
+
+        margin-right: 0
+
+        text-align: center
+
+.intro__contentLeftSideTitle
+    @media ( max-width: 1035px )
+        min-width: 270px
+
+    @media ( max-width: 700px )
+        min-width: unset
+
+.intro__contentLeftSideBottom
+    @media ( max-width: 1380px )
+        grid-column-start: 1
+        grid-column-end: 3
+        flex-direction: column
+        align-items: flex-start
+
+    @media ( max-width: 1035px )
+        flex-direction: column
+        align-items: center
+
+        grid-column-start: 1
+        grid-column-end: 3
+
+.reviews__list-itemStatText
+    font-size: 13px
+    color: #acacac
+
+input:focus
+    border: 1px solid $saladColor
+    outline: none
+
+.offer__formInputIntro--blackPlaceholder
+    padding: 13px 18px
+
+    max-width: 300px
+    width: 100%
+
+    height: 44px
+
+    border-radius: 10px
+    background-color: transparent
+    border: 1px solid #888888
+    transition: all .3s ease
+
+    color: #000
+    font-weight: 400
+    font-size: 16px
+
+    &:not(:last-child)
+        margin-right: 15px
+
+        // @media ( max-width: 1070px )
+        //     margin-right: 0
+        //     margin-bottom: 15px
+
+    &::placeholder
+        font-weight: 400
+        font-size: 16px
+//         color: #000
+
+    &:focus
+        border: 1px solid #000
+
+// .decorativeCicrcleWithLines
+.decorativeCicrcleWithLines
+    opacity: .1
+    transform: translate(0,-39%) rotate(28deg) scale(-1,1)
+    position: absolute
+    top: 30%
+    left: -171px
+
+.decorativeCicrcleWithLines--whatMore
+    opacity: 1
+    transform: translate(0,-39%) rotate(36deg) scale(-1,1)
+    top: 25%
+    left: -196px
+
+// local
+.intro__top-serviceDetail
+    display: flex
+    justify-content: space-between
+
+    @media ( max-width: 1380px )
+        justify-content: center
+
+    @media ( max-width:750px )
+        flex-direction: column-reverse
+
+// new
+.intro__bottomForm-serviceDetail-width
+    margin-right: 10%
+
+    max-width: 600px
+
+    @media ( max-width: 1200px )
+        max-width: 400px
+        margin-right: 6%
+
+    @media ( max-width: 1060px )
+        max-width: 410px
+        margin-right: 8%
+
+    @media ( max-width: 900px )
+        margin-bottom: 20px
+        margin-right: 0
+
+.intro__bottomForm-serviceDetail-inputs
+    display: flex
+
+    @media ( max-width: 370px )
+        flex-direction: column
+        align-items: center
+        gap: 10px
+
+.intro__bottomFormDescriptionBlock-serviceDetail
+    margin-top: 10px
+
+.intro__bottomFormWrapper-serviceDetail
+    display: flex
+
+.intro__bottomForm-serviceDetail
+    display: flex
+    margin-bottom: 0
+
+    @media ( max-width: 900px )
+        flex-direction: column
+        align-items: center
+
+// // new
+
+// // ======
+// // // attraction
+@import "../components/attraction/intro"
+@import "../components/attraction/solve"
+@import "../components/attraction/services"
+@import "../components/attraction/results"
+@import "../components/attraction/stages"
+@import "../components/attraction/offer"
+.intro__contentLeftSideBottomText--attraction
+    min-width: 325px
+.reviews__list-item-galleryImage
+    display: none
+// // brief
+@import "../components/brief/intro"
+@import "../components/brief/forms"
+// // contacts
+@import "../components/contacts/intro"
+// index
+@import "../components/index/intro"
+@import "../components/index/about-us"
+@import "../components/index/services"
+@import "../components/index/products"
+@import "../components/index/reviews"
+@import "../components/index/blog"
+.intro__content
+    justify-content: center
+// // modification
+@import "../components/modification/intro"
+@import "../components/modification/tasks"
+@import "../components/modification/ready"
+// // productsOncePage
+@import "../components/productsOncePage/intro"
+@import "../components/productsOncePage/info"
+@import "../components/productsOncePage/other"
+@import "../components/productsOncePage/mayToLike"
+// // projects
+@import "../components/projects/intro"
+// // seo
+@import "../components/seo/intro"
+@import "../components/seo/benefits"
+@import "../components/seo/costs"
+@import "../components/serviceDetail/ourWorks"
+@import "../components/seo/answers"
+@import "../components/attraction/why"
+@import "../components/seo/whatMore"
+// serm
+@import "../components/serm/intro"
+@import "../components/serm/formats"
+@import "../components/serm/cycles"
+@import "../components/serm/benefits"
+@import "../components/serm/costs"
+.why--serm
+    background-color: #262626
+.answers-serm
+    padding-top: 60px
+// // serviceDetail
+@import "../components/serviceDetail/intro"
+@import "../components/serviceDetail/stack"
+@import "../components/serviceDetail/costs"
+.offer-serviceDetail
+    padding-bottom: 100px
+
+    overflow: hidden
+
+    position: relative
+
+    @media (max-width: 760px)
+        padding-bottom: 50px
+.offer__decorativeCircle-middle-serviceDetail
+    position: absolute
+    left: -165px
+    top: 50%
+    z-index: -1
+    transform: translateY(-50%) rotate(356deg)
+
+    @media (max-width: 640px)
+        display: none
+// // serviceDetailSecond
+@import "../components/serviceDetailSecond/intro"
+@import "../components/serviceDetailSecond/listAfterIntro"
+@import "../components/serviceDetailSecond/quiz"
+.offer__contentMiddle-sds
+    margin-bottom: 0
+    padding: 0
+.offer__contentTop-sds
+    text-align: center
+.servisec-list__item-sds
+    max-width: 100%
+    text-align: center
+.types-sds
+    position: relative
+.projects__obliqueLines-sds
+    transform: translate(0,-50%)
+    position: absolute
+    top: 45%
+    right: -50px
+.stackDecorativeCircletBottom-sds
+    bottom: -185px
+    right: -116px
+    position: absolute
+.stackDecorativeCircletTop-sds
+    transform: rotate(182deg)
+    top: -169px
+    left: -88px
+    position: absolute
+// types
+.types-sds
+    padding: 60px 0 60px
+
+    position: relative
+
+.types__content-sds
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+.types__contentBottomItemText-sds
+    margin-bottom: 20px
+    margin-top: 20px
+
+    text-align: left
+    font-weight: 350
+    @include adaptiveFont(18, 16)
+    line-height: 1.2
+    color: #000000
+
+.five-sds
+    width: 0
+    height: 0
+    border-left: 0 solid transparent
+    border-right: 64px solid transparent
+    border-top: 60px solid #000
+    position: absolute
+    left: 0
+    top: 0
+
+.three-sds
+    width: 169px
+    height: 50px
+
+    background-color: #000
+
+.types__contentTop-sds
+    @media (max-width: 600px)
+        flex-direction: column
+        align-items: center
+
+.types__contentTopLeft-sds
+    @media (max-width: 600px)
+        margin-right: 0
+        margin-bottom: 20px
+
+        width: 100%
+
+.types__contentBottomItem-sds
+    min-height: 445px
+    border-radius: 15px
+    box-shadow: 0 0 11px rgba(0,0,0,.15)
+    display: flex
+    flex-direction: column
+    overflow: hidden
+    position: relative
+    max-width: 100%
+    padding-bottom: 40px
+
+    @media (max-width: 890px)
+        max-width: 430px
+
+    &:nth-child(2)
+        @media (max-width: 1300px)
+            grid-row-start: 2
+
+.types__contentBottomItems-sds
+    align-items: flex-start
+
+.decorationsWrapperBlackText-sds
+    position: absolute
+    top: 50%
+    left: 5%
+
+    transform: translateY(-50%)
+
+    color: #fff
+    white-space: nowrap
+    font-weight: 700
+    line-height: 1.2
+    @include adaptiveFont(20, 18)
+
+.decorationsWrapperBlackText-sds--black
+    color: #1E1E1E
+
+    position: absolute
+    top: 50%
+    left: unset
+    right: 4%
+
+.decorationsWrapperBlackText-sds--center
+    display: none
+
+    @media (max-width: 385px)
+        display: inherit
+
+        margin-top: 40px
+
+        @include adaptiveFont(25, 18)
+
+        position: unset
+
+.decorationsWrapperBlackText-sds--topRight
+    display: inherit
+
+    @media (max-width: 385px)
+        display: none
+
+.decorationsWrapperBlackImage
+    display: block
+    -webkit-transform: translateY(-50%)
+    -ms-transform: translateY(-50%)
+    transform: translateY(-50%)
+    position: absolute
+    top: 50%
+    left: 55%
+
+// // // serviceDetailSecond-2
+// .intro-serviceDetailSecond2
+//     @media( max-width: 1400px )
+//         padding: 130px 0 0
+
+//     @media( max-width: 1380px )
+//         padding: 130px 0 60px
+
+//     @media( max-width: 780px )
+//         padding: 125px 0 40px
+
+//     @media( max-width: 750px )
+//         padding: 200px 0 30px
+
+//     @media( max-width: 420px )
+//         padding: 170px 0 30px
+
+// .intro__contentRightSideImage-serviceDetailSecond2
+//     aspect-ratio: 2/1.4
+//     transform: unset
+
+//     @media( max-width: 1380px )
+//         max-width: 360px
+
+//     @media( max-width: 900px )
+//         max-width: 330px
+//         min-width: unset
+
+//     @media( max-width: 420px )
+//         margin-bottom: 20px
+
+//         max-width: 240px
+
+// .intro__contentLeftSideTitle-serviceDetailSecond2
+//     max-width: 660px
+// // // serviceDetailSecond-3
+// .intro-serviceDetailSecond3
+//     @media( max-width: 1400px )
+//         padding: 130px 0 0
+
+//     @media( max-width: 1380px )
+//         padding: 130px 0 60px
+
+//     @media( max-width: 780px )
+//         padding: 90px 0 0
+
+//     @media( max-width: 750px )
+//         padding: 200px 0 30px
+
+//     @media( max-width: 420px )
+//         padding: 170px 0 30px
+
+.intro__contentRightSideImage-serviceDetailSecond3
+    aspect-ratio: 2/1.5
+    transform: unset
+
+    @media( max-width: 1380px )
+        min-width: unset
+        max-width: 390px
+
+    @media( max-width: 900px )
+        max-width: 330px
+
+    @media( max-width: 420px )
+        margin-bottom: 20px
+
+        max-width: 250px
+
+// // // services
+@import "../components/services/intro"
+@import "../components/services/info"
+@import "../components/services/statistics"
+// sitesDevelopment
+@import "../components/sitesDevelopment/intro"
+@import "../components/sitesDevelopment/types"
+@import "../components/sitesDevelopment/clouds"
+@import "../components/sitesDevelopment/offer"
+@import "../components/services/offer"
+// // studio
+@import "../components/studio/intro"
+@import "../components/studio/about"
+@import "../components/studio/team"
+@import "../components/studio/hoisting"
+// // blog
+@import "../components/blog/intro"
+// // blog-once-page
+@import "../components/blog-once-page/intro"
+// // support
+@import "../components/support/intro"
+@import "../components/support/benefits"
+@import "../components/support/costs"
+// // // 
+.intro__bottom-brown
+    background-color: #2b2b2b
+
+.intro__bottom-unset
+    border-radius: unset
+
+.section__overtitle-line
+    margin-right: 15px
+    margin-left: 0
+
+    max-width: 35px
+
+.section__overtitle-line-ml20
+    margin-left: 20px
+
+.intro__bottomTitle
+    max-width: 235px
+    width: 100%
+
+    font-weight: 700
+    @include adaptiveFont(27, 18)
+    line-height: 1.2
+    color: #FFFFFF
+
+    &--black
+        color: #404040
+
+.types__contentBottomItemButton
+    &:hover
+        background-color: #D0FF48
+
+    &:hover .types__contentBottomItemButtonText
+        color: #000
+
+.types__contentBottomItemButton-width
+    max-width: 100%
+    width: 100%
+
+.types__contentBottomItemButtonWrapper-noPadd
+    padding: 0
+
+.reviews .reviews__list-item-attraction
+    padding: 30px 35px
+    max-width: 439px
+    min-height: 386px
+    width: 100%
+    height: auto
+    border-radius: 20px
+    position: relative
+// projects
+@import "../components/projects/projectsSection"
+@import "../components/projects/offer"
+
+.ready__contentLeftBottomFormInputs
+    display: flex
+    align-items: center
+
+    margin-bottom: 20px
+
+    @media (max-width: 1040px)
+        flex-direction: column
+
+.answers--noPadding
+    padding-top: 0
+
+// input
+.offer__formInputIntro
+    padding: 13px 18px
+
+    max-width: 300px
+    width: 100%
+
+    height: 44px
+
+    border-radius: 10px
+    background-color: transparent
+    border: 1px solid #535353
+    transition: all .3s ease
+
+    color: #fff
+    font-weight: 400
+    font-size: 16px
+
+    &:not(:last-child)
+        margin-right: 15px
+
+        @media ( max-width: 370px )
+            margin-right: 0
+        //     margin-bottom: 15px
+
+    &::placeholder
+        font-weight: 400
+        font-size: 16px
+        color: #fff
+
+    &:focus
+        border: 1px solid #fff
+
+//  intro
+.intro404
+    display: flex
+    justify-content: center
+    flex-direction: column
+    align-items: center
+
+    width: 100%
+    height: 860px
+
+    text-align: center
+
+    overflow: unset
+
+    position: relative
+
+    @media(max-width: 768px)
+        height: 580px
+
+    @media(max-width: 540px)
+        margin-top: 50px
+
+        height: 370px
+
+.intro404__decoration-circle-with-lines,
+.intro404__decoration-circle,
+.intro404__decoration-stars,
+.intro404__decoration-line,
+.intro404__decoration-figures
+    position: absolute
+
+.intro404__decoration-circle-with-lines
+    display: block
+
+    z-index: -1
+
+    @media(max-width: 768px)
+        display: none
+
+.intro404__decoration-figures
+    left: 20%
+    bottom: 10%
+
+    @media(max-width: 1024px)
+        left: 5%
+
+    @media(max-width: 735px)
+        bottom: 2%
+
+    @media(max-width: 768px)
+        display: none
+
+.intro404__decoration-line
+    margin: 0 auto
+
+    z-index: -1
+
+.intro404__decoration-circle
+    left: -100px
+    top: 170px
+
+    @media(max-width: 1024px)
+        left: -150px
+
+    @media(max-width: 768px)
+        display: none
+
+.intro404__decoration-stars
+    right: 30%
+    top: 20%
+
+    @media(max-width: 1024px)
+        right: 10%
+        top: 20%
+
+    @media(max-width: 768px)
+        display: none
+
+//@media( max-width: 735px )
+//  top: 13%
+
+// texts
+.intro404__title
+    font-weight: 800
+    @include adaptiveFont(180, 80)
+    line-height: 1
+    color: #000000
+
+.intro404__suptitle
+    margin-bottom: 15px
+
+    font-weight: 800
+    @include adaptiveFont(24, 18)
+    line-height: 1
+    text-align: center
+    color: #000000
+
+    @media(max-width: 500px)
+        margin: 0 auto 15px
+
+        max-width: 200px
+
+.intro404__text
+    margin: 0 auto 33px
+
+    max-width: 400px
+    width: 100%
+
+    font-weight: 400
+    @include adaptiveFont(24, 15)
+    line-height: 112.9%
+    text-align: center
+    color: #000000
+
+    @media(max-width: 500px)
+        max-width: 290px
+
+.intro404__button
+    display: flex
+    align-items: center
+    justify-content: center
+
+// lines
+.decoration-lines-404
+    display: flex
+    justify-content: space-between
+    height: fit-content
+    position: absolute
+    z-index: -1
+
+    @media(max-width: 730px)
+        display: none
+
+.decoration-line-404
+    border: 1px solid #EDEDED
+
+textarea
+    outline: none
+
+.galleryCrossButton
+    display: none
+
+.galleryCross
+    transition: transform .3s ease-in
+
+    &:hover
+        transform: rotate(180deg)

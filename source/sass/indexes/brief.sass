@@ -1,0 +1,98 @@
+@import "../components/utils/variables"
+@import "../components/utils/mixins"
+@import "../components/utils/fonts"
+@import "../components/utils/reset"
+@import "../components/circle/circle"
+@import "../components/utils/preloader"
+
+@import "../components/header/header"
+@import "../components/brief/intro"
+@import "../components/brief/forms"
+@import "../components/utils/burgerMenu"
+@import "../components/footer/footer"
+
+@import "../components/utils/fillingButton"
+@import "../components/utils/container"
+@import "../components/utils/locomotive.scss"
+
+.body-brief
+  display: flex
+  flex-direction: column
+
+  font-family: 'Circe', serif
+
+  position: relative
+
+  background-color: #1B1B1B
+
+main
+  flex-grow: 1
+
+.body--hidden
+  overflow: hidden
+
+.intro
+  overflow: unset
+
+input:focus
+  border: 1px solid $saladColor
+  outline: none
+
+input,
+textarea
+  outline: none
+
+// header phone
+.header__contacts-item-number-image
+  display: none
+
+  margin-right: 15px
+
+  &--black
+    @media (max-width: 390px)
+      display: inherit
+
+  &--white
+    @media (max-width: 390px)
+      display: none
+
+// header
+.header--main
+  // padding: 65px 0 10px 0
+
+  background-color: transparent
+
+  // @media (max-width: 1280px)
+  //   padding: 25px 0 10px 0
+
+  &--min-padding
+    background-color: #1B1B1B
+    padding: 10px 0 15px
+
+.header--main-black-mode
+  background-color: #1d1d1d
+
+.header__burger-span
+  background-color: #fff
+
+.header__nav-item,
+.header__contacts-item-number,
+.header__contacts-item-back-call
+  color: #fff
+
+.header__logo-block-image--black
+  display: none
+
+.header__logo-block-image--white
+  display: block
+
+.header__contacts-item-image--black
+  display: none
+
+.header__contacts-item-image--white
+  display: block
+
+// header letters
+.header__nav-item-text
+  .block:last-child
+    color: #ffffff

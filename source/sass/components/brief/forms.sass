@@ -1,0 +1,433 @@
+.forms-brief
+  position: relative
+
+  margin-top: 125px
+
+  @media (max-width: 1550px)
+    margin-left: 0
+
+  @media (max-width: 910px)
+    margin-top: 60px
+
+//  title
+.forms__title-block-brief
+  margin-bottom: 46px
+
+  @media (max-width: 1024px)
+    margin-bottom: 25px
+
+.forms__title-brief
+  padding: 18px 25px
+
+  max-width: 420px
+
+  background-color: #C9F31D
+  border-radius: 5px
+
+  font-weight: 700
+  @include adaptiveFont(22, 16)
+  line-height: 1.2
+  color: #2C2C2C
+
+  @media (max-width: 1280px)
+    @include adaptiveFont(18, 16)
+
+  @media (max-width: 1024px)
+    max-width: 310px
+
+  &--flex
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+//  header
+.forms__header-brief
+  display: flex
+  flex-direction: column
+
+  margin: 0 auto 105px
+
+  @media (max-width: 1536px)
+    max-width: 1135px
+
+  @media (max-width: 1280px)
+    margin: 0 auto 60px
+
+  @media (max-width: 775px)
+    margin: 0 auto 50px
+
+.forms__header-title-brief
+  margin-bottom: 45px
+
+  font-weight: 700
+  @include adaptiveFont(30, 16)
+  line-height: 109%
+  color: #FFFFFF
+
+  @media (max-width: 1280px)
+    margin-bottom: 25px
+
+    //@include adaptiveFont(20, 16)
+
+.forms__header-texts-brief
+  display: flex
+  flex-direction: column
+
+.forms__header-text-top-brief
+  margin-bottom: 35px
+
+  font-weight: 350
+  @include adaptiveFont(30, 16)
+  line-height: 109%
+  color: #FFFFFF
+  opacity: .6
+
+  @media (max-width: 1280px)
+    @include adaptiveFont(20, 16)
+
+.forms__header-text-bottom-brief
+  font-weight: 350
+  @include adaptiveFont(30, 16)
+  line-height: 109%
+  color: #FFFFFF
+
+  @media (max-width: 1280px)
+    @include adaptiveFont(20, 16)
+
+// company
+.forms__about-company-brief
+  @media (max-width: 1536px)
+    display: flex
+    justify-content: center
+
+.forms__about-company-content-brief
+  display: flex
+
+  // max-width: 1135px
+
+  width: 100%
+
+.forms__about-company-content-form-brief
+  display: flex
+
+.forms__block-left-brief
+  margin-right: 115px
+
+  // max-width: 433px
+
+  width: 100%
+
+  @media (max-width: 910px)
+    margin-right: 35px
+
+  @media (max-width: 830px)
+    margin-bottom: 38px
+
+    max-width: 100%
+
+  &--mb
+    margin-right: 0
+    margin-bottom: 37px
+
+    max-width: 873px
+
+  &--narrow
+    max-width: 293px
+
+.forms__block-left-title-brief
+  margin-bottom: 22px
+
+  font-weight: 400
+  @include adaptiveFont(20, 18)
+  line-height: 127.5%
+  color: #FFFFFF
+
+  &--biggest-font
+    margin-bottom: 15px
+
+    @include adaptiveFont(22, 20)
+
+.forms__block-left-text-brief
+  font-weight: 350
+  @include adaptiveFont(18, 16)
+  line-height: 127.5%
+  color: #FFFFFF
+
+.forms__block-right-brief
+  margin-right: -10px
+
+  width: 100%
+
+  &--flex
+    display: flex
+
+    @media (max-width: 990px)
+      grid-template-columns: repeat(4, 1fr)
+
+    @media (max-width: 1115px)
+      display: grid
+      grid-template-columns: repeat(3, 1fr)
+
+    @media (max-width: 740px)
+      grid-template-columns: repeat(2, 1fr)
+      justify-items: center
+
+    @media (max-width: 470px)
+      grid-template-columns: repeat(1, 1fr)
+
+.forms__block-brief
+  display: flex
+
+  @media (max-width: 830px)
+    flex-direction: column
+
+  &--column
+    flex-direction: column
+
+// form
+.forms__form-brief
+  display: flex
+  flex-direction: column
+
+  width: 100%
+
+.forms__content-button--center-brief
+  display: flex
+  justify-content: center
+
+.forms__content-brief
+  margin-bottom: 75px
+
+  width: 100%
+
+  @media (max-width: 1280px)
+    margin-bottom: 55px
+
+  @media (max-width: 830px)
+    margin-bottom: 40px
+
+.forms__form-input-fieldset-brief
+  display: flex
+  flex-direction: column
+
+  // max-width: 433px
+
+  width: 100%
+
+  @media (max-width: 830px)
+    max-width: 100%
+
+  &--wide
+    max-width: 100%
+
+.forms__form-input-label-brief
+  margin-bottom: 16px
+
+  font-weight: 400
+  @include adaptiveFont(20, 16)
+  line-height: 127.5%
+  color: #FFFFFF
+
+  @media (max-width: 1280px)
+    @include adaptiveFont(16, 16)
+
+  &--no-wrap
+    white-space: nowrap
+
+.forms__form-input-brief
+  padding: 15px 25px
+
+  // max-width: 433px
+
+  width: 100%
+  height: 61px
+
+  background-color: #212121
+  border: 1px solid #FFFFFF
+  border-radius: 10px
+
+  transition: border .3s ease-in-out
+
+  font-weight: 350
+  @include adaptiveFont(17, 15)
+  line-height: 127.5%
+  color: #fff
+
+  @media (max-width: 1280px)
+    height: 50px
+
+  @media (max-width: 830px)
+    max-width: 100%
+
+  &:focus
+    border: 1px solid $saladColor
+
+  &:not(:last-child)
+    margin-bottom: 26px
+
+    @media (max-width: 1280px)
+      margin-bottom: 20px
+
+  &::placeholder
+    font-weight: 350
+    @include adaptiveFont(17, 15)
+    line-height: 127.5%
+    color: #ACACAC
+
+  &--tail
+    height: 191px
+
+    @media (max-width: 1280px)
+      height: 156px
+
+  &--big-mb:not(:last-child)
+    margin-bottom: 38px
+
+.forms__form-textarea-brief
+  resize: none
+
+  max-width: 100%
+
+  &--narrow
+    max-width: 588px
+
+    @media (max-width: 830px)
+      max-width: 100%
+
+.input__radio-label-brief
+  margin-left: 13px
+
+  font-weight: 350
+  @include adaptiveFont(20, 16)
+  line-height: 127.5%
+  color: #FFFFFF
+
+  cursor: pointer
+
+  @media (max-width: 1280px)
+    @include adaptiveFont(16, 16)
+
+.input__radio-brief
+  flex-shrink: 0
+
+  width: 28px
+  height: 28px
+
+  background-color: #494949
+  filter: opacity(0)
+  cursor: pointer
+
+  position: absolute
+  left: 0
+  z-index: 1
+
+  &:checked + .input__radio-custom-brief .input__radio-custom-checked-brief
+    filter: opacity(1)
+
+.forms__block-left-radio-main-block-brief
+  display: flex
+  align-items: center
+
+  margin-bottom: 19px
+
+.forms__block-left-radio-block-brief
+  display: flex
+  align-items: center
+
+  width: 28px
+  height: 28px
+
+  cursor: pointer
+
+  position: relative
+
+.input__radio-custom-brief
+  flex-shrink: 0
+
+  width: 28px
+  height: 28px
+
+  background-color: #494949
+  border-radius: 50%
+  cursor: pointer
+
+.input__radio-custom-checked-brief
+  width: 18px
+  height: 18px
+
+  filter: opacity(0)
+  transition: filter .3s ease-in-out
+
+  background: #C9F31D
+  border-radius: 50%
+  cursor: pointer
+
+  position: absolute
+  top: 5px
+  left: 5px
+
+.forms__form-radio-block-brief
+  margin-right: 20px
+  margin-bottom: 15px
+
+  max-width: 200px
+
+  min-height: 52px
+
+  width: 100%
+  height: fit-content
+
+  border: 1px solid $saladColor
+  border-radius: 40px
+  background-color: transparent
+  cursor: pointer
+
+  transition: background-color .3s ease-in-out
+
+  overflow: hidden
+
+  position: relative
+  z-index: 2
+
+  @media (max-width: 1280px)
+    min-height: 44px
+
+  &--active .forms__form-radio-label-brief
+    color: #232323
+
+  &--active
+    background-color: $saladColor
+
+.forms__form-checkbox-brief
+  filter: opacity(0)
+
+.forms__form-radio-block-bg-brief
+  width: 100%
+  height: 100%
+
+  background-color: transparent
+  transition: background-color .3s ease-in-out
+
+  position: absolute
+  left: 0
+  top: 0
+
+.forms__form-radio-label-brief
+  white-space: nowrap
+
+  font-weight: 400
+  @include adaptiveFont(17, 15)
+  line-height: 127.5%
+  color: #fff
+
+  cursor: pointer
+  transform: translate(-50%, -50%)
+  transition: color .3s ease-in-out
+
+  position: absolute
+  left: 50%
+  top: 50%
+  z-index: 1
+
+  @media (max-width: 1280px)
+    @include adaptiveFont(16, 15)

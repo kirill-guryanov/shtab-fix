@@ -1,0 +1,379 @@
+// @import "../utils/variables"
+.intro-serviceDetailSecond
+    display: flex
+    align-items: center
+    justify-content: center
+
+    padding: 200px 0 30px
+
+    min-height: 795px
+
+    background-color: #202020
+
+    overflow: hidden
+
+    position: relative
+
+    @media( max-width: 1400px )
+        padding: 130px 0 0
+
+    @media( max-width: 1380px )
+        padding: 160px 0 60px
+
+        min-height: 400px
+
+    @media( max-width: 1050px )
+        padding: 140px 0 60px
+
+    @media ( max-width: 1035px )
+        padding: 225px 0 40px
+
+    @media( max-width: 780px )
+        padding: 125px 0 40px
+
+    @media( max-width: 750px )
+        padding: 200px 0 30px
+
+    @media( max-width: 420px )
+        padding: 185px 0 30px
+
+.intro__decorativeCircle-serviceDetailSecond
+    transform: translateY(-50%)
+    opacity: .1
+
+    position: absolute
+    left: 0
+    top: 50%
+
+    // @media ( max-width: 1100px )
+    //     display: none
+
+.intro__decorativeGlowingCircle-serviceDetailSecond
+    transform: translateY(-50%)
+
+    position: absolute
+    right: 0
+    top: 50%
+
+// content
+.intro__content-serviceDetailSecond
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    position: relative
+    z-index: 1
+
+// left side
+.intro__contentLeftSide-serviceDetailSecond
+    margin-right: 120px
+
+    flex-shrink: 0
+
+    @media ( max-width: 1400px )
+        margin-right: 20px
+
+    @media ( max-width: 1380px )
+        display: grid
+        grid-template-columns: 1fr
+
+    @media ( max-width: 900px )
+        margin-top: 65px
+        display: grid
+        grid-template-columns: 1fr
+        justify-items: center
+
+        margin-right: 0
+
+        text-align: center
+
+.intro__contentLeftSideTitle-serviceDetailSecond
+    margin-bottom: 50px
+    margin-right: 40px
+
+    max-width: 640px
+    width: 100%
+
+    font-weight: 800
+    @include adaptiveFont(50, 23)
+    line-height: 1.2
+    color: #fff
+
+    @media ( max-width: 1380px )
+        margin-right: 0
+        margin-bottom: 20px
+
+        max-width: 500px
+
+    @media ( max-width: 940px )
+        // max-width: unset
+
+// line
+.intro__contentLine-serviceDetailSecond
+    margin: 0 40px
+
+    width: 100%
+    height: 1px
+
+    background-color: #3A3A3A
+
+    @media ( max-width: 700px )
+        display: none
+
+// right side
+.intro__contentRightSide-serviceDetailSecond
+    display: flex
+    justify-content: center
+    align-items: center
+
+    height: auto
+
+.intro__contentRightSideImage-serviceDetailSecond
+    margin-top: -100px
+
+    max-width: 900px
+
+    width: 100%
+    height: auto
+    aspect-ratio: 2/1
+
+    @media( max-width: 900px )
+        max-width: 330px
+
+    @media ( max-width: 750px )
+        margin-bottom: 40px
+
+    @media( max-width: 420px )
+        margin-bottom: 20px
+
+        max-width: 240px
+
+    &--scale
+
+        transform: scale(1.8)
+
+        @media ( max-width: 1690px )
+            width: 100%
+            max-width: 659px
+            height: auto
+
+        @media ( max-width: 1400px )
+            max-width: 500px
+
+            transform: scale(1.5)
+
+        @media ( max-width: 1190px )
+            max-width: 390px
+
+        @media ( max-width: 750px )
+            margin-bottom: 65px
+
+        @media ( max-width: 600px )
+            max-width: 340px
+
+        @media ( max-width: 480px )
+            margin-bottom: 50px
+            max-width: 280px
+
+// local
+.intro__top-serviceDetailSecond
+    display: flex
+    justify-content: space-between
+
+    @media ( max-width: 1540px )
+        justify-content: center
+
+    @media ( max-width: 900px )
+        flex-direction: column-reverse
+
+.intro__contentLeftSideText-serviceDetailSecond
+    margin-bottom: 40px
+
+    max-width: 400px
+    width: 100%
+
+    font-weight: 400
+    @include adaptiveFont(20, 16)
+    line-height: 1.2
+    color: #FFFFFF
+
+    @media ( max-width:420px )
+        margin-bottom: 20px
+
+// bottom
+
+.intro__bottom-serviceDetailSecond
+    display: flex
+    justify-content: center
+
+    margin-top: -3px
+    padding: 30px 0
+
+    position: relative
+
+    background-color: #222222
+    border-radius: 0 0 30px 30px
+
+    @media ( max-width: 1380px )
+        margin-top: 0
+
+.intro__bottomItemsWrapper-serviceDetailSecond
+    display: flex
+    justify-content: space-evenly
+    align-items: center
+
+    width: 100%
+
+    @media ( max-width: 880px )
+        flex-direction: column
+
+.intro__bottomTitleWrapper-serviceDetailSecond
+    margin-right: 20px
+
+.intro__bottomTitle-serviceDetailSecond
+    max-width: 235px
+    width: 100%
+
+    font-weight: 700
+    @include adaptiveFont(27, 18)
+    line-height: 1.2
+    color: #FFFFFF
+
+    @media ( max-width: 880px )
+        text-align: center
+
+.intro__bottomFormWrapper-serviceDetailSecond
+    max-width: 600px
+    width: 100%
+
+    @media ( max-width: 1070px )
+        max-width: 300px
+
+    @media ( max-width: 880px )
+        margin-bottom: 20px
+
+.intro__bottomForm-serviceDetailSecond
+    display: flex
+
+    margin-bottom: 15px
+
+    @media ( max-width: 1070px )
+        flex-direction: column
+
+.intro__bottomFormDescription-serviceDetailSecond
+    font-weight: 350
+    font-size: 14px
+    line-height: 1.2
+    color: #797979
+
+    @media ( max-width: 880px )
+        text-align: center
+
+.intro__bottomButton-serviceDetailSecond
+    margin-left: 20px
+
+    @media ( max-width: 880px )
+        margin-left: 0
+
+// button
+.fillingButton__svg-circle--introBottom,
+.fillingButton--introBottom,
+.fillingButton__circle--introBottom,
+.fillingButton__svg--introBottom
+    width: 80px
+    height: 80px
+
+// left list
+.intro__contentLeftSideListTitle-serviceDetailSecond
+    margin-bottom: 20px
+
+    font-weight: 400
+    @include adaptiveFont(20, 18)
+    line-height: 1.2
+    color: #FFFFFF
+
+.intro__contentLeftSideList-serviceDetailSecond
+    margin-bottom: 50px
+
+    max-width: 460px
+
+// item
+.intro__contentLeftSideListItem-serviceDetailSecond
+    display: flex
+    align-items: baseline
+
+.intro__contentLeftSideListItemText-serviceDetailSecond
+    font-weight: 400
+    @include adaptiveFont(20, 16)
+    line-height: 1.5
+    color: #FFFFFF
+    text-align: left
+
+    &:not(:last-child)
+        margin-bottom: 14px
+
+// left bottom
+.intro__contentLeftSideBottom-serviceDetailSecond
+    display: flex
+    align-items: center
+
+    @media ( max-width: 1540px )
+        flex-direction: column
+        align-items: start
+
+        grid-column-start: 1
+        grid-column-end: 3
+
+    @media ( max-width: 900px )
+        flex-direction: column
+        align-items: center
+
+        grid-column-start: unset
+        grid-column-end: unset
+
+.intro__contentLeftSideBottomButtonWrapper-serviceDetailSecond
+    margin-right: 30px
+
+    min-width: 280px
+
+    text-align: center
+
+    @media ( max-width: 1540px )
+        margin-right: 0
+        margin-bottom: 20px
+
+.intro__contentLeftSideButtonTop-serviceDetailSecond
+    display: block
+
+    padding: 20px 30px
+
+    max-width: 276px
+    min-height: 66px
+
+    width: 100%
+
+    background-color: $saladColor
+    border-radius: 10px
+    cursor: pointer
+
+    transition: background-color .3s ease
+
+    font-weight: 700
+    @include adaptiveFont(20, 18)
+    line-height: 1.2
+    color: #000000
+
+    &:hover
+        background-color: #fff
+
+.intro__contentLeftSideBottomText-serviceDetailSecond
+    max-width: 360px
+
+    text-align: left
+    font-weight: 700
+    @include adaptiveFont(20, 18)
+    line-height: 1.1
+    color: #FFFFFF
+
+    @media ( max-width: 900px )
+        text-align: center

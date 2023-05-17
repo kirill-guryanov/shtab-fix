@@ -1,0 +1,129 @@
+@import "source/sass/components/utils/variables"
+
+.reviews-index
+  padding-top: 105px
+  padding-bottom: 105px
+
+  background-color: #1B1B1B
+
+  overflow: hidden
+
+  position: relative
+
+.reviews__decoration-lines-index
+  position: absolute
+  top: 0
+  left: 25%
+
+  @media (max-width: 715px)
+    display: none
+
+.reviews__section__title-title-index
+  @media (max-width: 650px)
+    max-width: 315px
+
+.reviews__decoration-text-index
+  position: absolute
+
+.reviews__list-index
+  transition: transform, opacity .4s ease-in
+
+  transform: rotateX(-100deg)
+  transform-origin: top
+  opacity: 0
+
+  &.animated
+    transform: rotateX(0deg)
+    transform-origin: top
+    opacity: 1
+
+.reviews__list-item-index
+  flex-shrink: 0
+
+  // max-width: 250px
+  // max-width: 360px
+  width: auto
+  height: auto
+  // aspect-ratio: 1/1.4
+
+  padding: 14px
+
+  border: 1px solid #6D6D6D
+
+  // @media (max-width: 1536px)
+  //   height: 360px
+
+.reviews__list-item-image-index
+  width: 100%
+  height: 100%
+
+  object-fit: fill
+
+// splide
+.reviews__splide-index
+  @media (max-width: 675px)
+    padding: 0 140px
+
+  @media (max-width: 630px)
+    padding: 0 105px
+
+  @media (max-width: 590px)
+    padding: 0 95px
+
+  @media (max-width: 530px)
+    padding-top: 30px
+
+  @media (max-width: 490px)
+    padding: 30px 90px 0
+
+  @media (max-width: 445px)
+    padding: 30px 40px 0
+
+  @media (max-width: 370px)
+    padding: 30px 15px 0
+
+.reviews__splide-index .splide__arrow
+  width: 54px
+  height: 54px
+
+  border: 1px solid #A0A0A0
+  border-radius: unset
+  background: unset
+  opacity: .4
+
+  transition: all .3s ease-in-out
+  overflow: hidden
+
+  right: 0
+  left: unset
+
+  &:hover
+    opacity: 1
+    border: 1px solid #fff
+
+  &:hover svg
+    fill: $saladColor
+
+  & svg
+    width: 34px
+    height: 25px
+
+    transition: all .3s ease-in-out
+
+.reviews__splide-index .splide__arrow:disabled
+  opacity: .4
+
+  &:hover
+    opacity: 1
+    border: 1px solid #fff
+
+.reviews__splide-index .splide__arrow--next svg
+  fill: #A0A0A0
+
+.reviews__splide-index .splide__arrow--prev svg
+  fill: #A0A0A0
+
+  @media (max-width: 335px)
+
+.reviews__splide-index .splide__arrow--prev
+  right: 67px

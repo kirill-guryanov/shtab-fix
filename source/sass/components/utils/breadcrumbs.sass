@@ -1,0 +1,33 @@
+.blog__in-page-header--left-breadcrumbs
+  display: flex
+  flex-wrap: wrap
+
+.blog__in-page-header--left-breadcrumbs-item-text
+  font-weight: 350
+  @include adaptiveFont(20, 16)
+  line-height: 112.9%
+  color: #9F9F9F
+
+  transition: color .3s ease-in-out
+
+  @media (max-width: 500px)
+    max-width: 320px
+
+.blog__in-page-header--left-breadcrumbs-item
+  display: flex
+  align-items: center
+  flex-shrink: 0
+
+  margin-right: 15px
+  margin-bottom: 5px
+
+  &:hover .blog__in-page-header--left-breadcrumbs-item-text
+    color: #000
+
+  &.blog__in-page-header--left-breadcrumbs-item--not-arrow .blog__in-page-header--left-breadcrumbs-item-arrow
+    display: none
+
+.blog__in-page-header--left-breadcrumbs-item-arrow
+  margin-left: 15px
+
+  pointer-events: none

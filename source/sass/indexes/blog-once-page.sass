@@ -1,0 +1,285 @@
+@import "../components/utils/variables"
+@import "../components/utils/mixins"
+@import "../components/utils/fonts"
+@import "../components/utils/reset"
+@import "../components/utils/breadcrumbs"
+@import "../components/utils/fillingButton"
+@import "../components/utils/preloader"
+
+@import "../components/circle/circle"
+@import "../components/header/header"
+@import "../components/utils/burgerMenu"
+@import "../components/index/blog"
+@import "./blog--page"
+@import "../components/footer/footer"
+@import "../components/utils/locomotive.scss"
+
+body
+  display: flex
+  flex-direction: column
+
+  font-family: 'Circe', serif
+
+  position: relative
+
+main
+  flex-grow: 1
+
+.body--hidden
+  overflow: hidden
+
+input:focus
+  border: 1px solid $saladColor
+  outline: none
+
+// intro
+.intro
+  margin-top: 140px
+  margin-bottom: 0
+
+  position: relative
+
+  @media (max-width: 680px)
+    margin-top: 90px
+
+.intro__decoration-circle
+  position: absolute
+
+  left: -100px
+  top: 0
+
+  @media (max-width: 1820px)
+    display: none
+
+.intro__container
+  display: flex
+  flex-direction: column
+
+  position: relative
+
+// intro header
+.intro__header
+  margin-bottom: 38px
+
+.intro__header-top
+  margin-bottom: 15px
+
+.intro__header-middle
+  display: flex
+  justify-content: space-between
+
+  margin-bottom: 20px
+
+  max-width: 100%
+  width: 100%
+
+  @media (max-width: 1035px)
+    flex-direction: column
+
+.intro__header-middle-title
+  margin-right: 20px
+  margin-left: -3px
+
+  max-width: 765px
+
+  font-weight: 800
+  @include adaptiveFont(50, 30)
+  line-height: 112.9%
+  color: #1B1B1B
+
+  @media (max-width: 1035px)
+    margin-bottom: 20px
+
+// intro__content
+.intro__content
+  flex-direction: column
+
+  margin-bottom: 130px
+
+  @media (max-width: 1200px)
+    margin-bottom: 60px
+
+.intro__content-image-block
+  margin-bottom: 55px
+
+  @media (max-width: 800px)
+    margin-bottom: 35px
+
+    width: 100%
+    height: auto
+
+.intro__content-image
+  max-width: 100%
+  min-height: 647px
+
+  width: 100%
+
+  object-fit: cover
+
+  @media (max-width: 800px)
+    min-height: unset
+
+    height: 400px
+
+  @media (max-width: 580px)
+    height: 270px
+
+  @media (max-width: 420px)
+    height: 230px
+
+  @media (max-width: 350px)
+    height: 200px
+
+.intro__content-text-block
+  width: 100%
+
+.intro__content-text
+  font-weight: 400
+  @include adaptiveFont(20, 18)
+  line-height: 161.4%
+  color: #0e0e0e
+
+// publications
+.intro__related-publications
+  margin-bottom: 100px
+
+  width: 100%
+  height: auto
+
+  @media (max-width: 780px)
+    margin-bottom: 60px
+
+.intro__related-publications--blog-once-page
+  margin-bottom: 50px
+
+  @media (max-width: 560px)
+    margin-bottom: 120px
+
+.section__title-title
+  font-weight: 800
+  @include adaptiveFont(50, 25)
+  line-height: 112.9%
+  color: #000000
+
+.reviews__section__title-title
+  @media (max-width: 650px)
+    max-width: 315px
+
+.intro__related-publications-slider
+  width: 100%
+
+//  slider
+.blog__items-item-block--blog-once-page
+  position: relative
+  z-index: 1
+
+.blog__items-item--blog-once-page
+  width: 280px
+  height: auto
+
+  overflow: hidden
+
+  cursor: pointer
+
+  &::after
+    content: ""
+    display: block
+    width: 100%
+    height: 100%
+    background-color: rgb(0 0 0)
+    opacity: 0
+    -webkit-transition: opacity .3s ease-in-out
+    -o-transition: opacity .3s ease-in-out
+    transition: opacity .3s ease-in-out
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+
+  &:hover::after
+    opacity: .5
+
+  &:hover .blog__items-item-visible-block-top-title--blog-page,
+  &:hover .blog__items-item-visible-block-top-date,
+  &:hover .blog__items-item-visible-block-body-text--blog-once-page
+    color: #fff
+
+  &:hover .blog__items-item-visible-block--blog-once-page
+    background-color: #000
+
+  &:hover .blog__items-item-visible-block-top-circle--blog-page,
+  &:hover .blog__items-item-visible-block-top-title--blog-page::before
+    background-color: #fff
+
+  .blog__items-item-visible-block-top-title--blog-page
+
+    &::before
+      transition: all .3s ease-in-out
+
+.blog__items-item-image--blog-once-page
+  width: 100%
+
+  object-fit: cover
+
+.blog__items-item-visible-block--blog-once-page
+  margin: 0
+  padding: 20px 20px 20px 40px
+
+  width: 100%
+  height: auto
+
+  transform: unset
+
+.blog__items-item-visible-block-body-text--blog-once-page
+  border-bottom: unset
+  @include adaptiveFont(16, 15)
+
+// splide arrows
+.intro__related-publications-slider .splide__arrow
+  width: 54px
+  height: 54px
+
+  border: 1px solid #A0A0A0
+  border-radius: unset
+  background: unset
+  opacity: .4
+
+  transition: all .3s ease-in-out
+  overflow: hidden
+
+  right: 0
+  left: unset
+
+  &:hover
+    opacity: 1
+    border: 1px solid #000
+
+  &:hover svg
+    fill: $saladColor
+
+  & svg
+    width: 80px
+    height: 80px
+
+    transition: all .3s ease-in-out
+
+.intro__related-publications-slider .splide__arrow:disabled
+  opacity: .4
+
+  &:hover
+    opacity: 1
+    border: 1px solid #000
+
+.intro__related-publications-slider .splide__arrow--next svg
+  margin-top: 24px
+  margin-left: 11px
+  fill: #A0A0A0
+
+.intro__related-publications-slider .splide__arrow--prev svg
+  margin-top: 27px
+  margin-right: 8px
+  fill: #A0A0A0
+
+.intro__related-publications-slider .splide__arrow--prev
+  right: 67px

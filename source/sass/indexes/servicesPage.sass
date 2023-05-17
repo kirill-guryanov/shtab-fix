@@ -1,0 +1,85 @@
+@import "../components/utils/variables"
+@import "../components/utils/mixins"
+@import "../components/utils/fonts"
+@import "../components/utils/reset"
+@import "../components/utils/container"
+@import "../components/utils/fillingButton"
+@import "../components/utils/preloader"
+
+@import "../components/header/header"
+@import "../components/utils/burgerMenu"
+@import "../components/circle/circle"
+@import "../components/services/intro"
+@import "../components/services/info"
+@import "../components/services/statistics"
+@import "../components/services/offer"
+@import "../components/footer/footer"
+@import "../components/modals/modals"
+@import "../components/utils/locomotive.scss"
+
+body
+  display: flex
+  flex-direction: column
+
+  font-family: 'Circe', serif
+
+  position: relative
+
+main
+  flex-grow: 1
+
+.body--hidden
+  overflow: hidden
+
+input:focus
+  border: 1px solid $saladColor
+  outline: none
+
+// header phone
+.header__contacts-item-number-image
+  display: none
+
+  margin-right: 15px
+
+  &--black
+    @media (max-width: 390px)
+      display: inherit
+
+  &--white
+    @media (max-width: 390px)
+      display: none
+
+// header
+.header--main
+  background-color: transparent
+
+.header--main--min-padding
+  background-color: #1D1D1D
+
+.header--main-black-mode
+  background-color: #1D1D1D
+
+.header__burger-span
+  background-color: #fff
+
+.header__nav-item,
+.header__contacts-item-number,
+.header__contacts-item-back-call
+  color: #fff
+
+.header__logo-block-image--black
+  display: none
+
+.header__logo-block-image--white
+  display: block
+
+.header__contacts-item-image--black
+  display: none
+
+.header__contacts-item-image--white
+  display: block
+
+// header letters
+.header__nav-item-text
+  .block:last-child
+    color: #ffffff

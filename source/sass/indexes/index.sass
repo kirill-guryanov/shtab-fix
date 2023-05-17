@@ -1,0 +1,46 @@
+// variables
+@import "../components/utils/variables"
+// utils
+@import "../components/utils/container"
+@import "../components/utils/locomotive.scss"
+@import "../components/utils/preloader"
+@import "../components/utils/variables"
+@import "../components/utils/mixins"
+@import "../components/utils/fonts"
+@import "../components/utils/reset"
+@import "../components/utils/fillingButton"
+@import "../components/utils/sectionTitles"
+// sections
+@import "../components/circle/circle"
+@import "../components/header/header"
+@import "../components/utils/burgerMenu"
+@import "../components/index/intro"
+@import "../components/index/about-us"
+@import "../components/index/products"
+@import "../components/index/reviews"
+@import "../components/index/services"
+@import "../components/index/blog"
+@import "../components/footer/footer"
+
+@import "../components/modals/modals"
+
+html
+  scroll-behavior: smooth
+
+body
+  display: flex
+  flex-direction: column
+
+  font-family: 'Circe', serif
+
+  position: relative
+
+main
+  flex-grow: 1
+
+input:focus
+  border: 1px solid $saladColor
+  outline: none
+
+// #butter
+//   position: fixed

@@ -1,0 +1,31 @@
+include head
+
+body
+    include ../../views/utils/preloader
+    include ../../views/utils/burgerMenu
+
+    include ../../views/circle/circle
+          
+
+    include ../../views/header/header 
+    #butter(data-scroll-container)
+        main(data-scroll-section)
+            include ../../views/index/intro
+            include ../../views/index/about-us
+            include ../../views/index/services
+            include ../../views/index/products
+            include ../../views/index/reviews
+            include ../../views/index/blog
+        include ../../views/footer/footer
+
+    include ../../views/modals/modals
+
+    
+
+// splide script
+script( src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js" )
+script( src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js" )
+//- 
+script( src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1/dist/locomotive-scroll.min.js" )
+// my js
+script( src="./assets/js/main.js" )

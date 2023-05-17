@@ -1,0 +1,177 @@
+.stack-serviceDetail
+    padding: 70px 0
+
+    background-color: #fff
+
+    position: relative
+
+// circles
+.stackDecorativeCircletTop-serviceDetail,
+.stackDecorativeCircletBottom-serviceDetail
+    position: absolute
+
+    @media( max-width: 490px )
+        display: none
+
+.stackDecorativeCircletTop-serviceDetail
+    transform: rotate(182deg)
+
+    top: -169px
+    left: -88px
+
+.stackDecorativeCircletBottom-serviceDetail
+    bottom: -185px
+    right: -116px
+
+.stack__content-serviceDetail
+    display: flex
+    flex-direction: column
+
+    position: relative
+    z-index: 1
+
+// top
+.stack__contentTop-serviceDetail
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    margin-bottom: 50px
+
+    @media (max-width: 1250px)
+        flex-direction: column
+        align-items: center
+
+.stack__contentTopTitle-serviceDetail
+    font-weight: 700
+    @include adaptiveFont(40, 20)
+    line-height: 1.2
+    letter-spacing: 0.015em
+    color: #111111
+
+    text-align: center
+
+    @media (max-width: 1250px)
+        margin-bottom: 30px
+
+// .stack__contentTopButton
+// middle
+.stack__contentMiddle-serviceDetail
+    margin-bottom: 65px
+
+.stack__contentMiddleItems-serviceDetail
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-column-gap: 15px
+    grid-row-gap: 15px
+
+    @media (max-width: 1250px)
+        grid-template-columns: repeat(2,1fr)
+        justify-items: center
+
+    @media (max-width: 650px)
+        grid-template-columns: repeat(1,1fr)
+
+//  item
+.stack__contentMiddleItem-serviceDetail
+    padding: 20px 30px
+
+    max-width: 456px
+    min-height: 233px
+
+    width: 100%
+
+    background: #343434
+    border-radius: 20px
+
+    @media (max-width: 650px)
+        max-width: 100%
+
+.stack__contentMiddleItemHeader-serviceDetail
+    display: flex
+    align-items: center
+
+    margin-bottom: 15px
+
+.stack__contentMiddleItemHeaderIconWrapper-serviceDetail
+    display: flex
+    align-items: center
+    justify-content: center
+
+    margin-right: 22px
+
+    width: 56px
+    height: 56px
+
+    border-radius: 20px
+    background-color: #1E1E1E
+
+.stack__contentMiddleItemHeaderIcon-serviceDetail
+    display: inherit
+
+.stack__contentMiddleItemHeaderTitle-serviceDetail
+    font-weight: 700
+    @include adaptiveFont(25, 18)
+    line-height: 1.2
+    color: #fff
+
+// .stack__contentMiddleItemBody
+
+.stack__contentMiddleItemBodyText-serviceDetail
+    font-weight: 350
+    @include adaptiveFont(17, 15)
+    line-height: 1.2
+    color: #FFFFFF
+
+// .stack__contentBottom
+
+.stack__contentBottomItems-serviceDetail
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    grid-column-gap: 20px
+
+    @media (max-width: 1250px)
+        grid-template-columns: repeat(2,1fr)
+        grid-row-gap: 57px
+        justify-items: center
+
+    @media (max-width: 650px)
+        grid-template-columns: repeat(1,1fr)
+
+// item
+.stack__contentBottomItemIconWrapper-serviceDetail
+    margin-bottom: 40px
+
+.stack__contentBottomItem-serviceDetail
+    max-width: 333px
+
+    width: 100%
+
+    @media (max-width: 1250px)
+        display: flex
+        flex-direction: column
+        align-items: center
+        text-align: center
+
+    &:nth-child(2) .stack__contentBottomItemIconWrapper-serviceDetail
+
+        margin-bottom: 26px
+
+    &:nth-child(1) .stack__contentBottomItemIconWrapper-serviceDetail
+        margin-bottom: 21px
+
+// .stack__contentBottomItemIcon
+
+.stack__contentBottomItemTitle-serviceDetail
+    margin-bottom: 15px
+
+    font-weight: 700
+    font-size: 24px
+    line-height: 100%
+    color: #000000
+
+.stack__contentBottomItemText-serviceDetail
+    font-weight: 350
+    font-size: 20px
+    line-height: 118.4%
+    color: #000000

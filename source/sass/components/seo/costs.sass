@@ -1,0 +1,202 @@
+.costs-seo
+    padding: 80px 0 80px
+
+    background-color: #262626
+
+    position: relative
+
+    @media ( max-width: 600px )
+        padding: 40px 0
+
+    & .servicesTitle
+        @media ( max-width: 420px )
+            text-align: center
+
+.projects__obliqueLines
+    position: absolute
+    top: 50%
+    right: -50px
+
+.decorativeCicrcleWithLines-seo
+    opacity: .1
+    transform: translate(0,-39%) rotate(28deg) scale(-1,1)
+    position: absolute
+    top: 30%
+    left: -171px
+
+// top
+.costs__contentTop-seo
+    margin-bottom: 45px
+
+// middle
+.costs__contentBottomItemMiddleList-seo
+    display: flex
+    flex-direction: column
+
+.costs__contentBottomItemMiddleListItem-seo
+    display: flex
+    align-items: baseline
+
+    margin-bottom: 10px
+
+.costs__contentBottomItemMiddleListItemText-seo
+    font-weight: 400
+    @include adaptiveFont(18, 16)
+    line-height: 1.2
+    color: #2B2B2B
+
+// bottom
+.costs__contentBottom-seo
+    margin-bottom: 55px
+
+.costs__contentBottomItemBottom-seo
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    @media ( max-width: 450px )
+        flex-direction: column
+
+.costs__contentBottomItemBottomLeft-seo
+    margin-right: 20px
+
+    @media ( max-width: 450px )
+        margin-right: 0
+        margin-bottom: 20px
+
+.costs__contentBottomItemBottomLeftText-seo
+    font-weight: 700
+    @include adaptiveFont(22, 18)
+    line-height: 1.2
+    color: #2B2B2B
+
+.costs__contentBottomItems-seo
+    display: grid
+    grid-template-columns: repeat(3,1fr)
+    column-gap: 85px
+    row-gap: 50px
+
+    @media ( max-width: 1320px )
+        grid-template-columns: repeat(2,1fr)
+        justify-items: center
+        column-gap: 50px
+        row-gap: 50px
+
+    @media ( max-width: 780px )
+        grid-template-columns: repeat(1,1fr)
+
+// Item
+.costs__contentBottomItem-seo
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+    padding: 30px
+
+    max-width: 410px
+    width: 100%
+
+    min-height: 406px
+
+    background-color: #fff
+    border-radius: 20px
+
+    @media ( max-width: 780px )
+        max-width: 100%
+
+// top
+.costs__contentBottomItemTop-seo
+    display: flex
+    align-items: center
+
+    margin-bottom: 20px
+
+    @media ( max-width: 450px )
+        flex-direction: column
+        justify-items: center
+
+        text-align: center
+
+.costs__contentBottomItemTopLeft-seo
+    margin-right: 20px
+
+    @media ( max-width: 450px )
+        margin-right: 0
+        margin-bottom: 20px
+
+.costs__contentBottomItemTopRightTitle-seo
+    font-weight: 700
+    @include adaptiveFont(25, 20)
+    line-height: 1.1
+    color: #262626
+
+// middle
+.costs__contentBottomItemMiddle-seo
+    margin-bottom: 20px
+
+.costs__contentBottomItemMiddleText-seo
+    margin-bottom: 30px
+
+    font-weight: 400
+    @include adaptiveFont(18, 16)
+    line-height: 1.1
+    color: #262626
+
+// button
+.fillingButton__svg--costsItem,
+.fillingButton__circle--costsItem,
+.fillingButton__svg-circle--costsItem
+    width: 62px
+    height: 62px
+
+.fillingButton__p--costsItem
+    font-weight: normal
+
+// footer
+.costs__contentFooterItem-seo
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    padding: 40px
+
+    width: 100%
+    min-height: 155px
+
+    background-color: #343434
+    border-radius: 15px
+
+    @media ( max-width: 985px )
+        flex-direction: column
+
+.costs__contentFooterItemLeft-seo
+    margin-right: 50px
+
+    @media ( max-width: 985px )
+        margin-right: 0
+        margin-bottom: 30px
+
+.costs__contentFooterItemLeftText-seo
+    max-width: 455px
+
+    font-weight: 700
+    @include adaptiveFont(25, 18)
+    line-height: 1.2
+    color: #FFFFFF
+
+    @media ( max-width: 985px )
+        text-align: center
+
+// bullet wrapper
+.services__contentBottomItemListItemBulletWrapper-seo
+    display: flex
+    align-items: center
+    justify-content: center
+
+    margin-right: 15px
+
+    width: 20px
+    height: 20px
+
+    border: 1px solid #AAAAAA
+    border-radius: 50%

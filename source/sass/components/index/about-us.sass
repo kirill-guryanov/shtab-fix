@@ -1,0 +1,343 @@
+@import "source/sass/components/utils/mixins"
+
+.about-us-index
+  background-color: #1B1B1B
+
+  min-height: 1030px
+
+  overflow: hidden
+
+  position: relative
+
+  @media (max-width: 1440px)
+    min-height: 920px
+
+  //@media (max-width: 1370px)
+  //  min-height: 1070px
+
+  @media (max-width: 1170px)
+    min-height: 710px
+
+  & .fillingButton__circle,
+  & .fillingButton__svg,
+  & .fillingButton__svg-circle
+    @media (max-width: 1300px)
+      width: 71px
+      height: 71px
+
+//  decoration
+.about-us__decoration-image--left
+  transform: translate(-40%, 100%) rotate(90deg)
+
+  @include adaptiveFont(140, 80)
+  color: #fff
+  opacity: .06
+
+  left: 55px
+  position: absolute
+
+  @media (max-width: 1520px)
+    display: none
+
+  @media (max-width: 1170px)
+    display: block
+
+    transform: translate(-40%, 90%) rotate(90deg)
+
+  @media (max-width: 700px)
+    display: none
+
+.about-us__decoration-image--right
+  position: absolute
+  right: -150px
+
+  opacity: .2
+
+  @media (max-width: 970px)
+    display: none
+
+// left side
+.about-us__left-side-index
+  flex-shrink: 0
+
+  padding-right: 45px
+
+  width: auto
+  height: auto
+
+  border-right: 1px solid #3c3c3c
+
+  @media (max-width: 1170px)
+    display: none
+
+    padding: unset
+
+    border-right: unset
+
+.about-us__left-side-image-block-index
+  max-width: 550px
+
+  width: 100%
+  height: 650px
+
+  @media (max-width: 1740px)
+    background-position: 50px
+
+  @media (max-width: 1440px)
+    height: 500px
+
+  @media (max-width: 1170px)
+    max-width: 100%
+
+    background-position: center
+
+// right side
+.about-us__right-side-index
+  padding-left: 60px
+
+  width: 100%
+
+  @media (max-width: 1170px)
+    padding-left: unset
+    margin: 0 0 230px 0
+
+  @media (max-width: 700px)
+    margin: 0 0 200px 0
+
+  @media (max-width: 480px)
+    margin: 0 0 145px 0
+
+.about-us__right-side-content-index
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  align-items: flex-start
+
+  @media (max-width: 1170px)
+    align-items: center
+
+.about-us__right-side-overtitle-index
+  display: flex
+  align-items: center
+  gap: 15px
+
+  margin-bottom: 10px
+
+  font-weight: 400
+  @include adaptiveFont(20, 14)
+  line-height: 112.9%
+  color: #FFFFFF
+
+.about-us__right-side-overtitle-line-index
+  width: 65px
+  height: 1px
+
+  background-color: #fff
+
+.about-us__right-side-title-index
+  margin-bottom: 20px
+
+  max-width: 100%
+
+  font-weight: 800
+  @include adaptiveFont(40, 22)
+  line-height: 112.9%
+  color: #FFFFFF
+
+  @media (max-width: 1170px)
+    margin-bottom: 35px
+
+    //max-width: 500px
+
+    text-align: center
+
+.about-us__right-side-suptitle-index
+  margin-bottom: 70px
+
+  max-width: 100%
+
+  font-weight: 400
+  @include adaptiveFont(22, 16)
+  line-height: 112.9%
+  color: #FFFFFF
+
+  @media (max-width: 1300px)
+    margin-bottom: 35px
+
+  @media (max-width: 1170px)
+    //max-width: 600px
+
+    text-align: center
+
+.about-us__right-side-benefits-index
+  display: flex
+  flex-shrink: 0
+
+  margin-bottom: 110px - 25px
+
+  @media (max-width: 1440px)
+    margin-bottom: 15px
+
+  @media (max-width: 1170px)
+    margin-bottom: 40px
+
+.about-us__right-side-benefits-list-index
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  flex-shrink: 0
+
+  @media (max-width: 1315px)
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+
+  @media (max-width: 1170px)
+    grid-template-columns: repeat(4, 1fr)
+
+  @media (max-width: 640px)
+    grid-template-columns: repeat(2, 1fr)
+
+.about-us__right-side-benefits-list-item-index
+  margin-bottom: 25px
+  padding-left: 15px
+
+  // max-width: 120px
+
+  // width: 100%
+
+  font-weight: 400
+  font-size: 18px
+  @include adaptiveFont(18, 14)
+  line-height: 112.9%
+  color: #FFFFFF
+
+  border-left: 1px solid $saladColor
+
+  &:not(:last-child)
+    margin-right: 25px
+
+    @media(max-width: 640px)
+      margin-right: 0
+
+  &:nth-child(odd)
+    @media(max-width: 640px)
+      margin-right: 25px
+
+  // @media(max-width: 380px)
+  //   max-width: 105px
+
+  & span
+    display: inline-block
+    margin: 0 3px
+
+    font-weight: 800
+    text-transform: uppercase
+
+  // &:nth-child(1)
+  //   max-width: 114px
+
+  // &:nth-child(2)
+  //   max-width: 138px
+
+  //   @media(max-width: 1047px)
+  //     max-width: 123px
+
+    //  max-width: 130px
+    //
+    //@media(max-width: 380px)
+    //  max-width: 122px
+
+.about-us__right-side-read-more-index
+  display: flex
+  align-items: center
+
+  cursor: default
+
+  font-weight: 700
+  font-size: 18px
+  line-height: 1
+  color: #FFFFFF
+
+p.about-us__right-side-read-more-index
+  cursor: pointer
+
+.about-us__right-side-read-more-image-index
+  margin-left: 15px
+
+// lines
+.about-us__running-line-index
+  display: flex
+  align-items: center
+
+  width: 110%
+  height: 64px
+
+  position: absolute
+  bottom: 130px
+  left: -5%
+  right: 0
+
+  @media (max-width: 1170px)
+    bottom: 85px
+
+  @media (max-width: 480px)
+    height: 35px
+
+    bottom: 40px
+
+.about-us__running-line-salad-index
+  background-color: $saladColor
+  transform: rotate(-4deg)
+
+.about-us__running-line-list-salad-index
+  animation: scrolling calc(8 * 3s) linear infinite
+
+.about-us__running-line-list-white-index
+
+  margin-left: -1500px
+
+  animation: scrolling--white calc(8 * 3s) linear infinite
+
+@keyframes scrolling
+  0%
+    transform: translateX(0)
+  50%
+    transform: translateX(calc(-1 * 150px * 8))
+  100%
+    transform: translateX(0)
+
+@keyframes scrolling--white
+  0%
+    transform: translateX(0)
+  50%
+    transform: translateX(calc(1 * 150px * 8))
+  100%
+    transform: translateX(0)
+
+.about-us__running-line-white-index
+  background-color: #fff
+  transform: rotate(4deg)
+
+.about-us__running-line-list-index
+  display: flex
+  align-items: center
+
+.about-us__running-line-list-item-index
+  flex-shrink: 0
+
+  font-weight: 800
+  font-size: 18px
+  line-height: 1
+  color: #000000
+
+  margin-right: 100px
+
+  @media (max-width: 770px)
+    margin-right: 50px
+
+  @media (max-width: 770px)
+    font-size: 14px
+
+.parallax-window
+  min-height: 400px
+  background: transparent

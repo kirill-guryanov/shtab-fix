@@ -1,0 +1,80 @@
+section.intro-serviceDetail.sectionForProgresCircleColor
+    h1.visibleHidden Разработка веб сервисов любой сложности под ключ 
+
+    img.intro__decorativeCircle-serviceDetail(
+        src="assets/images/utils/semicircle-to-right--gray.svg" alt="Декоративный круг" 
+        width=122 height=258
+    )
+
+    picture
+        source(srcset="assets/images/utils/glowingCircle.webp" type="image/webp")
+        source(srcset="assets/images/utils/glowingCircle.png" type="image/png")
+        img.intro__decorativeGlowingCircle-serviceDetail(
+            src="assets/images/utils/glowingCircle.png" alt="Декоративный круг" 
+        )
+
+    .container.container--introServiceDetail
+        .intro__top-serviceDetail
+            .intro__contentLeftSide-serviceDetail
+                h2.intro__contentLeftSideTitle-serviceDetail
+                    | Разработка веб сервисов
+                    | любой сложности под ключ
+                p.intro__contentLeftSideText-serviceDetail
+                    | От решений с типовым функционалом до высоконагруженных систем. Выстраиваем техническую 
+                    | архитектуру, сценарии покупок, интегрируем сторонние сервисы.
+                .intro__contentLeftSideButton-serviceDetail
+                    .fillingButton.fillingButton--introTop.modalTrigger(data-modal="4")
+                        .fillingButton__imageSrcInDataTag(data-src="assets/images/utils/arrowForFillingButton--white.svg")
+                        svg.fillingButton__svg( viewBox="0 0 204 204" )
+                            circle.fillingButton__svg-circle.fillingButton__svg-circle--introTop( cx="102" cy="102" r="102" fill="transparent" )
+
+                        .fillingButton__circle.fillingButton__circle--introTop
+
+                        .fillingButton__content
+                            p.fillingButton__p
+                                span.fillingButton__span--smallMargin-and-partial Рассчит
+                                | ать стоимость
+
+            .intro__contentRightSide-serviceDetail
+                img.intro__contentRightSideImage-serviceDetail(
+                    src="assets/images/serviceDetail/desktop.svg" alt="Декоративная картинка"
+                    width=659 height=433
+                )
+
+.intro__bottom.intro__bottom-brown
+    .container
+        .intro__bottomItemsWrapper-serviceDetail
+            .servisec-list__item.servisec-list__item--notMargin.servisec-list__item--notPadding
+                .servisec-list__item-title-span-wrapper.servisec-list__item-title-span-wrapper--wide
+                    .servisec-list__item-title-span-bg
+
+                .servisec-list__item-content
+                    h1.servisec-list__item-title.intro__bottomTitle-serviceDetail.intro__bottomTitle
+                        span.servisec-list__item-title-span Решим вашу задачу 
+                        | любой сложности!
+                
+
+            form().intro__bottomForm-serviceDetail
+                div.intro__bottomForm-serviceDetail-width
+                    div.intro__bottomForm-serviceDetail-inputs
+                        input(type="text" placeholder="Ваше имя" name="name").offer__formInputIntro
+                        input(type="tel" placeholder="Ваш телефон" name="tel").offer__formInputIntro
+
+                    footer.intro__bottomFormDescriptionBlock-serviceDetail
+                        p.intro__bottomFormDescription-serviceDetail
+                            | Нажимая кнопку, вы разрешаете обработку персональных данных и соглашаетесь с 
+                            | политикой конфиденциальности.
+
+                .intro__bottomButton-serviceDetail
+                    .intro__contentLeftSideButton-serviceDetail
+                        button(type="submit").fillingButton.fillingButton--introBottom
+                            .fillingButton__imageSrcInDataTag(data-src="")
+                            svg.fillingButton__svg.fillingButton__svg--introBottom( viewBox="0 0 160 160" )
+                                circle.fillingButton__svg-circle.fillingButton__svg-circle--introBottom( cx="80" cy="80" r="80" fill="transparent" )
+
+                            .fillingButton__circle.fillingButton__circle--introBottom
+
+                            .fillingButton__content
+                                p.fillingButton__p
+                                    span.fillingButton__span--smallMargin-and-partial Отпра
+                                    | вить

@@ -1,0 +1,27 @@
+
+include head
+
+body.hidden
+    include ../../views/utils/preloader
+    include ../../views/utils/burgerMenu
+
+    include ../../views/circle/circle
+          
+    include ../../views/header/headerBlack 
+    #butter(data-scroll-container)
+        main(data-scroll-section)
+            include ../../views/serm/intro
+            include ../../views/serm/formats
+            include ../../views/serm/cycles
+            include ../../views/serm/benefits
+            include ../../views/serm/costs
+            include ../../views/serm/why
+            include ../../views/serm/answers
+
+        include ../../views/footer/footer
+
+    include ../../views/modals/modals
+        
+script( src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1/dist/locomotive-scroll.min.js" )
+// my js
+script( src="./assets/js/main.js" )

@@ -1,0 +1,121 @@
+.about-studio
+    padding-top: 120px
+    padding-bottom: 90px
+
+    @media (max-width: 900px)
+        padding-top: 0
+
+    @media (max-width: 800px)
+        padding-top: 190px
+        padding-bottom: 40px
+
+    @media (max-width: 770px)
+        padding-top: 150px
+
+    @media (max-width: 730px)
+        padding-top: 140px
+
+    @media (max-width: 690px)
+        padding-top: 130px
+        padding-bottom: 0
+
+    @media (max-width: 665px)
+        padding-top: 80px
+
+    @media (max-width: 650px)
+        padding-top: 30px
+
+// .about__content
+//  top
+.about__contentTop
+    display: flex
+    justify-content: space-between
+
+    margin-bottom: 100px
+
+    @media (max-width: 810px)
+        flex-direction: column
+
+        margin-bottom: 60px
+
+    @media (max-width: 460px)
+        margin-bottom: 30px
+
+    & .section__titles
+        flex-shrink: 0
+
+.about__contentTopText
+    margin-left: 30px
+    margin-top: 100px
+
+    max-width: 1095px
+
+    @include adaptiveFont(18, 16)
+    line-height: 150%
+
+    @media (max-width: 810px)
+        margin-top: 30px
+        margin-left: 0
+
+// .about__contentMiddle
+.about__contentMiddleImages
+    display: grid
+    grid-template-columns: repeat(3,1fr)
+    column-gap: 40px
+    row-gap: 40px
+
+    @media (max-width: 1580px)
+        grid-template-columns: repeat(2,1fr)
+
+    @media (max-width: 670px)
+        column-gap: 10px
+        row-gap: 10px
+
+    @media (max-width: 460px)
+        grid-template-columns: repeat(1,1fr)
+
+.about__contentMiddleImageWrapper
+    &--center
+        display: flex
+        align-items: center
+
+        @media (max-width: 1580px)
+            display: unset
+
+    &--twoItems
+        display: grid
+        grid-template-columns: repeat(1,1fr)
+        row-gap: 25px
+
+        @media (max-width: 1580px)
+            grid-template-columns: repeat(2,1fr)
+            column-gap: 40px
+            grid-column-start: 1
+            grid-column-end: 3
+
+        @media (max-width: 670px)
+            column-gap: 10px
+            row-gap: 10px
+
+        @media (max-width: 460px)
+            grid-template-columns: repeat(1,1fr)
+            grid-column-start: unset
+            grid-column-end: unset
+
+.about__contentMiddleImage
+    object-fit: cover
+
+    width: auto
+    height: auto
+
+    @media (max-width: 1580px)
+        width: 100%
+        height: auto
+
+        aspect-ratio: 1/1
+
+    &--first
+        aspect-ratio: 2/2.4
+
+        @media (max-width: 1580px)
+            aspect-ratio: 1/1

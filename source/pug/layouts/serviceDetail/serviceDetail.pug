@@ -1,0 +1,25 @@
+include head
+
+body.hidden
+    include ../../views/utils/preloader
+    include ../../views/utils/burgerMenu
+
+    include ../../views/circle/circle
+          
+    include ../../views/header/headerBlack
+    #butter(data-scroll-container)
+        main(data-scroll-section)
+            include ../../views/serviceDetail/intro
+            include ../../views/serviceDetail/stack
+            include ../../views/serviceDetail/costs
+            include ../../views/serviceDetail/ourWorks
+            include ../../views/serviceDetail/offer
+        include ../../views/footer/footer
+
+    include ../../views/modals/modals
+
+script( src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1/dist/locomotive-scroll.min.js" )
+// splide script
+script( src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js" )
+// my js
+script( src="./assets/js/main.js" )

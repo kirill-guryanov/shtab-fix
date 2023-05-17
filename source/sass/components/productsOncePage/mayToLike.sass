@@ -1,0 +1,205 @@
+.mayToLike
+    // padding: 65px 0
+
+    background-color: #212121
+    border-radius: 0px 0px 40px 40px
+
+    overflow: visible
+
+    position: relative
+
+.glowingCircleBottom-productsOncePage
+    position: absolute
+    z-index: 1
+
+// lines
+.mayToLike__lines
+    display: flex
+    justify-content: space-between
+
+    max-width: 716px
+    width: 100%
+
+    position: absolute
+    top: 0
+    bottom: 0
+    right: 160px
+
+.mayToLike__line
+    width: 1px
+    height: 100%
+
+    background-color: #363636
+
+// content
+.mayToLike__content
+    display: flex
+    flex-direction: column
+
+    position: relative
+    z-index: 2
+
+// top
+.mayToLike__contentTop
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    margin-bottom: 45px
+
+    @media ( max-width: 490px )
+        flex-direction: column
+
+.mayToLike__contentTopLeft
+    @media ( max-width: 490px )
+        margin-bottom: 20px
+
+.mayToLike__contentTopLeftTitle
+    margin-bottom: 15px
+    color: #fff
+
+.mayToLike__contentTopLeftText
+    margin-right: 35px
+
+    max-width: 320px
+
+    @media ( max-width: 490px )
+        margin-bottom: 20px
+        margin-right: 0
+
+        text-align: center
+
+// .mayToLike__contentTopRight
+
+.mayToLike__contentTopRightButton
+    display: flex
+    align-items: center
+
+    width: max-content
+
+    padding: 17px 23px
+
+    border-radius: 50px
+    background-color: $saladColor
+    cursor: pointer
+
+    & span
+        display: inherit
+        flex-shrink: 0
+
+        margin-right: 10px
+
+        font-weight: 350
+        @include adaptiveFont(22, 16)
+        line-height: 1.2
+        color: #292929
+
+// .mayToLike__contentBottom
+
+.mayToLike__contentBottomItems
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    grid-column-gap: 30px
+
+    @media ( max-width: 1000px )
+        grid-row-gap: 50px
+        grid-template-columns: repeat(2, 1fr)
+
+    @media ( max-width: 490px )
+        grid-template-columns: repeat(1, 1fr)
+        justify-items: center
+
+.projects__itemImageWrapper-productsOncePage
+    margin-bottom: 30px
+
+    width: 100%
+    height: auto
+
+    border-radius: 20px
+    overflow: unset
+
+    position: relative
+
+.projects__itemImage-productsOncePage
+    width: 100%
+    height: auto
+
+    aspect-ratio: 2/1.4
+    object-fit: cover
+    border-radius: 20px
+
+    transition: transform .3s ease
+
+.projects__itemImageDecoration-productsOncePage
+    width: 100%
+    height: auto
+
+    transition: transform, filter .3s ease
+
+    transform: translate(18px, 18px)
+    filter: opacity(0)
+
+    position: absolute
+    bottom: 0
+    right: 0
+    z-index: -1
+
+.projects__itemTitleWrapper-productsOncePage
+    display: flex
+    align-items: center
+
+    margin-bottom: 10px
+
+.projects__itemTitle-productsOncePage
+    flex-shrink: 0
+
+    margin-right: 18px
+
+    font-weight: 700
+    @include adaptiveFont(30, 20)
+    line-height: 1.2
+    color: #fff
+
+.projects__itemTitleLine-productsOncePage
+    max-width: 64px
+
+    width: 100%
+    height: 1px
+
+    background-color: #fff
+
+.projects__itemSuptitle-productsOncePage
+    font-weight: 350
+    @include adaptiveFont(20, 16)
+    line-height: 1.2
+    color: #838383
+
+// item
+.projects__item-productsOncePage
+    display: flex
+    flex-direction: column
+
+    // margin-bottom: 90px
+
+    overflow: unset
+
+    max-width: 340px
+    max-height: 340px
+
+    height: auto
+
+    &:hover .projects__itemImage-productsOncePage
+        transform: scale(1.2)
+
+    &:hover .projects__itemTitleLine-productsOncePage
+        filter: opacity(1)
+
+    &:hover .projects__itemImageDecoration-productsOncePage
+        filter: opacity(1)
+
+.projects__itemImageWrapper--overHidden
+    overflow: hidden
+    width: 100%
+    height: auto
+
+    border-radius: 20px

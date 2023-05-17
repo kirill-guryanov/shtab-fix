@@ -1,0 +1,225 @@
+section.reviews.sectionForProgresCircleColor.whiteSection
+    svg.reviews__splide-arrow-for-slides.reviews__splide-arrow-prev.splide__arrow--next( width="27" height="16" viewBox="0 0 27 16" fill="none" xmlns="http://www.w3.org/2000/svg" )
+        path( d="M26.7071 7.29289C27.0976 7.68342 27.0976 8.31658 26.7071 8.70711L20.3431 15.0711C19.9526 15.4616 19.3195 15.4616 18.9289 15.0711C18.5384 14.6805 18.5384 14.0474 18.9289 13.6569L24.5858 8L18.9289 2.34315C18.5384 1.95262 18.5384 1.31946 18.9289 0.928932C19.3195 0.538407 19.9526 0.538407 20.3431 0.928932L26.7071 7.29289ZM1 9C0.447716 9 -4.82823e-08 8.55228 0 8C4.82823e-08 7.44771 0.447716 7 1 7L1 9ZM26 9L1 9L1 7L26 7L26 9Z" )
+    svg.reviews__splide-arrow-for-slide.reviews__splide-arrow-next.splide__arrow--prev( width="27" height="16" viewBox="0 0 27 16" fill="none" xmlns="http://www.w3.org/2000/svg" )
+        path( d="M26.7071 7.29289C27.0976 7.68342 27.0976 8.31658 26.7071 8.70711L20.3431 15.0711C19.9526 15.4616 19.3195 15.4616 18.9289 15.0711C18.5384 14.6805 18.5384 14.0474 18.9289 13.6569L24.5858 8L18.9289 2.34315C18.5384 1.95262 18.5384 1.31946 18.9289 0.928932C19.3195 0.538407 19.9526 0.538407 20.3431 0.928932L26.7071 7.29289ZM1 9C0.447716 9 -4.82823e-08 8.55228 0 8C4.82823e-08 7.44771 0.447716 7 1 7L1 9ZM26 9L1 9L1 7L26 7L26 9Z" )
+
+    // ===========================
+
+    .container.container--rewievs
+        .section__titles.section__titles--white.section__titles--reviews
+            .section__titles-left.section__titles-left--reviews
+
+                .servisec-list__item.servisec-list__item--notMargin
+                    .servisec-list__item-title-span-wrapper
+                        .servisec-list__item-title-span-bg
+
+                    .servisec-list__item-content
+                        h1.servisec-list__item-title.servisec-list__item-title--black
+                            span.servisec-list__item-title-span
+                            | Результаты наших клиентов 
+                            br 
+                            | на примере живых кейсов 
+
+    .reviews__splide.reviews__splide-attraction.splide( aria-label="Splide Basic HTML Example" )
+        .reviews__list-block.splide__track
+            ul.reviews__list.splide__list.animationItem.animationNoRepeat(data-scroll data-scroll-call="7").fadeIn
+                li.reviews__list-item.galleryItem-attraction.reviews__list-item-attraction.reviews__list-item-attraction.splide__slide
+                    .reviews__list-itemGradient
+                    img.galleryCrossButton( src="assets/images/utils/whiteCross.svg" )
+                    picture
+                        source(srcset="assets/images/attraction/resultsItemsBg.webp" type="image/webp")
+                        source(srcset="assets/images/attraction/resultsItemsBg.jpg" type="image/jpg")
+                        img.reviews__list-item-galleryImage(src="assets/images/attraction/resultsItemsBg.jpg" alt="Фото результатова работы по проекту" )
+                    picture
+                        source(srcset="assets/images/attraction/resultsItemsBg.webp" type="image/webp")
+                        source(srcset="assets/images/attraction/resultsItemsBg.jpg" type="image/jpg")
+                        img.reviews__list-itemBgImage(
+                            src="assets/images/attraction/resultsItemsBg.jpg" alt="Фоновое изображерние"    
+                        )
+
+                    .reviews__list-itemContent
+                        h2.reviews__list-itemTitle Услуги автосервиса
+                        .reviews__list-itemTextWrapper
+                            .reviews__list-itemTextLeftStick
+                            p.reviews__list-itemText 
+                                | Повысили приток входящих заявок и увеличили медийность студии, в том числе за рубежом. Благодаря этому появилась возможность выхода на европейский рынок.
+                        ul.reviews__list-itemStats
+                            li.reviews__list-itemStat
+                                h3.reviews__list-itemStatTitle 3 месяца
+                                p.reviews__list-itemStatText Срок обслуживания рекламной кампании
+                            li.reviews__list-itemStat
+                                h3.reviews__list-itemStatTitle 10 000
+                                p.reviews__list-itemStatText Новых потенциальных клиентов
+                            li.reviews__list-itemStat
+                                h3.reviews__list-itemStatTitle 62%
+                                p.reviews__list-itemStatText Посетителей оставили заявку
+                            li.reviews__list-itemStat
+                                h3.reviews__list-itemStatTitle 25,3 руб.
+                                p.reviews__list-itemStatText Средняя цена обращения
+                        a(href="#").reviews__list-itemBottomLink
+                            p.reviews__list-itemBottomLinkText Скриншоты статистики
+                            img.reviews__list-itemBottomLinkImg(
+                                src="assets/images/utils/arrowForFillingButton--salad.svg" alt="Стрелка"
+                                width=30 height=30
+                            )
+
+                li.reviews__list-item.galleryItem-attraction.reviews__list-item-attraction.reviews__list-item-attraction.splide__slide
+                    .reviews__list-itemGradient
+                    img.galleryCrossButton( src="assets/images/utils/whiteCross.svg" )
+                    picture
+                        source(srcset="assets/images/attraction/resultsItemsBg.webp" type="image/webp")
+                        source(srcset="assets/images/attraction/resultsItemsBg.jpg" type="image/jpg")
+                        img.reviews__list-item-galleryImage(src="assets/images/attraction/resultsItemsBg.jpg" alt="Фото результатова работы по проекту" )
+                    picture
+                        source(srcset="assets/images/attraction/resultsItemsBg.webp" type="image/webp")
+                        source(srcset="assets/images/attraction/resultsItemsBg.jpg" type="image/jpg")
+                        img.reviews__list-itemBgImage(
+                            src="assets/images/attraction/resultsItemsBg.jpg" alt="Фоновое изображерние"    
+                        )
+
+                    .reviews__list-itemContent
+                        h2.reviews__list-itemTitle Услуги автосервиса
+                        .reviews__list-itemTextWrapper
+                            .reviews__list-itemTextLeftStick
+                            p.reviews__list-itemText 
+                                | Повысили приток входящих заявок и увеличили медийность студии, в том числе за рубежом. Благодаря этому появилась возможность выхода на европейский рынок.
+                        ul.reviews__list-itemStats
+                            li.reviews__list-itemStat
+                                h3.reviews__list-itemStatTitle 3 месяца
+                                p.reviews__list-itemStatText Срок обслуживания рекламной кампании
+                            li.reviews__list-itemStat
+                                h3.reviews__list-itemStatTitle 10 000
+                                p.reviews__list-itemStatText Новых потенциальных клиентов
+                            li.reviews__list-itemStat
+                                h3.reviews__list-itemStatTitle 62%
+                                p.reviews__list-itemStatText Посетителей оставили заявку
+                            li.reviews__list-itemStat
+                                h3.reviews__list-itemStatTitle 25,3 руб.
+                                p.reviews__list-itemStatText Средняя цена обращения
+                        a(href="#").reviews__list-itemBottomLink
+                            p.reviews__list-itemBottomLinkText Скриншоты статистики
+                            img.reviews__list-itemBottomLinkImg(
+                                src="assets/images/utils/arrowForFillingButton--salad.svg" alt="Стрелка"
+                                width=30 height=30
+                            )
+
+                li.reviews__list-item.galleryItem-attraction.reviews__list-item-attraction.reviews__list-item-attraction.splide__slide
+                    .reviews__list-itemGradient
+                    img.galleryCrossButton( src="assets/images/utils/whiteCross.svg" )
+                    picture
+                        source(srcset="assets/images/attraction/resultsItemsBg.webp" type="image/webp")
+                        source(srcset="assets/images/attraction/resultsItemsBg.jpg" type="image/jpg")
+                        img.reviews__list-item-galleryImage(src="assets/images/attraction/resultsItemsBg.jpg" alt="Фото результатова работы по проекту" )
+                    picture
+                        source(srcset="assets/images/attraction/resultsItemsBg.webp" type="image/webp")
+                        source(srcset="assets/images/attraction/resultsItemsBg.jpg" type="image/jpg")
+                        img.reviews__list-itemBgImage(
+                            src="assets/images/attraction/resultsItemsBg.jpg" alt="Фоновое изображерние"    
+                        )
+
+                    .reviews__list-itemContent
+                        h2.reviews__list-itemTitle Услуги автосервиса
+                        .reviews__list-itemTextWrapper
+                            .reviews__list-itemTextLeftStick
+                            p.reviews__list-itemText 
+                                | Повысили приток входящих заявок и увеличили медийность студии, в том числе за рубежом. Благодаря этому появилась возможность выхода на европейский рынок.
+                        ul.reviews__list-itemStats
+                            li.reviews__list-itemStat
+                                h3.reviews__list-itemStatTitle 3 месяца
+                                p.reviews__list-itemStatText Срок обслуживания рекламной кампании
+                            li.reviews__list-itemStat
+                                h3.reviews__list-itemStatTitle 10 000
+                                p.reviews__list-itemStatText Новых потенциальных клиентов
+                            li.reviews__list-itemStat
+                                h3.reviews__list-itemStatTitle 62%
+                                p.reviews__list-itemStatText Посетителей оставили заявку
+                            li.reviews__list-itemStat
+                                h3.reviews__list-itemStatTitle 25,3 руб.
+                                p.reviews__list-itemStatText Средняя цена обращения
+                        a(href="#").reviews__list-itemBottomLink
+                            p.reviews__list-itemBottomLinkText Скриншоты статистики
+                            img.reviews__list-itemBottomLinkImg(
+                                src="assets/images/utils/arrowForFillingButton--salad.svg" alt="Стрелка"
+                                width=30 height=30
+                            )
+
+                li.reviews__list-item.galleryItem-attraction.reviews__list-item-attraction.reviews__list-item-attraction.splide__slide
+                    .reviews__list-itemGradient
+                    img.galleryCrossButton( src="assets/images/utils/whiteCross.svg" )
+                    picture
+                        source(srcset="assets/images/attraction/resultsItemsBg.webp" type="image/webp")
+                        source(srcset="assets/images/attraction/resultsItemsBg.jpg" type="image/jpg")
+                        img.reviews__list-item-galleryImage(src="assets/images/attraction/resultsItemsBg.jpg" alt="Фото результатова работы по проекту" )
+                    picture
+                        source(srcset="assets/images/attraction/resultsItemsBg.webp" type="image/webp")
+                        source(srcset="assets/images/attraction/resultsItemsBg.jpg" type="image/jpg")
+                        img.reviews__list-itemBgImage(
+                            src="assets/images/attraction/resultsItemsBg.jpg" alt="Фоновое изображерние"    
+                        )
+
+                    .reviews__list-itemContent
+                        h2.reviews__list-itemTitle Услуги автосервиса
+                        .reviews__list-itemTextWrapper
+                            .reviews__list-itemTextLeftStick
+                            p.reviews__list-itemText 
+                                | Повысили приток входящих заявок и увеличили медийность студии, в том числе за рубежом. Благодаря этому появилась возможность выхода на европейский рынок.
+                        ul.reviews__list-itemStats
+                            li.reviews__list-itemStat
+                                h3.reviews__list-itemStatTitle 3 месяца
+                                p.reviews__list-itemStatText Срок обслуживания рекламной кампании
+                            li.reviews__list-itemStat
+                                h3.reviews__list-itemStatTitle 10 000
+                                p.reviews__list-itemStatText Новых потенциальных клиентов
+                            li.reviews__list-itemStat
+                                h3.reviews__list-itemStatTitle 62%
+                                p.reviews__list-itemStatText Посетителей оставили заявку
+                            li.reviews__list-itemStat
+                                h3.reviews__list-itemStatTitle 25,3 руб.
+                                p.reviews__list-itemStatText Средняя цена обращения
+                        a(href="#").reviews__list-itemBottomLink
+                            p.reviews__list-itemBottomLinkText Скриншоты статистики
+                            img.reviews__list-itemBottomLinkImg(
+                                src="assets/images/utils/arrowForFillingButton--salad.svg" alt="Стрелка"
+                                width=30 height=30
+                            )
+
+                li.reviews__list-item.galleryItem-attraction.reviews__list-item-attraction.reviews__list-item-attraction.splide__slide
+                    .reviews__list-itemGradient
+                    img.galleryCrossButton( src="assets/images/utils/whiteCross.svg" )
+                    picture
+                        source(srcset="assets/images/attraction/resultsItemsBg.webp" type="image/webp")
+                        source(srcset="assets/images/attraction/resultsItemsBg.jpg" type="image/jpg")
+                        img.reviews__list-item-galleryImage(src="assets/images/attraction/resultsItemsBg.jpg" alt="Фото результатова работы по проекту" )
+                    picture
+                        source(srcset="assets/images/attraction/resultsItemsBg.webp" type="image/webp")
+                        source(srcset="assets/images/attraction/resultsItemsBg.jpg" type="image/jpg")
+                        img.reviews__list-itemBgImage(
+                            src="assets/images/attraction/resultsItemsBg.jpg" alt="Фоновое изображерние"    
+                        )
+
+                    .reviews__list-itemContent
+                        h2.reviews__list-itemTitle Услуги автосервиса
+                        .reviews__list-itemTextWrapper
+                            .reviews__list-itemTextLeftStick
+                            p.reviews__list-itemText 
+                                | Повысили приток входящих заявок и увеличили медийность студии, в том числе за рубежом. Благодаря этому появилась возможность выхода на европейский рынок.
+                        ul.reviews__list-itemStats
+                            li.reviews__list-itemStat
+                                h3.reviews__list-itemStatTitle 3 месяца
+                                p.reviews__list-itemStatText Срок обслуживания рекламной кампании
+                            li.reviews__list-itemStat
+                                h3.reviews__list-itemStatTitle 10 000
+                                p.reviews__list-itemStatText Новых потенциальных клиентов
+                            li.reviews__list-itemStat
+                                h3.reviews__list-itemStatTitle 62%
+                                p.reviews__list-itemStatText Посетителей оставили заявку
+                            li.reviews__list-itemStat
+                                h3.reviews__list-itemStatTitle 25,3 руб.
+                                p.reviews__list-itemStatText Средняя цена обращения
+                        a(href="#").reviews__list-itemBottomLink
+                            p.reviews__list-itemBottomLinkText Скриншоты статистики
+                            img.reviews__list-itemBottomLinkImg(
+                                src="assets/images/utils/arrowForFillingButton--salad.svg" alt="Стрелка"
+                                width=30 height=30
+                            )

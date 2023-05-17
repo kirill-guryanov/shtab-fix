@@ -1,0 +1,23 @@
+section
+    h1.visibleHidden
+
+    img(
+        src="" alt="" 
+        width= height=
+    )
+
+    .container
+
+img(
+    src="" alt="" 
+    width= height=
+)
+
+a(href="")
+
+@include adaptiveFont(20, 16)
+
+// aspect
+width: 100%
+height: auto
+aspect-ratio: 2/.9

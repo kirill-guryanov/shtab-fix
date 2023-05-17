@@ -1,0 +1,231 @@
+.projects-projects
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    padding: 90px 0
+
+    background-color: #1B1B1B
+
+    position: relative
+
+// decoration
+.projects__verticalLines
+    display: flex
+    justify-content: space-between
+
+    margin: 0 auto
+
+    max-width: 1110px
+
+    width: 100%
+    height: 100%
+
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+
+.projects__verticalLine
+    height: 100%
+    width: 1px
+
+    opacity: .2
+    background-color: #363636
+
+.projects__obliqueLines
+    position: absolute
+    top: 50%
+    right: -50px
+
+.glowingCircleTop
+    position: absolute
+    top: -5%
+    right: -10%
+
+.glowingCircleBottom
+    position: absolute
+    bottom: 5%
+    left: -10%
+
+// items
+.projects__itemsWrapper
+    display: flex
+    flex-wrap: unset
+
+    margin-bottom: 80px
+
+    position: relative
+    z-index: 1
+
+    @media ( max-width: 1100px )
+        margin-bottom: 30px
+
+    @media ( max-width: 640px )
+        flex-wrap: wrap
+
+.projects__itemsWrapperLeft
+    display: flex
+    flex-direction: column
+
+    margin-right: 80px
+
+    @media ( max-width: 640px )
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: center
+
+        margin-right: 0
+
+.projects__itemsWrapperRight
+    display: flex
+    flex-direction: column
+
+    margin-top: 115px
+
+    @media ( max-width: 1100px )
+        margin-top: 70px
+
+    @media ( max-width: 640px )
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: center
+
+        margin-top: 0
+
+// item
+.projects__item
+    display: flex
+    flex-direction: column
+
+    margin-bottom: 90px
+
+    max-width: 665px
+    height: auto
+
+    @media ( max-width: 1100px )
+        margin-bottom: 60px
+
+    &--second
+        margin-top: 120px
+
+    &:hover .projects__itemImageDecoration
+        filter: opacity(1)
+
+    &:hover .projects__itemImage
+        transform: scale(1.2)
+
+    &:hover .projects__itemTitleLine
+        filter: opacity(1)
+
+.projects__itemImagesWrapper
+    margin-bottom: 30px
+
+    width: 100%
+    height: auto
+
+    position: relative
+
+.projects__itemImagesWrapper
+    width: 100%
+    height: 100%
+
+.projects__itemImageWrapper
+    border-radius: 20px
+    overflow: hidden
+
+.projects__itemImage
+    width: 100%
+    height: auto
+
+    aspect-ratio: 2/1.4
+    object-fit: cover
+    border-radius: 20px
+
+    transition: transform .3s ease
+
+.projects__itemImageDecoration
+    transition: transform, filter .3s ease
+
+    transform: translate(18px, 18px)
+    filter: opacity(0)
+
+    position: absolute
+    bottom: 0
+    right: 0
+    z-index: -1
+
+.projects__itemTitleWrapper
+    display: flex
+    align-items: center
+
+    margin-bottom: 10px
+
+.projects__itemTitle
+    flex-shrink: 0
+
+    margin-right: 18px
+
+    font-weight: 700
+    @include adaptiveFont(25, 18)
+    line-height: 1.2
+    color: #fff
+
+.projects__itemTitleLine
+    max-width: 64px
+
+    width: 100%
+    height: 1px
+
+    background-color: #fff
+    filter: opacity(0)
+    transition: filter .3s ease
+
+.projects__itemSuptitle
+    font-weight: 350
+    @include adaptiveFont(18, 16)
+    line-height: 1.2
+    color: #838383
+
+// bottom buttons
+.projects__slideButtons
+    display: flex
+    align-items: center
+    justify-content: center
+
+    margin-left: 20px
+
+    position: relative
+    z-index: 1
+
+.projects__slideButton
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-shrink: 0
+
+    margin-right: 20px
+
+    width: 42px
+    height: 42px
+
+    font-weight: 400
+    @include adaptiveFont(20, 16)
+    color: #fff
+
+    background-color: #393939
+    border-radius: 5px
+    cursor: pointer
+
+    transition: all .3s ease
+
+    &:hover
+        background-color: #fff
+
+        color: #000
+
+    &--active
+        background-color: #C6FF00
+
+        color: #000

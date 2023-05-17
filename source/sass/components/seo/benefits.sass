@@ -1,0 +1,141 @@
+.benefits-seo
+    padding: 95px 0 110px
+
+    position: relative
+
+    @media ( max-width: 1400px )
+        padding: 50px 0 50px
+
+    @media ( max-width: 660px )
+        padding: 30px 0 30px
+
+// .benefits__content
+.benefits__contentTop-seo
+    margin-bottom: 100px
+
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    @media ( max-width: 660px )
+        flex-direction: column
+
+        margin-bottom: 30px
+
+.benefits__contentTopLeft-seo
+    margin-right: 40px
+
+    @media ( max-width: 660px )
+        text-align: center
+        margin-right: 0
+
+    & .servisec-list__item
+        max-width: 570px
+
+        @media ( max-width: 660px )
+            margin-right: 0
+            margin-bottom: 20px
+
+.benefits__contentMiddle-seo
+    margin-bottom: 50px
+
+.benefits__contentBottom-seo
+    display: flex
+    justify-content: center
+
+// items
+.benefits__contentItems-seo
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    column-gap: 55px
+    row-gap: 50px
+
+    @media ( max-width: 1370px )
+        grid-template-columns: repeat(2, 1fr)
+        justify-items: center
+
+    @media ( max-width: 800px )
+        grid-template-columns: repeat(1, 1fr)
+
+    @media ( max-width: 600px )
+        row-gap: 20px
+
+// item
+.benefits__contentItem-seo
+    padding: 40px 40px 40px 40px
+
+    max-width: 428px
+    min-height: 265px
+
+    width: 100%
+
+    background-color: #343434
+    border-radius: 15px
+
+    @media ( max-width: 1370px )
+        max-width: 100%
+
+    @media ( max-width: 380px )
+        padding: 35px 25px
+
+.benefits__contentItem--title
+    display: flex
+    align-items: center
+    justify-content: center
+
+    padding: 0
+
+    max-width: 428px
+    min-height: 265px
+
+    width: 100%
+
+    @media ( max-width: 800px )
+        max-width: unset
+        min-height: unset
+
+.benefits__contentItemTitle-seo
+    font-weight: 700
+    font-size: 40px
+    @include adaptiveFont(40, 20)
+    line-height: 1.2
+    color: #000000
+
+    @media ( max-width: 980px )
+        text-align: center
+
+// item top
+.benefits__contentItemTop-seo
+    display: flex
+    align-items: center
+
+.benefits__contentItemTopIcon-seo
+    margin-right: 25px
+
+.benefits__contentItemTopIcon-seo--marginLeft
+    margin-bottom: -20px
+    margin-left: -20px
+    margin-top: -20px
+
+.benefits__contentItemTopTitle-seo
+    font-weight: 700
+    @include adaptiveFont(25, 18)
+    line-height: 1.1
+    color: #FFFFFF
+
+// middle
+.benefits__contentItemMiddle-seo
+    margin: 25px 0 20px
+
+    width: 100%
+    height: 1px
+
+    background-color: #fff
+
+// bottom
+// .benefits__contentItemBottom
+.benefits__contentItemBottomText-seo
+    font-weight: 350
+    @include adaptiveFont(18, 16)
+    line-height: 1.2
+    color: #FFFFFF

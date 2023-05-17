@@ -1,0 +1,152 @@
+.offer
+    padding: 75px 0 55px
+
+    position: relative
+
+    @media ( max-width: 635px )
+        padding: 40px 0 30px
+
+    & .intro__bottom .servisec-list__item-title
+        max-width: 350px
+
+    & .intro__bottom
+        background-color: transparent
+
+    & .intro__bottomItemsWrapper
+        justify-content: space-between
+
+        & .servisec-list__item
+            margin-right: 30px
+            margin-left: 50px
+
+            flex-shrink: 0
+            max-width: 327px
+
+            @include adaptiveFont(45, 20)
+
+            @media ( max-width: 1230px )
+                max-width: 290px
+
+            @media ( max-width: 1030px )
+                max-width: 170px
+
+        & .intro__bottomButton
+            margin-left: 60px
+
+            @media ( max-width: 900px )
+                margin-left: 10px
+
+.offer-attraction .offer__decorativeCircle-middle
+    @media (max-width: 1350px)
+        transform: rotate(70deg)
+
+        left: unset
+        right: -20%
+        top: -8%
+
+    @media (max-width: 800px)
+        right: -30%
+
+// decor
+.offer__decorativeCircle
+    transform: translateY(-50%)
+
+    position: absolute
+    left: -200px
+    top: 50%
+
+.offer__content
+    position: relative
+    z-index: 1
+
+// top
+.offer__contentTop
+    margin-bottom: 45px
+
+    .servisec-list__item
+        @include adaptiveFont(45, 20)
+
+.offer__contentTopText
+    margin-top: 12px
+
+    font-weight: 400
+    @include adaptiveFont(30, 16)
+    line-height: 112.9%
+    color: #1E1E1E
+
+    @media (max-width: 800px)
+        text-align: center
+
+// middle
+.offer__contentMiddle
+    margin-bottom: 75px
+
+    @media ( max-width: 1350px )
+        margin-bottom: 35px
+
+.offer__contentMiddleItems
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    column-gap: 25px
+
+    @media ( max-width: 1100px )
+        grid-template-columns: repeat(2, 1fr)
+        row-gap: 25px
+
+    @media ( max-width: 635px )
+        grid-template-columns: repeat(1, 1fr)
+        justify-items: center
+
+// item
+.offer__contentMiddleItem
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    padding: 20px 20px
+
+    max-width: 418px
+    min-height: 205px
+
+    width: 100%
+
+    background-color: #343434
+    border-radius: 20px
+
+    @media ( max-width: 635px )
+        max-width: 100%
+
+.offer__contentMiddleItemIconWrapper
+    display: flex
+    align-items: center
+    justify-content: center
+
+    margin-bottom: 20px
+
+    width: 56px
+    height: 56px
+
+    background-color: #1E1E1E
+    border-radius: 20px
+
+.offer__contentMiddleItemTitle
+    margin-bottom: 10px
+
+    font-weight: 700
+    @include adaptiveFont(25, 18)
+    line-height: 1.2
+    color: #FFFFFF
+    text-align: center
+
+.offer__contentMiddleItemTitleText
+    font-weight: 350
+    @include adaptiveFont(17, 15)
+    line-height: 1.2
+    text-align: center
+    color: #FFFFFF
+
+// button
+.fillingButton__svg--introBottomOffer,
+.fillingButton__circle--introBottomOffer
+    width: 67px
+    height: 67px

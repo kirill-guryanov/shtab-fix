@@ -1,0 +1,163 @@
+.services-index
+    padding-top: 120px
+    padding-bottom: 85px
+
+    overflow: hidden
+
+    position: relative
+
+.decorative-circle-left-index,
+.decorative-lines-left-index
+    position: absolute
+    z-index: -1
+
+.decorative-circle-left-index
+    left: -119px
+    top: -86px
+
+    @media (max-width: 900px)
+        display: none
+
+.decorative-lines-left-index
+    right: 0
+    top: -40px
+
+.services-list-index
+    display: grid
+    grid-template-columns: 1fr 1fr
+
+    margin-top: 60px
+
+    transition: transform, opacity .5s ease
+
+    // transform: translateZ(-80px)
+    // opacity: 0
+
+    // transition: opacity, transform .3s ease
+
+    @media (max-width: 900px)
+        justify-items: center
+        grid-template-columns: 1fr
+
+.servisec-list__item-index
+    display: grid
+    align-items: center
+
+    padding-left: 85px
+    padding-top: 61px
+    padding-bottom: 51px
+
+    max-width: 700px
+    height: auto
+
+    overflow: hidden
+
+    position: relative
+
+    &:not(:last-child)
+        @media (max-width: 900px)
+            margin-bottom: 15px
+
+    @media (max-width: 1280px)
+        padding-left: 40px
+        padding-right: 40px
+
+    @media (max-width: 900px)
+        justify-items: center
+
+        padding-top: 35px
+        padding-bottom: 35px
+
+        width: 100%
+
+    @media (max-width: 420px)
+        padding-left: 15px
+        padding-right: 15px
+
+.servisec-list__item-title-span-index
+    transition: color .3s ease
+
+.servisec-list__item-title-span-wrapper-index
+    position: absolute
+
+    transform: rotate(359deg)
+
+    overflow: hidden
+
+// .servisec-list__item-title-span-bg
+//     transition: color .3s ease
+
+//     &::before
+//         content: ""
+//         display: block
+
+//         width: 100%
+//         height: 100%
+
+//         background-color: #D0FF48
+//         transition: transform .3s ease
+//         transform: translateX(-105%)
+
+//         position: absolute
+//         left: 0
+//         top: 0
+//         z-index: 1
+
+.servisec-list__item-img-index
+    width: 100%
+    height: 100%
+
+    object-fit: cover
+    transition: transform .3s ease
+
+    position: absolute
+    left: 0
+    top: 0
+    right: 0
+    bottom: 0
+    z-index: -1
+
+.servisec-list__item-content-index
+    display: grid
+    grid-template-columns: 1fr
+
+.servisec-list__item-title-index
+    margin-bottom: 60px
+
+    font-weight: 700
+    @include adaptiveFont(40, 20)
+    line-height: 105%
+    color: #fff
+
+    position: relative
+    z-index: 2
+
+    @media (max-width: 900px)
+        text-align: center
+
+.servisec-list__item-list-index
+    display: grid
+    grid-template-columns: 1fr
+
+.servisec-list__item-list-item-index
+    display: flex
+    align-items: center
+
+    &:not(:last-child)
+        margin-bottom: 15px
+
+    &:last-child
+        margin-bottom: 30px
+
+    p
+        color: #fff
+        font-size: 16px
+        line-height: 105%
+
+.servisec-list__item-list-item-stroke-index
+    margin-right: 15px
+
+    width: 21px
+    height: 1px
+
+    background-color: #fff

@@ -1,0 +1,415 @@
+.products-index
+  background-color: #1B1B1B
+
+  padding-top: 120px
+  padding-bottom: 85px
+
+  overflow: hidden
+
+  position: relative
+
+  @media (max-width: 1015px)
+    padding-top: 80px
+
+  @media (max-width: 600px)
+    padding-bottom: 0
+
+  & .fillingButton__circle,
+  & .fillingButton__svg,
+  & .fillingButton__svg-circle
+    @media (max-width: 1300px)
+      width: 71px
+      height: 71px
+
+// decoration
+.products__decoration-circle-index
+  position: absolute
+  right: 0
+  bottom: 0
+
+.products__decoration-lines-index
+  width: 367px
+  height: 1816px
+
+  position: absolute
+  top: 0
+  left: 0
+
+// titles
+.section__titles--white
+  align-items: center
+
+  margin-bottom: 85px
+
+  position: relative
+  z-index: 1
+
+.section__titles__decoration-right--white
+  display: flex
+  align-items: center
+
+  width: auto
+  height: auto
+
+.products__decoration-right-image-index
+  animation: 2.5s linear infinite rot
+
+  transform-origin: center
+
+  @media (max-width: 1300px)
+    width: 45px
+    height: 45px
+
+  @media (max-width: 680px)
+    width: 45px
+    height: 45px
+
+  &:hover
+    animation-play-state: paused
+
+@keyframes rot
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)
+
+.section__overtitle-text--white,
+.section__title-title--white
+  color: #fff!important
+
+// gallery
+.products__gallery-index
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr
+  justify-items: center
+  gap: 50px
+
+  width: 100%
+
+  // @media (max-width: 1450px)
+
+  @media (max-width: 1300px)
+    grid-template-columns: 1fr 1fr 1fr
+
+  @media (max-width: 1070px)
+    grid-template-columns: 1fr 1fr 1fr
+
+  @media (max-width: 940px)
+    grid-template-columns: 1fr 1fr
+
+  @media (max-width: 640px)
+    grid-template-columns: 1fr
+
+.products__gallery-items-column-index
+  &:nth-child(2)
+    margin-top: 70px
+
+  &:nth-child(3)
+    margin-top: 30px
+
+.products__gallery-items-column-item-index
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: flex-end
+  gap: 10px
+
+  width: 430px
+  height: 498px
+
+  opacity: 0
+  transform: perspective(360px) rotateX(70deg) translateY(200px) scale(.7)
+
+  transition: transform .6s ease
+
+  // will-change: transform
+
+  border: 1px solid #434343
+  background-color: #1B1B1B
+  cursor: pointer
+
+  position: relative
+  z-index: 1
+
+  &.animated
+    // animation: .3s ease 0 1 normal forwards running items
+    opacity: 1
+    transform: perspective(360px) rotateX(0deg) translateY(0px) scale(1)
+
+  @media (max-width: 1536px)
+    width: 341px
+    height: 377px
+
+  @media (max-width: 1300px)
+    width: 230px
+    height: 255px
+
+  @media (max-width: 955px)
+    margin-top: unset
+
+  @media (max-width: 800px)
+    width: 212px
+    height: 236px
+
+  @media (max-width: 640px)
+    width: 270px
+    height: 290px
+
+  @media (max-width: 390px)
+    width: 270px
+    height: 290px
+
+// @keyframes items
+
+//   100%
+
+.products__gallery-items-column-item-bottom-image-index
+  position: relative
+  z-index: 2
+
+.products__gallery-items-column-item-top-image--ribera-index
+  @media (max-width: 1300px)
+    width: 200px
+
+  @media (max-width: 800px)
+    width: 190px
+
+  @media (max-width: 640px)
+    width: 220px
+
+.products__gallery-items-column-item-bottom-image--roll-index
+  pointer-events: none
+
+  right: -25px
+
+  @media (max-width: 1536px)
+    width: 325px
+    right: -15px
+
+  @media (max-width: 1300px)
+    width: 250px
+
+  @media (max-width: 800px)
+    width: 221px
+
+  @media (max-width: 640px)
+    width: 270px
+
+  @media (max-width: 375px)
+    width: 292px
+    height: 194px
+    right: -5px
+
+.products__gallery-items-column-item-top-image--494-title-index
+  position: relative
+  bottom: -30px
+
+  @media (max-width: 1536px)
+    width: 160px
+    height: 189px
+
+  @media (max-width: 1300px)
+    width: 108px
+    height: 121px
+
+.products__gallery-items-column-item-bottom-image--494-car-index
+  pointer-events: none
+
+  right: -25px
+  bottom: -40px
+
+  @media (max-width: 1536px)
+    width: 439px
+    height: 242px
+
+  @media (max-width: 1300px)
+    width: 265px
+    height: 160px
+
+    right: -7px
+    bottom: -22px
+
+  @media (max-width: 800px)
+    width: 261px
+
+  @media (max-width: 640px)
+    width: 333px
+    height: 187px
+
+    right: -7px
+    bottom: -22px
+
+.products__gallery-items-column-item--flagman-index
+  justify-content: center
+
+.products__gallery-items-column-item-top-image--flagman-index,
+.products__gallery-items-column-item-bottom-image--flagman-index
+  @media (max-width: 1536px)
+    width: 300px
+
+  @media (max-width: 1300px)
+    width: 200px
+
+  @media (max-width: 800px)
+    width: 176px
+
+  @media (max-width: 640px)
+    width: 230px
+
+  @media (max-width: 420px)
+    width: 176px
+
+.products__gallery-items-column-item-bottom-image--flagman-index
+  @media (max-width: 1536px)
+    width: 240px
+
+    bottom: 25px
+
+  @media (max-width: 1300px)
+    width: 155px
+    bottom: 25px
+
+.products__gallery-items-column-item-top-image--hookah-index
+  position: relative
+  top: calc(-50% + 15px)
+  left: 5px
+  z-index: 3
+
+  @media (max-width: 1536px)
+    width: 190px
+
+  @media (max-width: 800px)
+    width: 180px
+
+  @media (max-width: 640px)
+    width: 245px
+
+  @media (max-width: 420px)
+    width: 180px
+
+.products__gallery-items-column-item-left--hookah-index,
+.products__gallery-items-column-item-right--hookah-index
+  width: 50%
+  height: 100%
+
+  position: absolute
+
+.products__gallery-items-column-item-left--hookah-index
+  background-color: #000
+
+  left: 0
+  top: 0
+
+.products__gallery-items-column-item-right--hookah-index
+  background-color: #fff
+
+  right: 0
+  top: 0
+
+.products__gallery-items-column-item--advance-index
+  justify-content: center
+
+.products__gallery-items-column-item-top-image--advance-index
+  @media (max-width: 1536px)
+    margin-top: -140px
+
+    width: 245px
+
+  @media (max-width: 1300px)
+    margin-top: -140px
+
+    width: 170px
+
+  @media (max-width: 800px)
+    width: 160px
+
+.products__gallery-items-column-item-bottom-image--advance-index
+  pointer-events: none
+
+  position: absolute
+  right: -45%
+  top: 10%
+
+  @media (max-width: 1536px)
+    width: 300px
+    height: 250px
+    right: -35%
+    top: 35%
+
+  @media (max-width: 1300px)
+    height: 160px
+
+  @media (max-width: 800px)
+    height: 165px
+
+  @media (max-width: 640px)
+    height: 191px
+
+  @media (max-width: 420px)
+    height: 200px
+
+.products__gallery-items-column-item-bottom-image-index--logistic-index
+  pointer-events: none
+
+  position: relative
+  right: -50px
+
+  @media (max-width: 1536px)
+    width: 306px
+    height: 233px
+
+  @media (max-width: 1300px)
+    width: 205px
+    height: 270px
+    right: -5px
+
+  @media (max-width: 800px)
+    width: 195px
+    height: 271px
+
+  @media (max-width: 640px)
+    width: 245px
+    height: 317px
+    right: -5px
+
+  @media (max-width: 420px)
+    width: 240px
+    height: 201px
+
+.products__gallery-items-column-item-top-image--logistic-index
+  @media (max-width: 1536px)
+    width: 225px
+    height: 200px
+    margin-right: -40px
+
+  @media (max-width: 1300px)
+    width: 216px
+    height: 178px
+
+// button
+.products__button-block-index
+  display: flex
+  justify-content: center
+
+  margin-top: 100px
+
+  @media (max-width: 480px)
+    margin-top: 60px
+
+// AOS
+// [data-aos="new-animation"]
+//   opacity: 0
+//   transition-property: transform, opacity
+//   transform: perspective(360px) rotateX(70deg) translateY(200px) scale(.7)
+//   //transform: rotateX(80deg)
+
+//   &.aos-animate
+//     opacity: 1
+//     transform: perspective(360px) rotateX(0deg) translateY(0px) scale(1)
+    //transform: rotateX(0deg)
+
+  //@media screen and (min-width: 768px)
+  //transform: translateX(100px)
+  //
+  //&.aos-animate
+  //  transform: translateX(0)

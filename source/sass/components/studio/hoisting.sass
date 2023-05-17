@@ -1,0 +1,45 @@
+.hoisting
+    // @media (max-width: 1140px)
+    padding: 60px 0
+
+.hoisting__content
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    @media (max-width: 800px)
+        flex-direction: column
+
+.hoisting__contentLeft
+    margin-right: 30px
+
+.hoisting__contentLeftImage
+    width: 100%
+    height: auto
+    aspect-ratio: 2/2.5
+
+    @media (max-width: 1210px)
+        min-width: 245px
+
+    @media (max-width: 800px)
+        min-width: 274px
+        max-height: 310px
+
+        margin-bottom: 20px
+
+.hoisting__contentRight
+    max-width: 790px
+
+.hoisting__contentRightTitle
+    margin-bottom: 30px
+
+    font-weight: 800
+    font-size: 40px
+    line-height: 1.2
+    color: #000000
+
+.hoisting__contentRightText
+    font-weight: 400
+    @include adaptiveFont(20, 16)
+    line-height: 1.4
+    color: #4F4F4F

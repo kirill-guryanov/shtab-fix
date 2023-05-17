@@ -1,0 +1,23 @@
+include head
+
+body.hidden
+    include ../../views/utils/preloader
+    include ../../views/utils/burgerMenu--services
+
+    include ../../views/circle/circle
+          
+    include ../../views/header/headerBlack
+    #butter(data-scroll-container)
+        main(data-scroll-section)
+            include ../../views/services/intro
+            include ../../views/services/info
+            include ../../views/services/statistics
+            include ../../views/services/offer
+        include ../../views/footer/footer
+
+    include ../../views/modals/modals
+    
+                                    
+script( src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1/dist/locomotive-scroll.min.js" )
+// my js
+script( src="./assets/js/main.js" )

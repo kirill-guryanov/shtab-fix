@@ -1,0 +1,281 @@
+.offer
+    padding: 70px 0
+
+    background-color: #fff
+
+    overflow: hidden
+
+    position: relative
+    z-index: 1
+
+.offer__decorativeCircle
+    position: absolute
+    left: -165px
+    top: 50%
+    z-index: -1
+    transform: translateY(-50%) rotate(350deg)
+
+    @media (max-width: 1350px)
+        transform: rotate(70deg)
+
+        left: unset
+        right: -20%
+        top: -20%
+
+    @media (max-width: 1005px)
+        right: -23%
+        top: -25%
+
+    @media (max-width: 640px)
+        display: none
+
+.offer__content
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+.titleBlockWithBg
+    display: flex
+
+    margin-bottom: 45px
+
+    @media (max-width: 640px)
+        justify-content: center
+
+.titleWithBg
+    display: inherit
+
+    width: fit-content
+
+    font-weight: 400
+    @include adaptiveFont(30, 20)
+    line-height: 1.2
+    color: #000
+
+    position: relative
+
+    &::before
+        content: ""
+        display: block
+
+        width: 100%
+        height: 100%
+
+        background-color: $saladColor
+        transform: rotate(357deg)
+
+        position: absolute
+        left: 0
+        top: 15%
+        z-index: -1
+
+.offer__contentTitle
+    margin-bottom: 50px
+
+    font-weight: 700
+    @include adaptiveFont(40, 20)
+    line-height: 1.2
+    color: #000000
+
+.offer__form
+    display: flex
+    flex-direction: column
+    // justify-content: space-between
+
+.offer__formBody
+    display: flex
+    justify-content: space-between
+
+    @media ( max-width: 1145px )
+        display: grid
+        grid-template-columns: auto 1fr
+        grid-row-gap: 40px
+
+    @media ( max-width: 445px )
+        grid-template-columns: 1fr
+        grid-template-rows: auto
+        justify-items: center
+
+.offer__formInputs
+    display: flex
+    justify-content: space-between
+    flex-direction: column
+
+    max-width: 266px
+    width: 100%
+
+    @media ( max-width: 680px )
+        justify-content: unset
+
+    @media ( max-width: 445px )
+        max-width: 100%
+        width: 100%
+
+.offer__formInput
+    padding: 13px 18px
+
+    width: 100%
+    width: 100%
+
+    height: 44px
+
+    border-radius: 10px
+    background-color: #fff
+    border: 1px solid #cecccc
+    transition: border .3s ease
+
+    &:not(:last-child)
+        margin-bottom: 23px
+
+    &::placeholder
+        font-weight: 400
+        font-size: 16px
+        color: #2B2B2B
+
+    &:focus
+        border: 1px solid #666464
+
+.offer__formCheckboxes
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+    @media ( max-width: 1145px )
+        margin-left: 50px
+
+    @media ( max-width: 445px )
+        margin-left: 0
+
+.offer__formCheckboxesHeader
+    margin-bottom: 20px
+
+    @media ( max-width: 445px )
+        text-align: center
+
+.offer__formCheckboxesTitle
+    font-weight: 700
+    font-size: 16px
+    line-height: 1.2
+    color: #2B2B2B
+
+.offer__formCheckboxesCols
+    display: flex
+    justify-content: space-between
+
+    @media ( max-width: 1145px )
+        justify-content: unset
+
+    @media ( max-width: 680px )
+        flex-direction: column
+
+.offer__formCheckboxesCol
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+    @media ( max-width: 680px )
+        margin-bottom: 20px
+
+    &:not(:last-child)
+        margin-right: 55px
+
+        @media ( max-width: 680px )
+            margin-right: 0
+
+.offer__formCheckboxesWithCustom
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    width: 100%
+    height: 23px
+
+    position: relative
+
+    &:not(:last-child)
+        margin-bottom: 20px
+
+.offer__formCheckboxCustom
+    width: 24px
+    height: 24px
+
+    border: 1px solid #464646
+    border-radius: 3px
+    cursor: pointer
+
+    position: absolute
+    left: 0
+    top: 0
+
+.offer__formCheckboxCustomFillWrapper
+    width: 100%
+    height: 100%
+
+    position: relative
+
+.offer__formCheckboxCustomFill
+    transform: translate(-50%, -50%)
+
+    border-radius: 3px
+
+    width: 16px
+    height: 16px
+
+    background-color: #C6FF00
+    filter: opacity(0)
+    transition: all .3s ease
+
+    position: absolute
+    top: 50%
+    left: 50%
+
+.offer__formCheckbox
+    width: 24px
+    height: 24px
+
+    opacity: 0
+    cursor: pointer
+
+    position: absolute
+    left: 0
+    top: 0
+    z-index: 1
+
+    &:checked + .offer__formCheckboxCustom .offer__formCheckboxCustomFill
+        filter: opacity(1)
+
+.offer__formCheckboxLabel
+    flex-shrink: 0
+
+    margin-top: 2px
+    margin-left: 33px
+
+    cursor: pointer
+
+.offer__formButtonBlock
+    @media ( max-width: 1145px )
+        display: grid
+
+        grid-column-start: 1
+        grid-column-end: 3
+
+    @media ( max-width: 680px )
+        justify-content: center
+
+    @media ( max-width: 445px )
+        grid-column-start: unset
+        grid-column-end: unset
+        justify-content: unset
+
+.offer__formFooter
+    margin-top: 30px
+    max-width: 509px
+
+    @media ( max-width: 445px )
+        text-align: center
+
+.offer__formFooterText
+    font-weight: 350
+    font-size: 14px
+    line-height: 1.2
+    color: #555555

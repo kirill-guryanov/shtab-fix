@@ -1,0 +1,290 @@
+@import "source/sass/components/utils/variables"
+
+.container
+  margin: 0 auto
+  padding: 0 15px
+
+  // max-width: 1430px
+  max-width: 1350px
+
+  width: 100%
+
+  @media (max-width: 1536px)
+    padding-left: 80px
+    padding-right: 80px
+
+  @media (max-width: 1400px)
+    max-width: 1300px
+
+  @media (max-width: 854px)
+    padding-left: 40px
+    padding-right: 40px
+
+  @media (max-width: 530px)
+    padding-left: 15px
+    padding-right: 15px
+
+  &--introServiceDetail
+    position: relative
+    z-index: 1
+
+  &--mayToLike
+    padding-top: 65px
+    padding-bottom: 65px
+
+  &--forGlowingCircle
+    position: relative
+
+  &--projects
+    position: relative
+
+    @media (max-width: 640px)
+      padding: 0 50px
+
+  &--preloader
+    width: 100%
+    height: 100%
+
+    position: relative
+
+  &--contacts
+    display: flex
+    align-items: center
+
+    z-index: 1
+    position: relative
+
+    @media (max-width: 1440px)
+      align-items: flex-end
+
+    @media (max-width: 1170px)
+      flex-direction: column
+
+    @media (max-width: 1280px)
+      align-items: center
+
+    @media (max-width: 1250px)
+      flex-direction: column-reverse
+
+    @media (max-width: 854px)
+      padding: 0 40px
+
+  &--header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-shrink: 1
+
+    @media (max-width: 1536px)
+      padding: 0 80px
+
+    @media (max-width: 854px)
+      padding: 0 40px
+
+    @media (max-width: 1200px)
+      position: relative
+      justify-content: flex-start
+
+    @media (max-width: 530px)
+      padding: 0 15px
+
+    @media (max-width: 450px)
+      justify-content: space-between
+
+  &--services
+    @media (max-width: 1536px)
+      padding: 0 80px
+
+    @media (max-width: 1280px)
+      align-items: center
+
+    @media (max-width: 854px)
+      padding: 0 40px
+
+    @media (max-width: 530px)
+      padding: 0 15px
+
+  &--rewievs
+    @media (max-width: 1536px)
+      padding: 0 80px
+
+    @media (max-width: 1280px)
+      align-items: center
+
+    @media (max-width: 854px)
+      padding: 0 40px
+
+    @media (max-width: 530px)
+      padding: 0 15px
+
+  &--products
+    position: relative
+    z-index: 1
+
+    @media (max-width: 1536px)
+      padding: 0 80px
+
+    @media (max-width: 1280px)
+      padding: 0 80px
+
+    @media (max-width: 854px)
+      padding: 0 40px
+
+    @media (max-width: 530px)
+      padding: 0 15px
+
+  &--intro
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-shrink: 1
+
+    height: inherit
+
+    position: relative
+
+    @media (max-width: 1536px)
+      padding: 0 80px
+
+    @media (max-width: 1070px)
+      flex-shrink: 0
+
+    @media (max-width: 854px)
+      padding: 0 40px
+
+    @media (max-width: 620px)
+      padding: 0 0
+
+      height: 670px
+
+    @media (max-width: 530px)
+      padding: 0 15px
+
+    @media (max-width: 380px)
+      height: 500px
+
+  &--blog
+    @media (max-width: 1536px)
+      padding: 0 80px
+
+    @media (max-width: 1024px)
+      flex-shrink: 0
+
+    @media (max-width: 854px)
+      padding: 0 40px
+
+    @media (max-width: 530px)
+      padding: 0 15px
+
+  &--about-us
+    display: flex
+    align-items: center
+
+    padding: 80px 15px 0
+
+    z-index: 1
+    position: relative
+
+    @media (max-width: 1536px)
+      padding: 80px 80px 0
+
+    @media (max-width: 1440px)
+      align-items: flex-end
+
+    @media (max-width: 1280px)
+      align-items: center
+
+    @media (max-width: 1170px)
+      flex-direction: column
+
+      padding-top: 45px
+
+    @media (max-width: 854px)
+      padding: 45px 40px 0
+
+    @media (max-width: 530px)
+      padding: 45px 15px 0
+
+  &--footer
+    display: flex
+    justify-content: space-between
+
+    width: 100%
+
+  &--footerSecond
+    display: flex
+    justify-content: space-between
+
+    padding: 0
+
+    max-width: 100%
+
+    width: 100%
+
+    @media (max-width: 1090px)
+      flex-direction: column-reverse
+
+  &--blog__in-page
+    position: relative
+
+    @media (max-width: 1536px)
+      padding: 0 80px
+
+    @media (max-width: 854px)
+      padding: 0 40px
+
+    @media (max-width: 530px)
+      padding: 0 15px
+
+  &--blog-once-page
+    display: flex
+    flex-direction: column
+
+    position: relative
+
+    @media (max-width: 1536px)
+      padding: 0 80px
+
+    @media (max-width: 854px)
+      padding: 0 40px
+
+    @media (max-width: 530px)
+      padding: 0 15px
+
+// into splide
+.intro__splider--container .splide__pagination .splide__pagination__page.is-active
+  background-color: #D0FF48!important
+  transform: unset!important
+
+// pagination
+.intro__splider--container .splide__pagination,
+.intro__splider--container .splide__pagination--ttb
+  right: unset
+  bottom: unset
+  left: 0!important
+  top: 0!important
+
+.intro__splider--container .splide__pagination li
+  position: relative!important
+
+.intro__splider--container .splide__pagination .splide__pagination__page
+  width: 19px
+  height: 19px
+
+  border: 1px solid #000
+  background: #fff!important
+  opacity: 1
+
+  @media (max-width: 1070px)
+    width: 14px
+    height: 14px
+
+.intro__splide-string
+  //@media (max-width: 540px)
+  //  height: 300px
+  //
+  //@media (max-width: 540px)
+  //  height: 200px
+
+.intro__slider-swiper-pagination .swiper-pagination-bullet-active
+  background: $saladColor !important

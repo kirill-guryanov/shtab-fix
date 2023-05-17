@@ -1,0 +1,18 @@
+#Separated Browserslist config should be named .browserslistrc and have browsers queries split by a new line. Each line is combined with the or combiner. Comments starts with
+
+#You can use the following query to reference an exported Browserslist config from another package:
+# "browserslist": [
+#   "extends browserslist-config-mycompany"
+# ]
+
+# You can also specify different browser queries for various environments. Browserslist will choose query according to BROWSERSLIST_ENV or NODE_ENV variables. If none of them is declared, Browserslist will firstly look for production queries and then use defaults.
+# [production]
+# > 1%
+# not dead
+# [modern]
+# last 1 chrome version
+# last 1 firefox version
+# [ssr]
+# node 12
+
+cover 99%

@@ -1,0 +1,22 @@
+// preloader
+import "../utils/preloader";
+// circle
+import "../circle/circle--brief";
+// header
+import "../header/text";
+import "../header/animationWithScroll";
+// burgerMenu
+import "../burgerMenu/burgerMenu";
+import "../burgerMenu/buttonsImplementation";
+// button
+import "./buttonsImplementation";
+// to next section
+import "./to-next-section";
+// checkboxes
+import "./checkboxes";
+// footer
+import "../footer/rights-top-border";
+import "../footer/checkbox";
+// utils
+import "../utils/allignButtonsSpan";
+import "../utils/butter";

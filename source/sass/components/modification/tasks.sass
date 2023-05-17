@@ -1,0 +1,152 @@
+// .benefits__content
+.benefits__contentTop
+    margin-bottom: 100px
+
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    @media ( max-width: 660px )
+        flex-direction: column
+
+        margin-bottom: 30px
+
+.benefits__contentTopLeft
+    margin-right: 40px
+
+    @media ( max-width: 660px )
+        text-align: center
+        margin-right: 0
+
+    & .servisec-list__item
+        max-width: 570px
+
+        @media ( max-width: 660px )
+            margin-right: 0
+            margin-bottom: 20px
+
+.types__contentBottomItemButton svg
+    transition: all .3s ease
+
+    width: 0
+    fill: #000
+    filter: opacity(0)
+
+.types__contentBottomItemButtonText
+    margin-right: 15px
+
+    font-weight: 400
+    @include adaptiveFont(17, 15)
+    line-height: 1.2
+    color: #1E1E1E
+
+.types__contentBottomItemButtonImage
+    filter: opacity(0)
+
+    transition: all .3s ease
+
+.types__contentBottomItemButtonWrapper
+    display: flex
+    justify-content: center
+
+    padding: 0 15px
+
+.types__contentBottom
+    width: 100%
+
+// tasks
+.tasks
+    padding: 70px 0
+
+    & .servisec-list__item
+        max-width: 500px
+
+// .tasks__content
+
+// bottom
+.tasks__contentBottom
+    margin-top: 50px
+
+.tasks__contentBottomItems
+    display: grid
+    grid-template-columns: repeat(3,1fr)
+    column-gap: 50px
+    row-gap: 50px
+
+    @media (max-width: 1250px)
+        grid-template-columns: repeat(2,1fr)
+        justify-items: center
+
+    @media (max-width: 730px)
+        grid-template-columns: repeat(1,1fr)
+
+// item
+.tasks__contentBottomItem
+    display: flex
+
+    max-width: 380px
+
+.tasks__contentBottomItemLeft
+    display: flex
+
+    margin-top: 40px
+    margin-right: 20px
+
+// .tasks__contentBottomItemLeftImage
+.tasks__contentBottomItemRight
+    display: flex
+    justify-content: space-between
+    flex-direction: column
+
+.tasks__contentBottomItemRightTitle
+    font-weight: 400
+    font-size: 25px
+    @include adaptiveFont(25, 18)
+    line-height: 1.2
+    color: #1F1F1F
+
+.tasks__contentBottomItemRightText
+    margin-bottom: 20px
+
+    @include adaptiveFont(18, 16)
+    font-weight: 350
+    line-height: 1.2
+    color: #1F1F1F
+
+// item button
+.types__contentBottomItemButton
+    display: flex
+    align-items: center
+    justify-content: center
+
+    padding: 10px
+
+    width: 100%
+    min-height: 62px
+
+    transition: background-color .3s ease
+
+    background: $saladColor
+    border-radius: 15px
+
+    &:hover svg
+        filter: opacity(1)
+        width: 38px
+
+.types__contentBottomItemButton
+    padding: 12px 15px
+
+    max-width: 255px
+    min-height: 43px
+
+    cursor: pointer
+    border-radius: 40px
+
+    &:hover p
+        color: #fff
+
+    &:hover
+        background-color: #000
+
+    // &:hover svg
+    //     fill: #fff

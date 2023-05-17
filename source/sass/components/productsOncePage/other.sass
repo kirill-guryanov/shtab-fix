@@ -1,0 +1,148 @@
+.other
+    padding-top: 45px
+    padding-bottom: 60px
+
+    background-color: #1E1E1E
+
+    overflow: visible
+
+.other__content
+    position: relative
+    z-index: 2
+
+.glowingCircleTop
+    position: absolute
+    top: -26%
+    right: -15%
+    z-index: 1
+
+    @media (max-width: 1320px)
+        top: 0
+        right: 0
+
+.other__contentTitleWrapper
+    display: flex
+    justify-content: center
+
+    margin-bottom: 120px
+
+// .other__contentTitle
+
+.other__contentItems
+    display: grid
+    grid-template-columns: repeat(5, 1fr)
+    grid-column-gap: 60px
+
+    @media (max-width: 1320px)
+        grid-template-columns: repeat(4, 1fr)
+        grid-row-gap: 130px
+
+    @media (max-width: 1100px)
+        grid-template-columns: repeat(3, 1fr)
+
+    @media (max-width: 875px)
+        grid-template-columns: repeat(2, 1fr)
+        justify-items: center
+
+    @media (max-width: 495px)
+        grid-template-columns: repeat(1, 1fr)
+        justify-items: center
+
+.other__contentItemBlockWrapper
+    display: flex
+    flex-direction: column
+
+    max-width: 229px
+    height: auto
+
+    &--bottom
+        margin-bottom: 0
+
+    &:hover .other__contentItemSideDieImage
+        fill: #D0FF48
+
+    &:hover .other__contentItemSideDieTitle
+        color: #3C3C3C
+
+    &:hover .other__contentItemButton
+        filter: opacity(1)
+
+.other__contentItemWrapper
+    width: 100%
+    height: 100%
+
+    cursor: initial
+
+.other__contentItem
+    width: 100%
+    height: 100%
+
+    border-radius: 10px
+    cursor: pointer
+
+    position: relative
+
+.other__contentItemSideDieWrapper
+    position: absolute
+
+    right: 0
+    top: -70px
+
+.other__contentItemSideDie
+    width: 75px
+    height: auto
+
+    position: relative
+
+.other__contentItemSideDieImage
+    fill: #343434
+
+    transition: fill .3s ease
+
+.other__contentItemSideDieTitle
+    font-weight: 400
+    font-size: 18px
+    line-height: 1.2
+    white-space: nowrap
+    color: #fff
+
+    transform: translate(-50%,-50%) rotate(90deg) scale(-1, -1)
+    transition: color .3s ease
+
+    position: absolute
+    top: 42%
+    left: 50%
+
+.other__contentItemImage
+    width: 100%
+    height: 100%
+
+    border-radius: 10px
+
+.other__contentItemButtonBlock
+    margin-top: 50px
+
+    width: 100%
+
+    text-align: center
+
+    cursor: initial
+
+.other__contentItemButton
+    display: block
+
+    margin: 0 auto
+    padding: 10px 35px
+
+    width: fit-content
+
+    background: #D0FF48
+    border-radius: 10px
+    filter: opacity(0)
+    transition: filter .3s ease
+    cursor: pointer
+
+    font-weight: 400
+    font-size: 16px
+    line-height: 1.2
+    color: #3C3C3C

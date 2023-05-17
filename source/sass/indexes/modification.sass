@@ -1,0 +1,407 @@
+// variables
+@import "../components/utils/variables"
+// utils
+@import "../components/utils/container"
+@import "../components/utils/locomotive.scss"
+@import "../components/utils/preloader"
+@import "../components/utils/variables"
+@import "../components/utils/mixins"
+@import "../components/utils/fonts"
+@import "../components/utils/reset"
+@import "../components/utils/fillingButton"
+@import "../components/utils/sectionTitles"
+// functional
+@import "../components/attraction/why"
+@import "../components/serviceDetail/ourWorks"
+// // sections
+@import "../components/modification/intro"
+@import "../components/modification/tasks"
+@import "../components/modification/ready"
+@import "../components/seo/answers"
+@import "../components/seo/whatMore"
+// 
+@import "../components/circle/circle"
+@import "../components/header/header"
+@import "../components/utils/burgerMenu"
+@import "../components/footer/footer"
+@import "../components/modals/modals"
+
+html
+    scroll-behavior: smooth
+
+body
+    display: flex
+    flex-direction: column
+
+    font-family: 'Circe', serif
+
+    position: relative
+
+main
+    flex-grow: 1
+
+input:focus
+    border: 1px solid $saladColor
+    outline: none
+
+#butter
+    position: fixed
+
+// header phone
+.header__contacts-item-number-image
+    display: none
+
+    margin-right: 15px
+
+    &--black
+        @media (max-width: 390px)
+            display: inherit
+
+    &--white
+        @media (max-width: 390px)
+            display: none
+
+// header
+.header--main
+    background-color: transparent
+
+.header--main--min-padding
+    background-color: #1D1D1D
+
+.header--main-black-mode
+    background-color: #1D1D1D
+
+.header__burger-span
+    background-color: #fff
+
+.header__nav-item,
+.header__contacts-item-number,
+.header__contacts-item-back-call
+    color: #fff
+
+.header__logo-block-image--black
+    display: none
+
+.header__logo-block-image--white
+    display: block
+
+.header__contacts-item-image--black
+    display: none
+
+.header__contacts-item-image--white
+    display: block
+
+// header letters
+// .header__nav-item-text
+.block .letter
+    color: #ffffff
+
+.reviews__splide
+    padding: 0 15px 0 15px
+
+    @media (max-width: 530px)
+        margin-top: 110px
+
+.reviews__splide .splide__arrow
+    width: 54px
+    height: 54px
+
+    border: 1px solid #A0A0A0
+    border-radius: unset
+    background: unset
+    opacity: .4
+
+    transition: all .3s ease-in-out
+    overflow: hidden
+
+    right: 0
+    left: unset
+
+    &:hover
+        opacity: 1
+        border: 1px solid #000
+
+    &:hover svg
+        fill: #000
+
+    & svg
+        width: 34px
+        height: 25px
+
+        transition: all .3s ease-in-out
+
+.reviews__splide .splide__arrow:disabled
+    opacity: .4
+
+    &:hover
+        opacity: 1
+        border: 1px solid #000
+
+.reviews__splide .splide__arrow--next svg
+    fill: #A0A0A0
+
+.reviews__splide .splide__arrow--prev svg
+    fill: #A0A0A0
+
+.reviews__splide .splide__arrow--prev
+    right: 67px
+
+// functional
+.section__titles
+    margin-bottom: 55px
+
+// main
+.reviews
+    padding: 65px 0 65px
+
+    position: relative
+
+// bullet
+.bullet
+    flex-shrink: 0
+
+    width: 8px
+    height: 8px
+
+    margin-right: 16px
+    margin-left: 16px
+
+    background-color: #C6FF00
+    border-radius: 50%
+
+    @media ( max-width: 580px )
+        margin-left: 0
+
+    &--grey
+        background-color: #A9A9A9
+
+    &--blackStages
+        width: 6px
+        height: 6px
+
+        background-color: #000
+
+    &--small
+        margin-right: 10px
+        margin-left: 10px
+
+        @media ( max-width: 580px )
+            margin-left: 0
+
+    &--checkMark
+        flex-shrink: 0
+
+        margin-right: 12px
+
+        background-color: unset
+        border-radius: unset
+
+    &--image
+        width: auto
+        height: auto
+
+        margin-left: unset
+        margin-right: unset
+
+        background-color: unset
+        border-radius: unset
+
+    &--imageRocket
+        margin-left: -30px
+
+    &--imageCheckMarkServices
+        margin-left: 8px
+        margin-bottom: 5px
+
+// titles
+.servisec-list__item
+
+    position: relative
+
+    &--notMargin
+        margin: 0
+
+.servisec-list__item-title-span
+    color: #444
+    transition: color .3s ease
+
+    &--white
+        color: #fff
+
+.servisec-list__item-title-span-wrapper
+    position: absolute
+
+    transform: rotate(359deg)
+
+    overflow: hidden
+
+.servisec-list__item-title-span-bg
+    transition: color .3s ease
+
+    &::before
+        content: ""
+        display: block
+
+        width: 100%
+        height: 100%
+
+        background-color: $saladColor
+        transition: transform .3s ease
+        transform: translateX(0)
+
+        position: absolute
+        left: 0
+        top: 0
+        z-index: 1
+
+.servisec-list__item-title-span-bg--transparent
+    transition: color .3s ease
+
+    &::before
+        content: ""
+        display: block
+
+        width: 100%
+        height: 100%
+
+        background-color: transparent
+        transition: transform .3s ease
+        transform: translateX(0)
+
+        position: absolute
+        left: 0
+        top: 0
+        z-index: 1
+
+.servisec-list__item-title
+    font-weight: 700
+    @include adaptiveFont(27, 20)
+    line-height: 1.2
+    color: #fff
+
+    position: relative
+    z-index: 2
+
+    &--black
+        color: #404040
+
+.servicesTitle
+    width: 100%
+
+    font-weight: 700
+    @include adaptiveFont(40, 25)
+    line-height: 1.2
+    color: #FFFFFF
+
+    &--black
+        color: #404040
+
+.projects__obliqueLines
+    transform: translate(0, -50%)
+
+    position: absolute
+    top: 45%
+    right: -50px
+
+    @media ( max-width: 1170px )
+        right: -70px
+
+    @media ( max-width: 860px )
+        display: none
+
+    &--benefits
+        transform: translate(0,20%) rotate(180deg) scale(1, -1)
+
+        left: -50px
+        top: 0%
+
+        @media ( max-width: 1350px )
+            left: -70px
+
+.decorativeCicrcleWithLines
+    opacity: .1
+
+    transform: translate(0,-39%) rotate(28deg) scale(-1,1)
+
+    position: absolute
+    top: 30%
+    left: -171px
+
+    &--whatMore
+        opacity: 1
+
+        transform: translate(0,-39%) rotate(36deg) scale(-1,1)
+
+        top: 25%
+        left: -196px
+
+    @media ( max-width: 1250px )
+        display: none
+
+// 
+.answers
+    padding-top: 0
+
+// 
+.why
+    @media ( max-width: 600px )
+        padding-top: 20px
+
+// bullet
+.bullet
+    flex-shrink: 0
+
+    width: 8px
+    height: 8px
+
+    margin-right: 16px
+    margin-left: 16px
+
+    background-color: #C6FF00
+    border-radius: 50%
+
+    @media ( max-width: 580px )
+        margin-left: 0
+
+    &--small
+        width: 4px
+        height: 4px
+
+    &--white
+        background-color: #fff
+
+    &--checkMark
+        flex-shrink: 0
+
+        margin-right: 12px
+
+        background-color: unset
+        border-radius: unset
+
+    &--image
+        width: auto
+        height: auto
+
+        margin-left: unset
+        margin-right: unset
+
+        background-color: unset
+        border-radius: unset
+
+// intro
+.intro__contentRightSideImage
+    aspect-ratio: 2/1.7
+    transform: unset
+
+    @media( max-width: 900px )
+        max-width: 330px
+        min-width: 330px
+
+    @media( max-width: 750px )
+        margin-bottom: 20px
+
+        min-width: unset
+
+    @media( max-width: 420px )
+
+        max-width: 240px

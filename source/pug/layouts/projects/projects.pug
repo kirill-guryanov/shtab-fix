@@ -1,0 +1,21 @@
+include head
+
+body.hidden
+    include ../../views/utils/preloader
+    include ../../views/utils/burgerMenu
+    include ../../views/circle/circle
+    include ../../views/header/headerBlack
+    #butter(data-scroll-container)
+        main(data-scroll-section)
+            include ../../views/projects/intro
+            include ../../views/projects/projectsSection
+            include ../../views/projects/offer
+        include ../../views/footer/footer
+
+    include ../../views/modals/modals
+
+script( src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1/dist/locomotive-scroll.min.js" )
+// aos
+script( src="https://unpkg.com/aos@next/dist/aos.js" )
+// my js
+script( src="./assets/js/main.js" )
