@@ -31,51 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
       false
     );
   } catch (error) {}
-  // try {
-  //   // intro top
-  //   addInteractivityToButton(
-  //     ".fillingButton--introTop",
-  //     ".fillingButton__svg-circle--introTop",
-  //     ".fillingButton__circle--introTop",
-  //     3,
-  //     3,
-  //     0,
-  //     0,
-  //     true,
-  //     true,
-  //     true
-  //   );
-  // } catch (error) {}
-  // try {
-  //   // intro bottom
-  //   addInteractivityToButton(
-  //     ".fillingButton--introBottom",
-  //     ".fillingButton__svg-circle--introBottom",
-  //     ".fillingButton__circle--introBottom",
-  //     3,
-  //     3,
-  //     0,
-  //     0,
-  //     true,
-  //     true,
-  //     true
-  //   );
-  // } catch (error) {}
-  // try {
-  //   // offer
-  //   addInteractivityToButton(
-  //     ".fillingButton--infoOffer",
-  //     ".fillingButton__svg-circle--infoOffer",
-  //     ".fillingButton__circle--infoOffer",
-  //     3,
-  //     3,
-  //     0,
-  //     0,
-  //     true,
-  //     true,
-  //     false
-  //   );
-  // } catch (error) {}
 });
 
 window.addEventListener("resize", () => {
@@ -92,32 +47,6 @@ window.addEventListener("resize", () => {
       false
     );
   } catch (error) {}
-  // try {
-  //   // intro top
-  //   addInteractivityToButton(
-  //     ".fillingButton--introTop",
-  //     ".fillingButton__svg-circle--introTop",
-  //     ".fillingButton__circle--introTop",
-  //     3,
-  //     3,
-  //     0,
-  //     0,
-  //     false
-  //   );
-  // } catch (error) {}
-  // try {
-  //   // intro bottom
-  //   addInteractivityToButton(
-  //     ".fillingButton--introBottom",
-  //     ".fillingButton__svg-circle--introBottom",
-  //     ".fillingButton__circle--introBottom",
-  //     3,
-  //     3,
-  //     0,
-  //     0,
-  //     false
-  //   );
-  // } catch (error) {}
   try {
     // costs
     addInteractivityToButton(
@@ -131,17 +60,4 @@ window.addEventListener("resize", () => {
       false
     );
   } catch (error) {}
-  // try {
-  //   // offer
-  //   addInteractivityToButton(
-  //     ".fillingButton--infoOffer",
-  //     ".fillingButton__svg-circle--infoOffer",
-  //     ".fillingButton__circle--infoOffer",
-  //     3,
-  //     3,
-  //     0,
-  //     0,
-  //     false
-  //   );
-  // } catch (error) {}
 });

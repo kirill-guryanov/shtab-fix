@@ -16,36 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
       true
     );
   } catch (error) {}
-  // try {
-  //   // intro bottom
-  //   addInteractivityToButton(
-  //     ".fillingButton--introBottom",
-  //     ".fillingButton__svg-circle--introBottom",
-  //     ".fillingButton__circle--introBottom",
-  //     2,
-  //     2,
-  //     0,
-  //     0,
-  //     true,
-  //     "whiteArrow",
-  //     true
-  //   );
-  // } catch (error) {}
-  // try {
-  //   // answersQuestions
-  //   addInteractivityToButton(
-  //     ".fillingButton--answersQuestions",
-  //     ".fillingButton__svg-circle--answersQuestions",
-  //     ".fillingButton__circle--answersQuestions",
-  //     2,
-  //     2,
-  //     0,
-  //     0,
-  //     true,
-  //     true,
-  //     false
-  //   );
-  // } catch (error) {}
+
   try {
     // costsTop
     addInteractivityToButton(
@@ -102,32 +73,6 @@ window.addEventListener("resize", () => {
       false
     );
   } catch (error) {}
-  // try {
-  //   // intro bottom
-  //   addInteractivityToButton(
-  //     ".fillingButton--introBottom",
-  //     ".fillingButton__svg-circle--introBottom",
-  //     ".fillingButton__circle--introBottom",
-  //     3,
-  //     2,
-  //     0,
-  //     0,
-  //     false
-  //   );
-  // } catch (error) {}
-  // try {
-  //   // answersQuestions
-  //   addInteractivityToButton(
-  //     ".fillingButton--answersQuestions",
-  //     ".fillingButton__svg-circle--answersQuestions",
-  //     ".fillingButton__circle--answersQuestions",
-  //     2,
-  //     2,
-  //     0,
-  //     0,
-  //     false
-  //   );
-  // } catch (error) {}
   try {
     // costsTop
     addInteractivityToButton(

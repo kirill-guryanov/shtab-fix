@@ -1,21 +1,6 @@
 import { addInteractivityToButton } from "../utils/addInteractivityToButton";
 
 document.addEventListener("DOMContentLoaded", () => {
-  // try {
-  //   // intro bottom
-  //   addInteractivityToButton(
-  //     ".fillingButton--introBottom",
-  //     ".fillingButton__svg-circle--introBottom",
-  //     ".fillingButton__circle--introBottom",
-  //     2,
-  //     2,
-  //     0,
-  //     0,
-  //     true,
-  //     true,
-  //     true
-  //   );
-  // } catch (error) {}
   try {
     // costsFooterItem
     addInteractivityToButton(
@@ -133,19 +118,19 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 window.addEventListener("resize", () => {
-  try {
-    // intro bottom
-    addInteractivityToButton(
-      ".fillingButton--introBottom",
-      ".fillingButton__svg-circle--introBottom",
-      ".fillingButton__circle--introBottom",
-      2,
-      2,
-      0,
-      0,
-      false
-    );
-  } catch (error) {}
+  //   try {
+  //     // intro bottom
+  //     addInteractivityToButton(
+  //       ".fillingButton--introBottom",
+  //       ".fillingButton__svg-circle--introBottom",
+  //       ".fillingButton__circle--introBottom",
+  //       2,
+  //       2,
+  //       0,
+  //       0,
+  //       false
+  //     );
+  //   } catch (error) {}
   try {
     // costsFooterItem
     addInteractivityToButton(

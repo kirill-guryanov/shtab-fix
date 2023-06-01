@@ -223,15 +223,33 @@ export function addInteractivityToButton(
     buttonImagesBlock.appendChild(whiteImage);
   }
 
-  if (typeOfDecorativeImageOrSrc === true) {
+  if (typeOfDecorativeImageOrSrc === imagesTypes.blackArrow) {
     // create image
     let decorativeImage;
-    // create white arrow
-    // if (typeOfDecorativeImageOrSrc === imagesTypes.whiteArrow) {
-    //   decorativeImage = new Image(15, 15);
-    //   decorativeImage.src =
-    //     "assets/images/utils/arrowForFillingButton--white.svg";
-    // }
+    // // create black arrow
+    decorativeImage = new Image(15, 15);
+    decorativeImage.src =
+      "assets/images/utils/arrowForFillingButton--black.svg";
+    // add custom class for created image with correct sizes
+    decorativeImage.classList.add("fillingButton__image");
+    // append created image
+    const buttonContentBlock = parent.querySelector(".fillingButton__content");
+    buttonContentBlock.appendChild(decorativeImage);
+  } else if (typeOfDecorativeImageOrSrc === imagesTypes.whiteArrow) {
+    // create image
+    let decorativeImage;
+    // // create black arrow
+    decorativeImage = new Image(15, 15);
+    decorativeImage.src =
+      "assets/images/utils/arrowForFillingButton--white.svg";
+    // add custom class for created image with correct sizes
+    decorativeImage.classList.add("fillingButton__image");
+    // append created image
+    const buttonContentBlock = parent.querySelector(".fillingButton__content");
+    buttonContentBlock.appendChild(decorativeImage);
+  } else if (typeOfDecorativeImageOrSrc === true) {
+    // create image
+    let decorativeImage;
     if (typeOfDecorativeImageOrSrc === true) {
       decorativeImage = new Image(15, 15);
       let tagWithSrc = parent.querySelector(
@@ -239,23 +257,6 @@ export function addInteractivityToButton(
       );
       decorativeImage.src = tagWithSrc.dataset.src;
     }
-    // // create black arrow
-    // if (typeOfDecorativeImageOrSrc === imagesTypes.blackArrow) {
-    //   decorativeImage = new Image(15, 15);
-    //   decorativeImage.src =
-    //     "assets/images/utils/arrowForFillingButton--black.svg";
-    // }
-    // if (
-    //   typeOfDecorativeImageOrSrc !== imagesTypes.blackArrow &&
-    //   typeOfDecorativeImageOrSrc !== imagesTypes.whiteArrow &&
-    //   typeOfDecorativeImageOrSrc !== null
-    // ) {
-    //   // destructure custom sizes
-    //   const [width, height] = [...decorativeImageSizes];
-
-    //   decorativeImage = new Image(width, height);
-    //   decorativeImage.src = typeOfDecorativeImageOrSrc;
-    // }
     // add custom class for created image with correct sizes
     decorativeImage.classList.add("fillingButton__image");
     // append created image

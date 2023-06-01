@@ -1477,93 +1477,174 @@ try {
 /***/ 312:
 /***/ (function() {
 
+// ("use strict");
 try {
-  ("use strict");
-  // parent
-  const parent = document.querySelector(".quizComponent");
-  // slider
-  const slidesWrapper = document.querySelector(".quizComponentQuestions");
-  const slides = document.querySelectorAll(".quizComponentQuestion");
-  // controls
-  const controls = document.querySelector(".quizComponentControls");
-  // buttons
-  const leftSideButton = document.querySelector(
-    ".quizComponentControlsLeftButton"
-  );
-
-  const leftSideButtonSvg = document.querySelector(
-    ".quizComponentControlsLeftButtonImage"
-  );
-  const rightSideButton = document.querySelector(
-    ".quizComponentControlsRightButton"
-  );
-  // stages
-  const currentStage = document.querySelector(
-    ".quizComponentControlsStagesCurrentStage"
-  );
-  const stagesAtAll = document.querySelector(
-    ".quizComponentControlsStagesAtAll"
-  );
-
-  //
-  let currentLeftButtonFontSize = 0;
-
   window.addEventListener("load", () => {
+    const parents = document.querySelectorAll(".quizComponent");
     try {
-      currentLeftButtonFontSize = getComputedStyle(leftSideButton).fontSize;
-      let currentSlide = 1;
-      let atAllSlides;
-      //
-      let currentTransformPosition = 0;
-      // get width for scroll
-      const parentWidth = parent.getBoundingClientRect().width;
-      // set slides width
-      slides.forEach((slide, index) => {
-        const parentLeftPadding = getComputedStyle(parent).paddingLeft;
-        const reg = /\d*/;
-        slide.style.width = `${
-          parentWidth - Number(parentLeftPadding.match(reg) * 2)
-        }px`;
-        slide.style.marginRight = `${Number(
-          parentLeftPadding.match(reg) * 2
-        )}px`;
-        slide.dataset.slideNumber = index + 1;
-        atAllSlides = slide.dataset.slideNumber = index + 1;
-      });
-      // set at all stages
-      stagesAtAll.textContent = atAllSlides;
-      // set buttons type for change animation and interaction
-      leftSideButton.dataset.type = "next";
-      // right side button
-      rightSideButton.addEventListener("click", () => {
-        const isActive = rightSideButton.dataset.type === "active";
+      parents.forEach((parent) => {
+        // parent
+        // slider
+        const slidesWrapper = parent.querySelector(".quizComponentQuestions");
+        const slides = parent.querySelectorAll(".quizComponentQuestion");
+        // controls
+        const controls = parent.querySelector(".quizComponentControls");
+        // buttons
+        const leftSideButton = parent.querySelector(
+          ".quizComponentControlsLeftButton"
+        );
 
-        const notLastSlideNow = currentSlide !== atAllSlides;
-        const lastSlideNow = currentSlide === atAllSlides;
+        const leftSideButtonSvg = parent.querySelector(
+          ".quizComponentControlsLeftButtonImage"
+        );
+        const rightSideButton = parent.querySelector(
+          ".quizComponentControlsRightButton"
+        );
+        // stages
+        const currentStage = parent.querySelector(
+          ".quizComponentControlsStagesCurrentStage"
+        );
+        const stagesAtAll = parent.querySelector(
+          ".quizComponentControlsStagesAtAll"
+        );
 
-        if (isActive && notLastSlideNow && atAllSlides - currentSlide !== 1) {
-          switch (currentSlide) {
-            case 2:
+        let currentLeftButtonFontSize = 0;
+        //
+
+        currentLeftButtonFontSize = getComputedStyle(leftSideButton).fontSize;
+        let currentSlide = 1;
+        let atAllSlides;
+        //
+        let currentTransformPosition = 0;
+        // get width for scroll
+        const parentWidth = parent.getBoundingClientRect().width;
+        // set slides width
+        slides.forEach((slide, index) => {
+          const parentLeftPadding = getComputedStyle(parent).paddingLeft;
+          const reg = /\d*/;
+          slide.style.width = `${
+            parentWidth - Number(parentLeftPadding.match(reg) * 2)
+          }px`;
+          slide.style.marginRight = `${Number(
+            parentLeftPadding.match(reg) * 2
+          )}px`;
+          slide.dataset.slideNumber = index + 1;
+          atAllSlides = slide.dataset.slideNumber = index + 1;
+        });
+        // set at all stages
+        stagesAtAll.textContent = atAllSlides;
+        // set buttons type for change animation and interaction
+        leftSideButton.dataset.type = "next";
+        // right side button
+        rightSideButton.addEventListener("click", () => {
+          const isActive = rightSideButton.dataset.type === "active";
+
+          const notLastSlideNow = currentSlide !== atAllSlides;
+          const lastSlideNow = currentSlide === atAllSlides;
+
+          if (isActive && notLastSlideNow && atAllSlides - currentSlide !== 1) {
+            switch (currentSlide) {
+              case 2:
+                slides.forEach((slide, index) => {
+                  if (currentSlide === 2 && index + 1 === 2) {
+                    const inputs = slide.querySelectorAll("input");
+                    inputs.forEach((input) => {
+                      if (input.value !== "" || input.value.length > 3) {
+                        currentTransformPosition -= parentWidth;
+                        slidesWrapper.style.transform = `translateX(${currentTransformPosition}px)`;
+                        // set current slide
+                        currentSlide++;
+                        console.log(currentSlide);
+                        console.log(input.value);
+                        currentStage.innerText = currentSlide;
+                      }
+                    });
+                  }
+                });
+
+              case 3:
+                slides.forEach((slide, index) => {
+                  if (currentSlide === 3 && index + 1 === 3) {
+                    const inputs = slide.querySelectorAll("input");
+                    inputs.forEach((input) => {
+                      if (input.checked) {
+                        currentTransformPosition -= parentWidth;
+                        slidesWrapper.style.transform = `translateX(${currentTransformPosition}px)`;
+                        // set current slide
+                        currentSlide++;
+                        console.log(currentSlide);
+                        console.log(input.value);
+                        currentStage.innerText = currentSlide;
+                      }
+                    });
+                  }
+                });
+            }
+
+            // currentTransformPosition -= parentWidth;
+            // slidesWrapper.style.transform = `translateX(${currentTransformPosition}px)`;
+            // // set current slide
+            // currentSlide++;
+            // currentStage.innerText = currentSlide;
+          } else if (isActive && atAllSlides - currentSlide === 1) {
+            if (currentSlide === 4) {
               slides.forEach((slide, index) => {
-                if (currentSlide === 2 && index + 1 === 2) {
+                if (currentSlide === 4 && index + 1 === 4) {
                   const inputs = slide.querySelectorAll("input");
                   inputs.forEach((input) => {
                     if (input.value !== "" || input.value.length > 3) {
+                      // set current slide
+                      const submitButton = parent.querySelector(
+                        ".quizComponentControlsRightButtonSubmit"
+                      );
+
+                      let counter = 0;
+
+                      rightSideButton.style.display = "none";
+                      submitButton.style.display = "flex";
+                      submitButton.removeAttribute("disabled");
+
                       currentTransformPosition -= parentWidth;
                       slidesWrapper.style.transform = `translateX(${currentTransformPosition}px)`;
                       // set current slide
-                      currentSlide++;
-                      console.log(currentSlide);
-                      console.log(input.value);
-                      currentStage.innerText = currentSlide;
+                      if (counter < 1) {
+                        currentSlide++;
+                        counter++;
+                      }
+                      currentStage.innerText = atAllSlides;
                     }
                   });
                 }
               });
-
-            case 3:
+            }
+          }
+          if (lastSlideNow) {
+            if (currentSlide === 5) {
               slides.forEach((slide, index) => {
-                if (currentSlide === 3 && index + 1 === 3) {
+                if (currentSlide === 5 && index + 1 === 5) {
+                  const inputs = slide.querySelectorAll("input");
+                  inputs.forEach((input) => {
+                    // if (input.value !== "" || input.value.length > 3) {
+                    //   parent.submit();
+                    // }
+                  });
+                }
+              });
+            }
+          }
+        });
+        // left side buttom
+        leftSideButton.addEventListener("click", () => {
+          const isNext = leftSideButton.dataset.type === "next";
+          const isPrev = leftSideButton.dataset.type === "prev";
+
+          const notLastSlideNow = currentSlide !== atAllSlides;
+          const notLessThanOne = currentSlide !== 1;
+
+          if (isNext && notLastSlideNow) {
+            if (currentSlide === 1) {
+              slides.forEach((slide, index) => {
+                if (currentSlide === 1 && index + 1 === 1) {
                   const inputs = slide.querySelectorAll("input");
                   inputs.forEach((input) => {
                     if (input.checked) {
@@ -1571,152 +1652,313 @@ try {
                       slidesWrapper.style.transform = `translateX(${currentTransformPosition}px)`;
                       // set current slide
                       currentSlide++;
-                      console.log(currentSlide);
-                      console.log(input.value);
                       currentStage.innerText = currentSlide;
                     }
                   });
                 }
               });
+            }
+            // currentTransformPosition -= parentWidth;
+            // slidesWrapper.style.transform = `translateX(${currentTransformPosition}px)`;
+            // // set current slide
+            // currentSlide++;
+            // currentStage.innerText = currentSlide;
           }
 
-          // currentTransformPosition -= parentWidth;
-          // slidesWrapper.style.transform = `translateX(${currentTransformPosition}px)`;
-          // // set current slide
-          // currentSlide++;
-          // currentStage.innerText = currentSlide;
-        } else if (isActive && atAllSlides - currentSlide === 1) {
-          if (currentSlide === 4) {
-            slides.forEach((slide, index) => {
-              if (currentSlide === 4 && index + 1 === 4) {
-                console.log(currentSlide);
-                const inputs = slide.querySelectorAll("input");
-                inputs.forEach((input) => {
-                  console.log(input);
-                  if (input.value !== "" || input.value.length > 3) {
-                    // set current slide
-                    const submitButton = document.querySelector(
-                      ".quizComponentControlsRightButtonSubmit"
-                    );
-
-                    let counter = 0;
-
-                    rightSideButton.style.display = "none";
-                    submitButton.style.display = "flex";
-                    submitButton.removeAttribute("disabled");
-
-                    currentTransformPosition -= parentWidth;
-                    slidesWrapper.style.transform = `translateX(${currentTransformPosition}px)`;
-                    // set current slide
-                    if (counter < 1) {
-                      currentSlide++;
-                      counter++;
-                    }
-                    currentStage.innerText = atAllSlides;
-                  }
-                });
-              }
-            });
+          if (isPrev && notLessThanOne) {
+            currentTransformPosition += parentWidth;
+            slidesWrapper.style.transform = `translateX(${currentTransformPosition}px)`;
+            // set current slide
+            currentSlide--;
+            currentStage.innerText = currentSlide;
           }
-        }
-        if (lastSlideNow) {
-          if (currentSlide === 5) {
-            slides.forEach((slide, index) => {
-              if (currentSlide === 5 && index + 1 === 5) {
-                console.log(currentSlide);
-                const inputs = slide.querySelectorAll("input");
-                inputs.forEach((input) => {
-                  if (input.value !== "" || input.value.length > 3) {
-                    parent.submit();
-                  }
-                });
-              }
-            });
+
+          if (currentSlide > 1) {
+            leftSideButton.dataset.type = "prev";
+            // add active type to right button
+            rightSideButton.dataset.type = "active";
+            //
+            rightSideButton.classList.remove(
+              "quizComponentControlsRightButton--notActive"
+            );
+            //
+            leftSideButton.classList.add(
+              "quizComponentControlsLeftButton--prev"
+            );
+            leftSideButtonSvg.classList.add(
+              "quizComponentControlsLeftButtonImage--prev"
+            );
+            //
+            leftSideButton.style.fontSize = 0;
           }
-        }
-      });
-      // left side buttom
-      leftSideButton.addEventListener("click", () => {
-        const isNext = leftSideButton.dataset.type === "next";
-        const isPrev = leftSideButton.dataset.type === "prev";
 
-        const notLastSlideNow = currentSlide !== atAllSlides;
-        const notLessThanOne = currentSlide !== 1;
-
-        if (isNext && notLastSlideNow) {
           if (currentSlide === 1) {
-            slides.forEach((slide, index) => {
-              if (currentSlide === 1 && index + 1 === 1) {
-                const inputs = slide.querySelectorAll("input");
-                inputs.forEach((input) => {
-                  if (input.checked) {
-                    currentTransformPosition -= parentWidth;
-                    slidesWrapper.style.transform = `translateX(${currentTransformPosition}px)`;
-                    // set current slide
-                    currentSlide++;
-                    currentStage.innerText = currentSlide;
-                  }
-                });
-              }
-            });
+            leftSideButton.style.fontSize = `${currentLeftButtonFontSize}`;
+            //
+            leftSideButton.dataset.type = "next";
+            // reset active data type from right button
+            rightSideButton.dataset.type = "";
+            rightSideButton.classList.add(
+              "quizComponentControlsRightButton--notActive"
+            );
+            //
+            leftSideButtonSvg.classList.remove(
+              "quizComponentControlsLeftButtonImage--prev"
+            );
+            leftSideButton.classList.remove(
+              "quizComponentControlsLeftButton--prev"
+            );
           }
-          // currentTransformPosition -= parentWidth;
-          // slidesWrapper.style.transform = `translateX(${currentTransformPosition}px)`;
-          // // set current slide
-          // currentSlide++;
-          // currentStage.innerText = currentSlide;
-        }
 
-        if (isPrev && notLessThanOne) {
-          currentTransformPosition += parentWidth;
-          slidesWrapper.style.transform = `translateX(${currentTransformPosition}px)`;
-          // set current slide
-          currentSlide--;
-          currentStage.innerText = currentSlide;
-        }
-
-        if (currentSlide > 1) {
-          leftSideButton.dataset.type = "prev";
-          // add active type to right button
-          rightSideButton.dataset.type = "active";
-          //
-          rightSideButton.classList.remove(
-            "quizComponentControlsRightButton--notActive"
-          );
-          //
-          leftSideButton.classList.add("quizComponentControlsLeftButton--prev");
-          leftSideButtonSvg.classList.add(
-            "quizComponentControlsLeftButtonImage--prev"
-          );
-          //
-          leftSideButton.style.fontSize = 0;
-        }
-
-        if (currentSlide === 1) {
-          leftSideButton.style.fontSize = `${currentLeftButtonFontSize}`;
-          //
-          leftSideButton.dataset.type = "next";
-          // reset active data type from right button
-          rightSideButton.dataset.type = "";
-          rightSideButton.classList.add(
-            "quizComponentControlsRightButton--notActive"
-          );
-          //
-          leftSideButtonSvg.classList.remove(
-            "quizComponentControlsLeftButtonImage--prev"
-          );
-          leftSideButton.classList.remove(
-            "quizComponentControlsLeftButton--prev"
-          );
-        }
-
-        if (currentSlide < atAllSlides) {
-          rightSideButton.textContent = "Далее";
-        }
+          if (currentSlide < atAllSlides) {
+            rightSideButton.textContent = "Далее";
+          }
+        });
       });
     } catch (error) {}
   });
 } catch (error) {}
+
+// try {
+//   ("use strict");
+//   // parent
+//   const parent = document.querySelector(".quizComponent");
+//   // slider
+//   const slidesWrapper = document.querySelector(".quizComponentQuestions");
+//   const slides = document.querySelectorAll(".quizComponentQuestion");
+//   // controls
+//   const controls = document.querySelector(".quizComponentControls");
+//   // buttons
+//   const leftSideButton = document.querySelector(
+//     ".quizComponentControlsLeftButton"
+//   );
+
+//   const leftSideButtonSvg = document.querySelector(
+//     ".quizComponentControlsLeftButtonImage"
+//   );
+//   const rightSideButton = document.querySelector(
+//     ".quizComponentControlsRightButton"
+//   );
+//   // stages
+//   const currentStage = document.querySelector(
+//     ".quizComponentControlsStagesCurrentStage"
+//   );
+//   const stagesAtAll = document.querySelector(
+//     ".quizComponentControlsStagesAtAll"
+//   );
+
+//   //
+//   let currentLeftButtonFontSize = 0;
+
+//   window.addEventListener("load", () => {
+//     try {
+//       currentLeftButtonFontSize = getComputedStyle(leftSideButton).fontSize;
+//       let currentSlide = 1;
+//       let atAllSlides;
+//       //
+//       let currentTransformPosition = 0;
+//       // get width for scroll
+//       const parentWidth = parent.getBoundingClientRect().width;
+//       // set slides width
+//       slides.forEach((slide, index) => {
+//         const parentLeftPadding = getComputedStyle(parent).paddingLeft;
+//         const reg = /\d*/;
+//         slide.style.width = `${
+//           parentWidth - Number(parentLeftPadding.match(reg) * 2)
+//         }px`;
+//         slide.style.marginRight = `${Number(
+//           parentLeftPadding.match(reg) * 2
+//         )}px`;
+//         slide.dataset.slideNumber = index + 1;
+//         atAllSlides = slide.dataset.slideNumber = index + 1;
+//       });
+//       // set at all stages
+//       stagesAtAll.textContent = atAllSlides;
+//       // set buttons type for change animation and interaction
+//       leftSideButton.dataset.type = "next";
+//       // right side button
+//       rightSideButton.addEventListener("click", () => {
+//         const isActive = rightSideButton.dataset.type === "active";
+
+//         const notLastSlideNow = currentSlide !== atAllSlides;
+//         const lastSlideNow = currentSlide === atAllSlides;
+
+//         if (isActive && notLastSlideNow && atAllSlides - currentSlide !== 1) {
+//           switch (currentSlide) {
+//             case 2:
+//               slides.forEach((slide, index) => {
+//                 if (currentSlide === 2 && index + 1 === 2) {
+//                   const inputs = slide.querySelectorAll("input");
+//                   inputs.forEach((input) => {
+//                     if (input.value !== "" || input.value.length > 3) {
+//                       currentTransformPosition -= parentWidth;
+//                       slidesWrapper.style.transform = `translateX(${currentTransformPosition}px)`;
+//                       // set current slide
+//                       currentSlide++;
+//                       console.log(currentSlide);
+//                       console.log(input.value);
+//                       currentStage.innerText = currentSlide;
+//                     }
+//                   });
+//                 }
+//               });
+
+//             case 3:
+//               slides.forEach((slide, index) => {
+//                 if (currentSlide === 3 && index + 1 === 3) {
+//                   const inputs = slide.querySelectorAll("input");
+//                   inputs.forEach((input) => {
+//                     if (input.checked) {
+//                       currentTransformPosition -= parentWidth;
+//                       slidesWrapper.style.transform = `translateX(${currentTransformPosition}px)`;
+//                       // set current slide
+//                       currentSlide++;
+//                       console.log(currentSlide);
+//                       console.log(input.value);
+//                       currentStage.innerText = currentSlide;
+//                     }
+//                   });
+//                 }
+//               });
+//           }
+
+//           // currentTransformPosition -= parentWidth;
+//           // slidesWrapper.style.transform = `translateX(${currentTransformPosition}px)`;
+//           // // set current slide
+//           // currentSlide++;
+//           // currentStage.innerText = currentSlide;
+//         } else if (isActive && atAllSlides - currentSlide === 1) {
+//           if (currentSlide === 4) {
+//             slides.forEach((slide, index) => {
+//               if (currentSlide === 4 && index + 1 === 4) {
+//                 console.log(currentSlide);
+//                 const inputs = slide.querySelectorAll("input");
+//                 inputs.forEach((input) => {
+//                   console.log(input);
+//                   if (input.value !== "" || input.value.length > 3) {
+//                     // set current slide
+//                     const submitButton = document.querySelector(
+//                       ".quizComponentControlsRightButtonSubmit"
+//                     );
+
+//                     let counter = 0;
+
+//                     rightSideButton.style.display = "none";
+//                     submitButton.style.display = "flex";
+//                     submitButton.removeAttribute("disabled");
+
+//                     currentTransformPosition -= parentWidth;
+//                     slidesWrapper.style.transform = `translateX(${currentTransformPosition}px)`;
+//                     // set current slide
+//                     if (counter < 1) {
+//                       currentSlide++;
+//                       counter++;
+//                     }
+//                     currentStage.innerText = atAllSlides;
+//                   }
+//                 });
+//               }
+//             });
+//           }
+//         }
+//         if (lastSlideNow) {
+//           if (currentSlide === 5) {
+//             slides.forEach((slide, index) => {
+//               if (currentSlide === 5 && index + 1 === 5) {
+//                 console.log(currentSlide);
+//                 const inputs = slide.querySelectorAll("input");
+//                 inputs.forEach((input) => {
+//                   if (input.value !== "" || input.value.length > 3) {
+//                     parent.submit();
+//                   }
+//                 });
+//               }
+//             });
+//           }
+//         }
+//       });
+//       // left side buttom
+//       leftSideButton.addEventListener("click", () => {
+//         const isNext = leftSideButton.dataset.type === "next";
+//         const isPrev = leftSideButton.dataset.type === "prev";
+
+//         const notLastSlideNow = currentSlide !== atAllSlides;
+//         const notLessThanOne = currentSlide !== 1;
+
+//         if (isNext && notLastSlideNow) {
+//           if (currentSlide === 1) {
+//             slides.forEach((slide, index) => {
+//               if (currentSlide === 1 && index + 1 === 1) {
+//                 const inputs = slide.querySelectorAll("input");
+//                 inputs.forEach((input) => {
+//                   if (input.checked) {
+//                     currentTransformPosition -= parentWidth;
+//                     slidesWrapper.style.transform = `translateX(${currentTransformPosition}px)`;
+//                     // set current slide
+//                     currentSlide++;
+//                     currentStage.innerText = currentSlide;
+//                   }
+//                 });
+//               }
+//             });
+//           }
+//           // currentTransformPosition -= parentWidth;
+//           // slidesWrapper.style.transform = `translateX(${currentTransformPosition}px)`;
+//           // // set current slide
+//           // currentSlide++;
+//           // currentStage.innerText = currentSlide;
+//         }
+
+//         if (isPrev && notLessThanOne) {
+//           currentTransformPosition += parentWidth;
+//           slidesWrapper.style.transform = `translateX(${currentTransformPosition}px)`;
+//           // set current slide
+//           currentSlide--;
+//           currentStage.innerText = currentSlide;
+//         }
+
+//         if (currentSlide > 1) {
+//           leftSideButton.dataset.type = "prev";
+//           // add active type to right button
+//           rightSideButton.dataset.type = "active";
+//           //
+//           rightSideButton.classList.remove(
+//             "quizComponentControlsRightButton--notActive"
+//           );
+//           //
+//           leftSideButton.classList.add("quizComponentControlsLeftButton--prev");
+//           leftSideButtonSvg.classList.add(
+//             "quizComponentControlsLeftButtonImage--prev"
+//           );
+//           //
+//           leftSideButton.style.fontSize = 0;
+//         }
+
+//         if (currentSlide === 1) {
+//           leftSideButton.style.fontSize = `${currentLeftButtonFontSize}`;
+//           //
+//           leftSideButton.dataset.type = "next";
+//           // reset active data type from right button
+//           rightSideButton.dataset.type = "";
+//           rightSideButton.classList.add(
+//             "quizComponentControlsRightButton--notActive"
+//           );
+//           //
+//           leftSideButtonSvg.classList.remove(
+//             "quizComponentControlsLeftButtonImage--prev"
+//           );
+//           leftSideButton.classList.remove(
+//             "quizComponentControlsLeftButton--prev"
+//           );
+//         }
+
+//         if (currentSlide < atAllSlides) {
+//           rightSideButton.textContent = "Далее";
+//         }
+//       });
+//     } catch (error) {}
+//   });
+// } catch (error) {}
 
 
 /***/ }),
@@ -2016,29 +2258,17 @@ function addInteractivityToButton(
       [width, height] = [...decorativeImageSizes];
       // create black
       blackImage = new Image(width, height);
-      let tagWithSrcBlack = parent.querySelector(
-        ".fillingButton__imageSrcInDataTagBlack"
-      );
-      blackImage.src = tagWithSrcBlack.dataset.src;
+      blackImage.src = "assets/images/utils/arrowForFillingButton--black.svg";
       // create white
       whiteImage = new Image(width, height);
-      let tagWithSrcWhite = parent.querySelector(
-        ".fillingButton__imageSrcInDataTagWhite"
-      );
-      whiteImage.src = tagWithSrcWhite.dataset.src;
+      whiteImage.src = "assets/images/utils/arrowForFillingButton--white.svg";
     } else {
       // create black
       blackImage = new Image(20, 20);
-      let tagWithSrcBlack = parent.querySelector(
-        ".fillingButton__imageSrcInDataTagBlack"
-      );
-      blackImage.src = tagWithSrcBlack.dataset.src;
+      blackImage.src = "assets/images/utils/arrowForFillingButton--black.svg";
       // create white
       whiteImage = new Image(20, 20);
-      let tagWithSrcWhite = parent.querySelector(
-        ".fillingButton__imageSrcInDataTagWhite"
-      );
-      whiteImage.src = tagWithSrcWhite.dataset.src;
+      whiteImage.src = "assets/images/utils/arrowForFillingButton--white.svg";
     }
     // big mode and white first
     if (mode === modes.bigWhiteFirst) {
@@ -2077,16 +2307,34 @@ function addInteractivityToButton(
     buttonImagesBlock.appendChild(blackImage);
     buttonImagesBlock.appendChild(whiteImage);
   }
-
-  if (typeOfDecorativeImageOrSrc === true) {
+  // =======
+  if (typeOfDecorativeImageOrSrc === imagesTypes.blackArrow) {
     // create image
     let decorativeImage;
-    // create white arrow
-    // if (typeOfDecorativeImageOrSrc === imagesTypes.whiteArrow) {
-    //   decorativeImage = new Image(15, 15);
-    //   decorativeImage.src =
-    //     tagWithSrcWhite.dataset.src;
-    // }
+    // // create black arrow
+    decorativeImage = new Image(15, 15);
+    decorativeImage.src =
+      "assets/images/utils/arrowForFillingButton--black.svg";
+    // add custom class for created image with correct sizes
+    decorativeImage.classList.add("fillingButton__image");
+    // append created image
+    const buttonContentBlock = parent.querySelector(".fillingButton__content");
+    buttonContentBlock.appendChild(decorativeImage);
+  } else if (typeOfDecorativeImageOrSrc === imagesTypes.whiteArrow) {
+    // create image
+    let decorativeImage;
+    // // create black arrow
+    decorativeImage = new Image(15, 15);
+    decorativeImage.src =
+      "assets/images/utils/arrowForFillingButton--white.svg";
+    // add custom class for created image with correct sizes
+    decorativeImage.classList.add("fillingButton__image");
+    // append created image
+    const buttonContentBlock = parent.querySelector(".fillingButton__content");
+    buttonContentBlock.appendChild(decorativeImage);
+  } else if (typeOfDecorativeImageOrSrc === true) {
+    // create image
+    let decorativeImage;
     if (typeOfDecorativeImageOrSrc === true) {
       decorativeImage = new Image(15, 15);
       let tagWithSrc = parent.querySelector(
@@ -2094,29 +2342,13 @@ function addInteractivityToButton(
       );
       decorativeImage.src = tagWithSrc.dataset.src;
     }
-    // // create black arrow
-    // if (typeOfDecorativeImageOrSrc === imagesTypes.blackArrow) {
-    //   decorativeImage = new Image(15, 15);
-    //   decorativeImage.src =
-    //     tagWithSrcBlack.dataset.src;
-    // }
-    // if (
-    //   typeOfDecorativeImageOrSrc !== imagesTypes.blackArrow &&
-    //   typeOfDecorativeImageOrSrc !== imagesTypes.whiteArrow &&
-    //   typeOfDecorativeImageOrSrc !== null
-    // ) {
-    //   // destructure custom sizes
-    //   const [width, height] = [...decorativeImageSizes];
-
-    //   decorativeImage = new Image(width, height);
-    //   decorativeImage.src = typeOfDecorativeImageOrSrc;
-    // }
     // add custom class for created image with correct sizes
     decorativeImage.classList.add("fillingButton__image");
     // append created image
     const buttonContentBlock = parent.querySelector(".fillingButton__content");
     buttonContentBlock.appendChild(decorativeImage);
   }
+
   // add listeners
   circleSvg.addEventListener("mousemove", (event) => {
     matrixFrom = +getComputedStyle(
@@ -2262,21 +2494,6 @@ var animationWithScroll = __webpack_require__(253);
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  // try {
-  //   // intro bottom
-  //   addInteractivityToButton(
-  //     ".fillingButton--introBottom",
-  //     ".fillingButton__svg-circle--introBottom",
-  //     ".fillingButton__circle--introBottom",
-  //     3,
-  //     3,
-  //     0,
-  //     0,
-  //     true,
-  //     "whiteArrow",
-  //     true
-  //   );
-  // } catch (error) {}
   try {
     // types
     addInteractivityToButton(
@@ -2292,22 +2509,6 @@ document.addEventListener("DOMContentLoaded", () => {
       false
     );
   } catch (error) {}
-});
-
-window.addEventListener("resize", () => {
-  // try {
-  //   // intro bottom
-  //   addInteractivityToButton(
-  //     ".fillingButton--introBottom",
-  //     ".fillingButton__svg-circle--introBottom",
-  //     ".fillingButton__circle--introBottom",
-  //     3,
-  //     3,
-  //     0,
-  //     0,
-  //     false
-  //   );
-  // } catch (error) {}
 });
 
 // EXTERNAL MODULE: ./source/js/serviceDetailSecond/allignTypesImage.js
@@ -2554,15 +2755,33 @@ function addInteractivityToButton_modals_addInteractivityToButton(
     buttonImagesBlock.appendChild(whiteImage);
   }
 
-  if (typeOfDecorativeImageOrSrc === true) {
+  if (typeOfDecorativeImageOrSrc === imagesTypes.blackArrow) {
     // create image
     let decorativeImage;
-    // create white arrow
-    // if (typeOfDecorativeImageOrSrc === imagesTypes.whiteArrow) {
-    //   decorativeImage = new Image(15, 15);
-    //   decorativeImage.src =
-    //     "assets/images/utils/arrowForFillingButton--white.svg";
-    // }
+    // // create black arrow
+    decorativeImage = new Image(15, 15);
+    decorativeImage.src =
+      "assets/images/utils/arrowForFillingButton--black.svg";
+    // add custom class for created image with correct sizes
+    decorativeImage.classList.add("fillingButton__image");
+    // append created image
+    const buttonContentBlock = parent.querySelector(".fillingButton__content");
+    buttonContentBlock.appendChild(decorativeImage);
+  } else if (typeOfDecorativeImageOrSrc === imagesTypes.whiteArrow) {
+    // create image
+    let decorativeImage;
+    // // create black arrow
+    decorativeImage = new Image(15, 15);
+    decorativeImage.src =
+      "assets/images/utils/arrowForFillingButton--white.svg";
+    // add custom class for created image with correct sizes
+    decorativeImage.classList.add("fillingButton__image");
+    // append created image
+    const buttonContentBlock = parent.querySelector(".fillingButton__content");
+    buttonContentBlock.appendChild(decorativeImage);
+  } else if (typeOfDecorativeImageOrSrc === true) {
+    // create image
+    let decorativeImage;
     if (typeOfDecorativeImageOrSrc === true) {
       decorativeImage = new Image(15, 15);
       let tagWithSrc = parent.querySelector(
@@ -2570,23 +2789,6 @@ function addInteractivityToButton_modals_addInteractivityToButton(
       );
       decorativeImage.src = tagWithSrc.dataset.src;
     }
-    // // create black arrow
-    // if (typeOfDecorativeImageOrSrc === imagesTypes.blackArrow) {
-    //   decorativeImage = new Image(15, 15);
-    //   decorativeImage.src =
-    //     "assets/images/utils/arrowForFillingButton--black.svg";
-    // }
-    // if (
-    //   typeOfDecorativeImageOrSrc !== imagesTypes.blackArrow &&
-    //   typeOfDecorativeImageOrSrc !== imagesTypes.whiteArrow &&
-    //   typeOfDecorativeImageOrSrc !== null
-    // ) {
-    //   // destructure custom sizes
-    //   const [width, height] = [...decorativeImageSizes];
-
-    //   decorativeImage = new Image(width, height);
-    //   decorativeImage.src = typeOfDecorativeImageOrSrc;
-    // }
     // add custom class for created image with correct sizes
     decorativeImage.classList.add("fillingButton__image");
     // append created image
@@ -2703,7 +2905,7 @@ document.addEventListener("DOMContentLoaded", () => {
         0,
         0,
         true,
-        true,
+        "whiteArrow",
         true,
         [],
         null,

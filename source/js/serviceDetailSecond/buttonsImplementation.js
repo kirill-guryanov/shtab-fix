@@ -1,21 +1,6 @@
 import { addInteractivityToButton } from "../utils/addInteractivityToButton";
 
 document.addEventListener("DOMContentLoaded", () => {
-  // try {
-  //   // intro bottom
-  //   addInteractivityToButton(
-  //     ".fillingButton--introBottom",
-  //     ".fillingButton__svg-circle--introBottom",
-  //     ".fillingButton__circle--introBottom",
-  //     3,
-  //     3,
-  //     0,
-  //     0,
-  //     true,
-  //     "whiteArrow",
-  //     true
-  //   );
-  // } catch (error) {}
   try {
     // types
     addInteractivityToButton(
@@ -31,20 +16,4 @@ document.addEventListener("DOMContentLoaded", () => {
       false
     );
   } catch (error) {}
-});
-
-window.addEventListener("resize", () => {
-  // try {
-  //   // intro bottom
-  //   addInteractivityToButton(
-  //     ".fillingButton--introBottom",
-  //     ".fillingButton__svg-circle--introBottom",
-  //     ".fillingButton__circle--introBottom",
-  //     3,
-  //     3,
-  //     0,
-  //     0,
-  //     false
-  //   );
-  // } catch (error) {}
 });

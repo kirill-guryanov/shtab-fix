@@ -6,12 +6,7 @@ section.intro-modification.sectionForProgresCircleColor
         width=122 height=258
     )
 
-    picture
-        source(srcset="assets/images/utils/glowingCircle.webp" type="image/webp")
-        source(srcset="assets/images/utils/glowingCircle.png" type="image/png")
-        img.intro__decorativeGlowingCircle-modification(
-            src="assets/images/utils/glowingCircle.png" alt="Декоративный круг" 
-        )
+    
 
     .container.container--introServiceDetail
         .intro__top
@@ -37,6 +32,12 @@ section.intro-modification.sectionForProgresCircleColor
                                 | ть заявку
 
             .intro__contentRightSide
+                picture
+                    source(srcset="assets/images/utils/glowingCircle.webp" type="image/webp")
+                    source(srcset="assets/images/utils/glowingCircle.png" type="image/png")
+                    img.intro__decorativeGlowingCircle-modification(
+                        src="assets/images/utils/glowingCircle.png" alt="Декоративный круг" 
+                    )
                 picture
                     source(srcset="assets/images/modification/introRightSide.webp" type="image/webp")
                     source(srcset="assets/images/modification/introRightSide.png" type="image/png")
@@ -72,7 +73,6 @@ section.intro-modification.sectionForProgresCircleColor
                 .intro__bottomButton-serviceDetail
                     .intro__contentLeftSideButton-serviceDetail
                         button(type="submit").fillingButton.fillingButton--introBottom
-                            .fillingButton__imageSrcInDataTag(data-src="assets/images/utils/arrowForFillingButton--white.svg")
                             svg.fillingButton__svg.fillingButton__svg--introBottom( viewBox="0 0 160 160" )
                                 circle.fillingButton__svg-circle.fillingButton__svg-circle--introBottom( cx="80" cy="80" r="80" fill="transparent" )
 

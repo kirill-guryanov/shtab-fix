@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
         0,
         0,
         true,
-        true,
+        "whiteArrow",
         true,
         [],
         null,

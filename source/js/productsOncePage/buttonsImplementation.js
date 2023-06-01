@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
       0,
       0,
       true,
-      true,
+      "blackArrow",
       false
     );
   } catch (error) {}

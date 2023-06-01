@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
       0,
       0,
       true,
-      true,
+      "whiteArrow",
       true
     );
   } catch (error) {}
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
       0,
       0,
       true,
-      true
+      "blackArrow"
     );
   } catch (error) {}
 });

@@ -1142,29 +1142,17 @@ function addInteractivityToButton(
       [width, height] = [...decorativeImageSizes];
       // create black
       blackImage = new Image(width, height);
-      let tagWithSrcBlack = parent.querySelector(
-        ".fillingButton__imageSrcInDataTagBlack"
-      );
-      blackImage.src = tagWithSrcBlack.dataset.src;
+      blackImage.src = "assets/images/utils/arrowForFillingButton--black.svg";
       // create white
       whiteImage = new Image(width, height);
-      let tagWithSrcWhite = parent.querySelector(
-        ".fillingButton__imageSrcInDataTagWhite"
-      );
-      whiteImage.src = tagWithSrcWhite.dataset.src;
+      whiteImage.src = "assets/images/utils/arrowForFillingButton--white.svg";
     } else {
       // create black
       blackImage = new Image(20, 20);
-      let tagWithSrcBlack = parent.querySelector(
-        ".fillingButton__imageSrcInDataTagBlack"
-      );
-      blackImage.src = tagWithSrcBlack.dataset.src;
+      blackImage.src = "assets/images/utils/arrowForFillingButton--black.svg";
       // create white
       whiteImage = new Image(20, 20);
-      let tagWithSrcWhite = parent.querySelector(
-        ".fillingButton__imageSrcInDataTagWhite"
-      );
-      whiteImage.src = tagWithSrcWhite.dataset.src;
+      whiteImage.src = "assets/images/utils/arrowForFillingButton--white.svg";
     }
     // big mode and white first
     if (mode === modes.bigWhiteFirst) {
@@ -1203,16 +1191,34 @@ function addInteractivityToButton(
     buttonImagesBlock.appendChild(blackImage);
     buttonImagesBlock.appendChild(whiteImage);
   }
-
-  if (typeOfDecorativeImageOrSrc === true) {
+  // =======
+  if (typeOfDecorativeImageOrSrc === imagesTypes.blackArrow) {
     // create image
     let decorativeImage;
-    // create white arrow
-    // if (typeOfDecorativeImageOrSrc === imagesTypes.whiteArrow) {
-    //   decorativeImage = new Image(15, 15);
-    //   decorativeImage.src =
-    //     tagWithSrcWhite.dataset.src;
-    // }
+    // // create black arrow
+    decorativeImage = new Image(15, 15);
+    decorativeImage.src =
+      "assets/images/utils/arrowForFillingButton--black.svg";
+    // add custom class for created image with correct sizes
+    decorativeImage.classList.add("fillingButton__image");
+    // append created image
+    const buttonContentBlock = parent.querySelector(".fillingButton__content");
+    buttonContentBlock.appendChild(decorativeImage);
+  } else if (typeOfDecorativeImageOrSrc === imagesTypes.whiteArrow) {
+    // create image
+    let decorativeImage;
+    // // create black arrow
+    decorativeImage = new Image(15, 15);
+    decorativeImage.src =
+      "assets/images/utils/arrowForFillingButton--white.svg";
+    // add custom class for created image with correct sizes
+    decorativeImage.classList.add("fillingButton__image");
+    // append created image
+    const buttonContentBlock = parent.querySelector(".fillingButton__content");
+    buttonContentBlock.appendChild(decorativeImage);
+  } else if (typeOfDecorativeImageOrSrc === true) {
+    // create image
+    let decorativeImage;
     if (typeOfDecorativeImageOrSrc === true) {
       decorativeImage = new Image(15, 15);
       let tagWithSrc = parent.querySelector(
@@ -1220,29 +1226,13 @@ function addInteractivityToButton(
       );
       decorativeImage.src = tagWithSrc.dataset.src;
     }
-    // // create black arrow
-    // if (typeOfDecorativeImageOrSrc === imagesTypes.blackArrow) {
-    //   decorativeImage = new Image(15, 15);
-    //   decorativeImage.src =
-    //     tagWithSrcBlack.dataset.src;
-    // }
-    // if (
-    //   typeOfDecorativeImageOrSrc !== imagesTypes.blackArrow &&
-    //   typeOfDecorativeImageOrSrc !== imagesTypes.whiteArrow &&
-    //   typeOfDecorativeImageOrSrc !== null
-    // ) {
-    //   // destructure custom sizes
-    //   const [width, height] = [...decorativeImageSizes];
-
-    //   decorativeImage = new Image(width, height);
-    //   decorativeImage.src = typeOfDecorativeImageOrSrc;
-    // }
     // add custom class for created image with correct sizes
     decorativeImage.classList.add("fillingButton__image");
     // append created image
     const buttonContentBlock = parent.querySelector(".fillingButton__content");
     buttonContentBlock.appendChild(decorativeImage);
   }
+
   // add listeners
   circleSvg.addEventListener("mousemove", (event) => {
     matrixFrom = +getComputedStyle(
